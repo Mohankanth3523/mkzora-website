@@ -196,6 +196,36 @@ h1{
     font-size:.9rem;
 }
 
+
+
+.launch-badge{
+    padding:14px 28px;
+    border-radius:50px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    color:#fff;
+}
+
+.demo-btn{
+    text-decoration:none;
+    padding:16px 30px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.invitation-btn{
+    background:linear-gradient(90deg,#00d4ff,#7c3aed);
+    color:#fff;
+    box-shadow:0 0 25px rgba(0,212,255,.35);
+}
+
+
+
+.demo-btn:hover{
+    transform:translateY(-3px);
+}
+
 /* ==========================
    Mobile Responsive
 ========================== */
