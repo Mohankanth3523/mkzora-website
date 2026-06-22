@@ -1,0 +1,862 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   ROOT COLORS
+========================================== */
+
+:root{
+
+    --gold:#FFD700;
+    --gold-light:#ffeaa7;
+
+    --maroon:#5f021f;
+    --dark:#120606;
+
+    --white:#ffffff;
+
+}
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Noto Sans Tamil',sans-serif;
+
+    background:#120606;
+
+    color:#fff;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+    line-height:1.6;
+}
+
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    background:
+    radial-gradient(
+    circle at center,
+    #2a1010,
+    #120606);
+
+}
+
+/* Floating Golden Glow */
+
+body::before{
+
+    content:'';
+
+    position:fixed;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(255,215,0,.20),
+    transparent);
+
+    top:-150px;
+    left:-150px;
+
+    animation:
+    floatGlow 8s ease-in-out infinite;
+
+    z-index:-1;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    position:relative;
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.35),
+    rgba(0,0,0,.8));
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+    max-width:800px;
+}
+
+.kolam-design{
+
+    width:120px;
+
+    height:120px;
+
+    margin:0 auto 30px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,215,0,.3);
+
+    box-shadow:
+    0 0 20px rgba(255,215,0,.3);
+
+    animation:
+    rotateKolam 20s linear infinite;
+}
+
+.opening-text{
+
+    font-size:2.4rem;
+
+    color:var(--gold);
+
+    text-shadow:
+    0 0 20px gold,
+    0 0 40px rgba(255,215,0,.5);
+
+    animation:
+    fadeUp 2s ease;
+}
+
+.sub-text{
+
+    margin-top:15px;
+
+    font-size:1rem;
+
+    color:#eee;
+
+    letter-spacing:1px;
+
+    animation:
+    fadeUp 3s ease;
+}
+
+.scroll-down{
+
+    margin-top:40px;
+
+    font-size:2rem;
+
+    color:gold;
+
+    animation:
+    bounce 2s infinite;
+}
+
+/* ==========================================
+   INTRO SECTION
+========================================== */
+
+.intro-section{
+
+    padding:100px 20px;
+}
+
+.intro-container{
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    backdrop-filter:
+    blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+    box-shadow:
+    0 0 30px rgba(255,215,0,.1);
+}
+
+#typewriter{
+
+    text-align:center;
+
+    color:var(--gold-light);
+
+    font-size:1.3rem;
+
+    line-height:2;
+}
+
+/* ==========================================
+   BIRTHDAY REVEAL
+========================================== */
+
+.birthday-reveal{
+
+    text-align:center;
+
+    padding:100px 20px;
+}
+
+.photo-glow{
+
+    width:300px;
+
+    height:300px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    padding:8px;
+
+    background:
+    linear-gradient(
+    45deg,
+    gold,
+    #fff4b5,
+    gold);
+
+    animation:
+    pulseGlow 3s infinite;
+}
+
+.main-photo{
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+}
+
+.birthday-title{
+
+    margin-top:30px;
+
+    color:gold;
+
+    font-size:2rem;
+
+    text-shadow:
+    0 0 15px rgba(255,215,0,.5);
+}
+
+.birthday-subtitle{
+
+    margin-top:10px;
+
+    color:#ddd;
+
+    font-size:1rem;
+}
+
+/* ==========================================
+   FRIENDS WISHES
+========================================== */
+
+.friends-wishes{
+
+    padding:100px 20px;
+}
+
+.section-title{
+
+    text-align:center;
+
+    color:gold;
+
+    font-size:2rem;
+
+    margin-bottom:50px;
+}
+
+.wish-container{
+
+    display:grid;
+
+    gap:25px;
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.wish-card{
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.06);
+
+    backdrop-filter:
+    blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+    transition:.4s ease;
+}
+
+.wish-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 10px 30px rgba(255,215,0,.25);
+}
+
+.wish-card p{
+
+    color:#fff;
+
+    line-height:1.8;
+}
+
+.wish-card span{
+
+    display:block;
+
+    margin-top:15px;
+
+    color:gold;
+
+    font-weight:600;
+}
+
+/* ==========================================
+   COMMON ANIMATIONS
+========================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(50px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:
+        translateY(0);
+    }
+
+    50%{
+
+        transform:
+        translateY(10px);
+    }
+}
+
+@keyframes pulseGlow{
+
+    0%,100%{
+
+        box-shadow:
+        0 0 30px gold;
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 70px gold;
+    }
+}
+
+@keyframes floatGlow{
+
+    0%,100%{
+
+        transform:
+        translate(0,0);
+    }
+
+    50%{
+
+        transform:
+        translate(80px,80px);
+    }
+}
+
+@keyframes rotateKolam{
+
+    from{
+
+        transform:
+        rotate(0deg);
+    }
+
+    to{
+
+        transform:
+        rotate(360deg);
+    }
+}
+/* ===================================
+   MEMORY GALLERY
+=================================== */
+
+.memory-gallery{
+    padding:100px 20px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.gallery-card{
+    overflow:hidden;
+    border-radius:20px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    transition:.5s ease;
+}
+
+.gallery-card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 15px 35px rgba(255,215,0,.25);
+}
+
+.gallery-card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    display:block;
+    transition:.6s;
+}
+
+.gallery-card:hover img{
+    transform:scale(1.1);
+}
+
+/* ===================================
+   YEARS OF SMILES
+=================================== */
+
+.counter-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.counter-section h2{
+    color:gold;
+    margin-bottom:30px;
+}
+
+.counter-box{
+    width:180px;
+    height:180px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:3rem;
+    font-weight:bold;
+
+    color:gold;
+
+    border:3px solid gold;
+
+    box-shadow:
+    0 0 30px gold;
+}
+
+#ageCounter{
+    animation:pulseNumber 2s infinite;
+}
+
+@keyframes pulseNumber{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.08);
+    }
+}
+
+/* ===================================
+   GIFT SECTION
+=================================== */
+
+.gift-section{
+    padding:120px 20px;
+    text-align:center;
+}
+
+.gift-section h2{
+    color:gold;
+    margin-bottom:40px;
+}
+
+.gift-box{
+    width:220px;
+    margin:auto;
+    cursor:pointer;
+    transition:.5s;
+}
+
+.gift-box:hover{
+    transform:scale(1.1) rotate(-5deg);
+}
+
+.gift-box img{
+    width:100%;
+}
+
+.surprise-message{
+
+    max-width:700px;
+
+    margin:40px auto 0;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.06);
+
+    backdrop-filter:
+    blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+    display:none;
+}
+
+.surprise-message.show{
+    display:block;
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===================================
+   FINAL SECTION
+=================================== */
+
+.final-section{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    position:relative;
+}
+
+.final-content{
+
+    max-width:900px;
+}
+
+.final-content h1{
+
+    font-size:3rem;
+
+    color:gold;
+
+    margin-bottom:30px;
+
+    text-shadow:
+    0 0 25px gold;
+}
+
+.final-content p{
+
+    font-size:1.2rem;
+
+    line-height:2;
+
+    color:#eee;
+
+    margin-bottom:30px;
+}
+
+.final-content h2{
+
+    color:#ff8fab;
+
+    margin-bottom:20px;
+
+    font-size:2rem;
+}
+
+.final-content h3{
+
+    color:gold;
+
+    font-weight:400;
+}
+
+/* ===================================
+   FLOWER LAYER
+=================================== */
+
+#flowers{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:999;
+}
+
+/* ===================================
+   FIREWORKS CANVAS
+=================================== */
+
+#fireworks{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:998;
+}
+
+/* ===================================
+   GLASS EFFECT
+=================================== */
+
+.glass{
+
+    background:
+    rgba(255,255,255,.06);
+
+    backdrop-filter:
+    blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,.1);
+}
+
+/* ===================================
+   GOLD SHIMMER EFFECT
+=================================== */
+
+.gold-shine{
+
+    background:
+    linear-gradient(
+    90deg,
+    #b8860b,
+    #ffd700,
+    #fff4b5,
+    #ffd700,
+    #b8860b
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:shine 5s linear infinite;
+}
+
+@keyframes shine{
+
+    0%{
+        background-position:0%;
+    }
+
+    100%{
+        background-position:300%;
+    }
+}
+
+/* ===================================
+   MOBILE RESPONSIVE
+=================================== */
+
+@media(max-width:768px){
+
+    .opening-text{
+        font-size:1.8rem;
+    }
+
+    .birthday-title{
+        font-size:1.5rem;
+    }
+
+    .photo-glow{
+
+        width:240px;
+        height:240px;
+    }
+
+    .gallery-card img{
+
+        height:280px;
+    }
+
+    .final-content h1{
+
+        font-size:2rem;
+    }
+
+    .final-content p{
+
+        font-size:1rem;
+    }
+
+    .counter-box{
+
+        width:140px;
+        height:140px;
+
+        font-size:2.2rem;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .hero{
+        padding:15px;
+    }
+
+    .opening-text{
+        font-size:1.5rem;
+    }
+
+    .sub-text{
+        font-size:.9rem;
+    }
+
+    .wish-card{
+        padding:20px;
+    }
+
+    .gallery-card img{
+        height:250px;
+    }
+
+    .final-content h1{
+        font-size:1.7rem;
+    }
+
+    .final-content h2{
+        font-size:1.4rem;
+    }
+
+    .gift-box{
+        width:180px;
+    }
+
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+
+    <!-- Tamil Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="kolam-design"></div>
+
+            <h1 class="opening-text">
+                ஒரு சிறப்பு நாளுக்காக...
+            </h1>
+
+            <p class="sub-text">
+                இன்று ஒரு சாதாரண நாள் அல்ல ✨
+            </p>
+
+            <div class="scroll-down">
+                ↓
+            </div>
+
+        </div>
+
+    </section>
+        <!-- Introduction Section -->
+
+    <section class="intro-section">
+
+        <div class="intro-container">
+
+            <h2 id="typewriter"></h2>
+
+        </div>
+
+    </section>
+        <!-- Main Photo Reveal -->
+
+    <section class="birthday-reveal">
+
+        <div class="photo-glow">
+
+            <img
+                src="images/photo1.jpg"
+                alt="Birthday Girl"
+                class="main-photo">
+
+        </div>
+
+        <h2 class="birthday-title">
+            🎂 பிறந்தநாள் நல்வாழ்த்துக்கள் 🎂
+        </h2>
+
+        <p class="birthday-subtitle">
+            எப்போதும் மகிழ்ச்சியாக இரு ❤️
+        </p>
+
+    </section>
+        <!-- Friends Wishes -->
+
+    <section class="friends-wishes">
+
+        <h2 class="section-title">
+            நண்பர்களின் வாழ்த்துக்கள்
+        </h2>
+
+        <div class="wish-container">
+
+            <div class="wish-card">
+
+                <p>
+                    உன் வாழ்க்கை வெற்றி மற்றும்
+                    மகிழ்ச்சியால் நிரம்பியிருக்க
+                    என் மனமார்ந்த வாழ்த்துகள்.
+                </p>
+
+                <span>
+                    - Friend 1
+                </span>
+
+            </div>
+
+            <div class="wish-card">
+
+                <p>
+                    இன்று உன் நாள் ❤️
+                    உன் கனவுகள் அனைத்தும்
+                    நனவாகட்டும்.
+                </p>
+
+                <span>
+                    - Friend 2
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- Memory Gallery -->
+
+    <section class="memory-gallery">
+
+        <h2 class="section-title">
+            அழகான நினைவுகள்
+        </h2>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-card">
+                <img src="images/photo1.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/photo2.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/photo3.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/photo4.jpg" alt="">
+            </div>
+
+        </div>
+
+    </section>
+        <!-- Counter Section -->
+
+    <section class="counter-section">
+
+        <h2>
+            Years Of Smiles ✨
+        </h2>
+
+        <div class="counter-box">
+
+            <span id="ageCounter">
+                0
+            </span>
+
+        </div>
+
+    </section>
+        <!-- Surprise Gift -->
+
+    <section class="gift-section">
+
+        <h2>
+            ஒரு சிறிய பரிசு 🎁
+        </h2>
+
+        <div class="gift-box" id="giftBox">
+
+            <img
+                src="images/gift-box.png"
+                alt="Gift Box">
+
+        </div>
+
+        <div class="surprise-message" id="surpriseMessage">
+
+            <h3>
+                Happy Birthday ❤️
+            </h3>
+
+            <p>
+                உன் வாழ்க்கை முழுவதும்
+                அன்பு, மகிழ்ச்சி,
+                ஆரோக்கியம் மற்றும்
+                வெற்றியால் நிரம்பியிருக்க
+                வாழ்த்துகள்.
+            </p>
+
+        </div>
+
+    </section>
+        <!-- Final Section -->
+
+    <section class="final-section">
+
+        <div class="final-content">
+
+            <h1>
+                இன்று உன் நாள் ✨
+            </h1>
+
+            <p>
+
+                உன் வாழ்க்கை
+
+                மகிழ்ச்சி,
+
+                வெற்றி,
+
+                ஆரோக்கியம்,
+
+                அன்பு
+
+                ஆகியவற்றால் நிரம்பியிருக்க
+                வாழ்த்துகள்.
+
+            </p>
+
+            <h2>
+                Happy Birthday ❤️
+            </h2>
+
+            <h3>
+                With Love,
+                <br>
+                உன் நண்பர்கள்
+            </h3>
+
+        </div>
+
+    </section>
+        <!-- Background Music -->
+
+    <audio id="bgMusic">
+
+        <source
+            src="music/birthday.mp3"
+            type="audio/mp3">
+
+    </audio>
+
+    <!-- Jasmine Flowers -->
+    <div id="flowers"></div>
+
+    
+    <!-- Fireworks -->
+    <canvas id="fireworks"></canvas>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>

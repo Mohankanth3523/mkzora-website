@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Joshnika Sasha | Ear Piercing Ceremony</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- LOADER -->
+
+<div id="loader">
+    <div class="loader-ring"></div>
+    <h2>Loading Invitation...</h2>
+</div>
+
+<!-- MUSIC -->
+
+<audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mp3">
+</audio>
+
+<button id="musicBtn">
+    <i class="fas fa-music"></i>
+</button>
+
+<!-- GOLD PARTICLES -->
+
+<div id="particles"></div>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="welcome">
+            With Divine Blessings
+        </p>
+
+        <h1 id="nameReveal">
+            JOSHNIKA SASHA
+        </h1>
+
+        <p class="subtitle">
+            Ear Piercing Ceremony
+        </p>
+
+        <button id="openInvite" class="open-btn">
+            Open Invitation
+        </button>
+
+    </div>
+
+</section>
+
+<div id="invitationContent" class="invitation-content">
+<!-- BABY SECTION -->
+
+<section class="baby-section reveal">
+
+    <div class="glass-card">
+
+        <div class="baby-wrapper">
+
+            <img
+                src="assets/baby.jpg"
+                alt="Baby"
+                class="baby-image"
+                loading="lazy"
+            >
+
+            <span class="glow-ring"></span>
+
+        </div>
+
+        <h2>Joshnika Sasha</h2>
+
+        <p>Our Little Princess</p>
+
+    </div>
+
+</section>
+
+<!-- PARENTS SECTION -->
+
+<section class="parents reveal">
+
+    <div class="glass-card">
+
+        <h2>Beloved Parents</h2>
+
+        <img
+            src="assets/parents.jpg"
+            alt="Parents"
+            class="parents-image"
+            loading="lazy"
+        >
+
+        <h3>
+            Sachin Kumar & Sharmila
+        </h3>
+
+    </div>
+
+</section>
+
+<!-- INVITATION MESSAGE -->
+
+<section class="invitation reveal">
+
+    <div class="glass-card invitation-card">
+
+        <h2>Invitation</h2>
+
+        <p>
+
+            With the blessings of Almighty,
+
+            we warmly invite you to grace the
+
+            Ear Piercing Ceremony of our beloved daughter
+
+            <strong>JOSHNIKA SASHA</strong>
+
+            and make the occasion memorable with your presence.
+
+        </p>
+
+    </div>
+
+</section>
+<!-- GRAND PARENTS -->
+
+<section class="grandparents reveal">
+
+    <h2 class="section-title">
+        Grand Parents
+    </h2>
+
+    <div class="grand-grid">
+
+        <div class="glass-card gp-card">
+            Gnanasegaran & Yesodha
+        </div>
+
+        <div class="glass-card gp-card">
+            Udhaya Kumar & Pushpa Rani
+        </div>
+
+        <div class="glass-card gp-card">
+            Thirunavokarasu & Sheela
+        </div>
+
+        <div class="glass-card gp-card">
+            Sivaraj & Tamilarasi
+        </div>
+
+        <div class="glass-card gp-card">
+            Raghukumaran & Geetharani
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EVENT DETAILS -->
+
+<section class="event-section reveal">
+
+    <h2 class="section-title">
+        Event Details
+    </h2>
+
+    <div class="timeline">
+
+        <div class="glass-card event-card">
+            📅 05 July 2026 (Sunday)
+        </div>
+
+        <div class="glass-card event-card">
+            ⏰ Ear Piercing Ceremony - 11:00 AM
+        </div>
+
+        <div class="glass-card event-card">
+            🍽 Lunch - 1:00 PM
+        </div>
+
+        <div class="glass-card event-card">
+            📍 Munishwaran Swamy Temple
+        </div>
+
+    </div>
+
+</section>
+
+<!-- COUNTDOWN -->
+
+<section class="countdown-section reveal">
+
+    <h2 class="section-title">
+        Countdown
+    </h2>
+
+    <div class="countdown">
+
+        <div class="time-box">
+            <span id="days">00</span>
+            <small>Days</small>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">00</span>
+            <small>Hours</small>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <small>Minutes</small>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <small>Seconds</small>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VENUE -->
+
+<!-- VENUE SECTION -->
+
+<section class="venue reveal">
+
+    <div class="glass-card">
+
+        <h2>📍 Venue</h2>
+
+        <h3>
+            Munishwaran Swamy Temple
+        </h3>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3887.985527027109!2d78.25104037507646!3d12.972777387342658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU4JzIyLjAiTiA3OMKwMTUnMTMuMCJF!5e0!3m2!1sen!2sin!4v1782144249836!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <div class="map-buttons">
+
+            <a
+                href="https://maps.google.com/?q=12.972777,78.253611"
+                target="_blank"
+                class="map-btn">
+                📍 Open Map
+            </a>
+
+            <a
+                href="https://www.google.com/maps/dir/?api=1&destination=12.972777,78.253611"
+                target="_blank"
+                class="map-btn">
+                🚗 Navigate Now
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- BLESSINGS SECTION -->
+
+<section class="blessings reveal">
+
+    <div class="glass-card">
+
+        <h2 class="section-title">
+            Blessings
+        </h2>
+
+        <div class="quote-box">
+
+            <p id="blessingText">
+                Every child is a blessing.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAMILY GALLERY -->
+
+<section class="gallery-section reveal">
+
+    <h2 class="section-title">
+        Family Gallery
+    </h2>
+
+    <div class="gallery-slider">
+
+        <div class="slide active">
+            <img src="assets/gallery1.jpg" alt="">
+        </div>
+
+        <div class="slide">
+            <img src="assets/gallery2.jpg" alt="">
+        </div>
+
+        <div class="slide">
+            <img src="assets/gallery3.jpg" alt="">
+        </div>
+
+        <div class="slide">
+            <img src="assets/gallery4.jpg" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MEMORY TREE -->
+
+<section class="memory-tree reveal">
+
+    <h2 class="section-title">
+        Blessing Tree
+    </h2>
+
+    <p class="tree-subtitle">
+        Tap a leaf to reveal blessings
+    </p>
+
+    <div class="tree-container">
+
+        <div class="tree">
+
+            <div class="leaf" data-message="Health">
+                🍃
+            </div>
+
+            <div class="leaf" data-message="Happiness">
+                🍃
+            </div>
+
+            <div class="leaf" data-message="Prosperity">
+                🍃
+            </div>
+
+            <div class="leaf" data-message="Success">
+                🍃
+            </div>
+
+            <div class="leaf" data-message="Long Life">
+                🍃
+            </div>
+
+        </div>
+
+        <div id="wishBox">
+            Click a leaf
+        </div>
+
+    </div>
+
+</section>
+
+<!-- THANK YOU SECTION -->
+
+<section class="thank-you reveal">
+
+    <div class="glass-card">
+
+        <h2>
+            Awaiting Your
+        </h2>
+
+        <h1 class="glow-text">
+            Gracious Presence
+        </h1>
+
+        <p>
+            We look forward to celebrating this special occasion with you.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h3>
+            Ear Piercing Ceremony
+        </h3>
+
+        <h2>
+            Joshnika Sasha
+        </h2>
+
+        <p>
+            05 July 2026 | Sunday
+        </p>
+
+        <p>
+            Munishwaran Swamy Temple
+        </p>
+
+        <div class="footer-line"></div>
+
+        <small>
+            Made with Love ❤️
+        </small>
+
+    </div>
+
+</footer>
+</div>
+<!-- CONFETTI CANVAS -->
+
+<canvas id="confettiCanvas"></canvas>
+
+<!-- FIREWORKS CANVAS -->
+
+<canvas id="fireworksCanvas"></canvas>
+<!-- SCRIPT FILE -->
+<script src="script.js"></script>
+
+</body>
+</html>
