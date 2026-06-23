@@ -3,9 +3,13 @@
 ========================================== */
 
 const textLines = [
-    "இன்று ஒரு சாதாரண நாள் அல்ல...",
-    "இது எங்கள் அன்புக்குரிய தோழியின் பிறந்தநாள்...",
-    "இன்று அவளின் புன்னகை இன்னும் அழகாக இருக்க வேண்டிய நாள்..."
+
+"சில நட்புகள் மறக்க முடியாதவை...",
+
+"சில மனிதர்கள் மனதில் நிலைத்திருப்பார்கள்...",
+
+"அப்படிப்பட்ட ஒரு தோழியின் நாள் இன்று ❤️"
+
 ];
 
 const typewriter = document.getElementById("typewriter");
@@ -79,25 +83,24 @@ function animateCounter(target) {
 }
 
 /* Change age here */
-animateCounter(24);
+animateCounter(19);
 
 
 /* ==========================================
    GIFT BOX SURPRISE
 ========================================== */
-
 const giftBox =
-    document.getElementById("giftBox");
+document.getElementById("giftBox");
 
 const surpriseMessage =
-    document.getElementById("surpriseMessage");
+document.getElementById("surpriseMessage");
 
 if (giftBox) {
 
     giftBox.addEventListener("click", () => {
 
         giftBox.style.transform =
-            "scale(1.2) rotate(15deg)";
+        "scale(1.2) rotate(15deg)";
 
         setTimeout(() => {
 
@@ -105,11 +108,11 @@ if (giftBox) {
 
         }, 500);
 
+        
+
     });
 
 }
-
-
 /* ==========================================
    BACKGROUND MUSIC
 ========================================== */
@@ -556,27 +559,7 @@ if (finalSection) {
 }
 
 
-/* ==========================================
-   PREMIUM SCROLL EFFECT
-========================================== */
 
-window.addEventListener("scroll", () => {
-
-    const scrollY =
-        window.scrollY;
-
-    document.querySelectorAll(
-        ".gallery-card"
-    ).forEach((card, index) => {
-
-        const speed =
-            (index + 1) * 0.03;
-
-        card.style.transform =
-            `translateY(${scrollY * speed}px)`;
-    });
-
-});
 
 
 /* ==========================================

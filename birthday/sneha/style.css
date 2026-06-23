@@ -141,21 +141,32 @@ body::before{
 
 .kolam-design{
 
-    width:120px;
+    position:absolute;
 
-    height:120px;
+    top:80px;
+    left:50%;
 
-    margin:0 auto 30px;
+    transform:translateX(-50%);
 
-    border-radius:50%;
+    width:250px;
+    height:250px;
 
-    border:2px solid rgba(255,215,0,.3);
+    opacity:.18;
 
-    box-shadow:
-    0 0 20px rgba(255,215,0,.3);
+    z-index:0;
+}
+
+.kolam-design img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    mix-blend-mode:screen;
 
     animation:
-    rotateKolam 20s linear infinite;
+    rotateKolam 40s linear infinite;
 }
 
 .opening-text{
@@ -254,9 +265,8 @@ body::before{
 
 .photo-glow{
 
-    width:300px;
-
-    height:300px;
+    width:320px;
+    height:320px;
 
     margin:auto;
 
@@ -271,19 +281,25 @@ body::before{
     #fff4b5,
     gold);
 
+    box-shadow:
+    0 0 40px gold;
+
     animation:
     pulseGlow 3s infinite;
+
+    overflow:hidden;
 }
 
 .main-photo{
 
     width:100%;
-
     height:100%;
 
     border-radius:50%;
 
     object-fit:cover;
+
+    object-position:center 20%;
 }
 
 .birthday-title{
@@ -514,38 +530,72 @@ body::before{
 /* ===================================
    YEARS OF SMILES
 =================================== */
-
 .counter-section{
+
     padding:100px 20px;
+
     text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
 }
 
 .counter-section h2{
-    color:gold;
+
+    color:#fff;
+
+    font-size:2rem;
+
     margin-bottom:30px;
+
+    text-align:center;
 }
 
 .counter-box{
+
     width:180px;
     height:180px;
 
-    margin:auto;
+    margin:0 auto 30px;
 
     border-radius:50%;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
     font-size:3rem;
+
     font-weight:bold;
 
     color:gold;
 
-    border:3px solid gold;
+    border:4px solid gold;
 
     box-shadow:
-    0 0 30px gold;
+    0 0 15px gold,
+    0 0 30px rgba(255,215,0,.5);
+}
+.counter-message{
+
+    max-width:600px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+    line-height:1.8;
+
+    color:#fff;
+
+    font-size:1.1rem;
 }
 
 #ageCounter{
@@ -786,33 +836,74 @@ body::before{
 
 @media(max-width:768px){
 
+    .hero{
+        padding:20px 15px;
+        min-height:90vh;
+    }
+
     .opening-text{
-        font-size:1.8rem;
+        font-size:2rem;
+        line-height:1.3;
+    }
+
+    .sub-text{
+        font-size:1rem;
     }
 
     .birthday-title{
-        font-size:1.5rem;
+        font-size:1.6rem;
+    }
+
+    .birthday-subtitle{
+        font-size:.95rem;
     }
 
     .photo-glow{
 
-        width:240px;
-        height:240px;
+        width:250px;
+        height:250px;
+    }
+
+    .section-title{
+        font-size:1.7rem;
+    }
+
+    .wish-card{
+        padding:20px;
+    }
+
+    /* Gallery */
+
+    .memory-gallery{
+        padding:70px 15px;
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:12px;
+    }
+
+    .gallery-card{
+
+        aspect-ratio:3/4;
+        border-radius:15px;
     }
 
     .gallery-card img{
 
-        height:280px;
+        width:100%;
+        height:100%;
+
+        object-fit:cover;
     }
 
-    .final-content h1{
+    /* Counter */
 
-        font-size:2rem;
-    }
-
-    .final-content p{
-
-        font-size:1rem;
+    .counter-section{
+        padding:80px 20px;
     }
 
     .counter-box{
@@ -821,6 +912,37 @@ body::before{
         height:140px;
 
         font-size:2.2rem;
+    }
+    .counter-section h2{
+
+        font-size:1.8rem;
+
+        margin-bottom:25px;
+    }
+
+    /* Gift */
+
+    .gift-box{
+        width:180px;
+    }
+
+    /* Final Section */
+
+    .final-content h1{
+
+        font-size:2rem;
+        line-height:1.3;
+    }
+
+    .final-content p{
+
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .final-content h2{
+
+        font-size:1.4rem;
     }
 
 }
