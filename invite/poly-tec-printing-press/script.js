@@ -836,3 +836,28 @@ sections.forEach(section=>{
 observer.observe(section);
 
 });
+
+/* ==========================================
+   MOBILE NAV ACTIVE PAGE
+========================================== */
+
+const currentPage =
+window.location.pathname.split("/").pop();
+
+document
+.querySelectorAll(".mobile-bottom-nav a")
+.forEach(link => {
+
+    const href =
+    link.getAttribute("href");
+
+    if(
+        href === currentPage ||
+        href === "./" + currentPage
+    ){
+
+        link.classList.add("active");
+
+    }
+
+});

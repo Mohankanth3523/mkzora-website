@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Kanchipuram Silk Saree",
+    "price": "₹8,999",
+    "description": "Premium bridal silk saree",
+    "image": "assets/images/products/sarees/bridal-saree-1.webp"
+  },
+  {
+    "id": 2,
+    "name": "Wedding Collection Saree",
+    "price": "₹9,999",
+    "description": "Luxury wedding saree",
+    "image": "assets/images/products/sarees/bridal-saree-1.webp"
+  }
+]

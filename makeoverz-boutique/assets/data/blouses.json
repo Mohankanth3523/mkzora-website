@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Aari Work Bridal Blouse",
+    "price": "₹2,999",
+    "description": "Premium bridal blouse with handcrafted Aari embroidery.",
+    "image": "assets/images/products/blouses/blouses1.webp"
+  },
+  {
+    "id": 2,
+    "name": "Maggam Work Designer Blouse",
+    "price": "₹3,499",
+    "description": "Luxury maggam work blouse for bridal collections.",
+    "image": "assets/images/products/blouses/blouses1.webp"
+  }
+]

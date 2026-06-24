@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Silk Dress Material",
+    "price": "₹2,999",
+    "description": "Luxury silk dress material for festive wear.",
+    "image": "assets/images/products/dress-materials/bridal-saree-1.webp"
+  },
+  {
+    "id": 2,
+    "name": "Designer Cotton Material",
+    "price": "₹1,499",
+    "description": "Comfortable designer cotton collection.",
+    "image": "assets/images/products/dress-materials/bridal-saree-1.webp"
+  }
+]

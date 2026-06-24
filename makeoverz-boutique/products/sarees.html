@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Saree Collection | Revathi Boutique
+
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+HEADER
+========================================== -->
+
+<header class="header">
+
+    <div class="container">
+
+        <div class="logo">
+
+            <a href="../index.html">
+
+                Revathi Boutique
+
+            </a>
+
+        </div>
+
+        <nav class="navbar">
+
+            <ul>
+
+                <li><a href="../index.html">Home</a></li>
+
+                <li><a href="../collections.html">Collections</a></li>
+
+                <li><a href="../gallery.html">Gallery</a></li>
+
+                <li><a href="../contact.html">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- ==========================================
+CATEGORY BANNER
+========================================== -->
+
+<section class="page-banner">
+
+    <div class="container">
+
+        <h1>
+
+            Saree Collection
+
+        </h1>
+
+        <p>
+
+            Premium Sarees For Every Occasion
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+SEARCH
+========================================== -->
+
+<section
+    style="
+    padding-bottom:40px;
+    background:white;">
+
+    <div class="container">
+
+        <input
+            type="text"
+            id="productSearch"
+            placeholder="Search Sarees..."
+            style="
+            width:100%;
+            padding:15px;
+            border:1px solid #ddd;
+            border-radius:10px;">
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+PRODUCT GRID
+========================================== -->
+
+<section class="products-section">
+
+    <div class="container">
+
+        <div
+            id="productsContainer"
+            class="products-grid">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+CTA
+========================================== -->
+
+<section class="contact-cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <h2>
+
+                Looking For Something Special?
+
+            </h2>
+
+            <p>
+
+                Contact us for custom orders
+                and bridal collections.
+
+            </p>
+
+            <a
+                href="https://wa.me/918838935124"
+                class="btn btn-gold">
+
+                WhatsApp Inquiry
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+FOOTER
+========================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>
+
+                    Revathi Makeoverz
+
+                </h3>
+
+                <p>
+
+                    Bridal Makeup Artist,
+                    Saree Draping,
+                    Hairstyling &
+                    Boutique Collections.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    Quick Links
+
+                </h4>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="services.html">Services</a></li>
+
+                    <li><a href="collections.html">Collections</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    Contact
+
+                </h4>
+
+                <p>
+
+                    +91 8838935124
+
+                </p>
+
+                <p>
+
+                    info@revathimakeoverz.com
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Revathi Makeoverz.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+<!-- ==========================================
+FLOATING BUTTONS
+========================================== -->
+<a
+href="https://www.instagram.com/mk_marketing.in"
+class="instagram-float"
+target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+<a
+href="https://wa.me/9188935124"
+class="whatsapp-float">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+<!-- ==========================================
+PAGE SCRIPT
+========================================== -->
+
+<script>
+
+let allProducts = [];
+
+fetch('../assets/data/sarees.json')
+
+.then(response => response.json())
+
+.then(products => {
+
+    allProducts = products;
+
+    renderProducts(products);
+
+});
+
+function renderProducts(products) {
+
+    const container =
+        document.getElementById(
+            'productsContainer'
+        );
+
+    container.innerHTML = '';
+
+    products.forEach(product => {
+
+        container.innerHTML += `
+
+        <div class="product-card">
+
+            <img
+                src="../${product.image}"
+                alt="${product.name}">
+
+            <div class="product-content">
+
+                <h3>
+
+                    ${product.name}
+
+                </h3>
+
+                <p>
+
+                    ${product.description}
+
+                </p>
+
+                <div class="product-price">
+
+                    ${product.price}
+
+                </div>
+
+                <a
+                    href="https://wa.me/918838935124?text=I'm interested in ${product.name}"
+                    class="btn btn-gold">
+
+                    Enquire Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+document
+.getElementById('productSearch')
+.addEventListener('keyup', function() {
+
+    const keyword =
+        this.value.toLowerCase();
+
+    const filtered =
+        allProducts.filter(product =>
+
+            product.name
+            .toLowerCase()
+            .includes(keyword)
+
+        );
+
+    renderProducts(filtered);
+
+});
+
+</script>
+
+
+<!-- MOBILE BOTTOM NAV -->
+
+<nav class="mobile-bottom-nav">
+
+    <a href="../index.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+    </a>
+
+    <a href="../about.html">
+        <i class="fa-solid fa-user"></i>
+        <span>About</span>
+    </a>
+
+    <a href="../collections.html" class="active">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Shop</span>
+    </a>
+
+    <a href="../services.html">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span>Services</span>
+    </a>
+
+    <a href="../gallery.html">
+        <i class="fa-solid fa-images"></i>
+        <span>Gallery</span>
+    </a>
+
+</nav>
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+</html>

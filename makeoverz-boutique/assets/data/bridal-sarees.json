@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Royal Kanchipuram Bridal Saree",
+    "price": "₹12,999",
+    "description": "Premium bridal silk saree with zari work.",
+    "image": "assets/images/products/bridal-sarees/bridal-saree-1.webp"
+  },
+  {
+    "id": 2,
+    "name": "Wedding Special Silk Saree",
+    "price": "₹15,999",
+    "description": "Luxury wedding collection saree.",
+    "image": "assets/images/products/bridal-sarees/bridal-saree-1.webp"
+  }
+]
