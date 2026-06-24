@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "category": "bridal-makeup",
+    "name": "Silver Bridal Package",
+    "price": "₹4,999",
+    "description": "Bridal Makeup + Basic Hairstyle + Saree Draping",
+    "image": "images/products/bridal-package-1.jpg"
+  },
+  {
+    "id": 2,
+    "category": "bridal-makeup",
+    "name": "Classic Bridal Package",
+    "price": "₹6,999",
+    "description": "HD Bridal Makeup + Hairstyle + Saree Draping",
+    "image": "images/products/bridal-package-2.jpg"
+  },
+  {
+    "id": 3,
+    "category": "bridal-makeup",
+    "name": "Gold Bridal Package",
+    "price": "₹8,999",
+    "description": "HD Makeup + Premium Hairstyle + Draping",
+    "image": "images/products/bridal-package-3.jpg"
+  },
+  {
+    "id": 4,
+    "category": "bridal-makeup",
+    "name": "Premium Gold Package",
+    "price": "₹10,999",
+    "description": "Luxury Bridal Makeup with Floral Hairstyle",
+    "image": "images/products/bridal-package-4.jpg"
+  },
+  {
+    "id": 5,
+    "category": "bridal-makeup",
+    "name": "Platinum Bridal Package",
+    "price": "₹14,999",
+    "description": "Complete Bridal Styling Package",
+    "image": "images/products/bridal-package-5.jpg"
+  },
+  {
+    "id": 6,
+    "category": "bridal-makeup",
+    "name": "Airbrush Bridal Package",
+    "price": "₹16,999",
+    "description": "Premium Airbrush Makeup with Hairstyle",
+    "image": "images/products/bridal-package-6.jpg"
+  },
+  {
+    "id": 7,
+    "category": "bridal-makeup",
+    "name": "Temple Bridal Package",
+    "price": "₹11,999",
+    "description": "Traditional South Indian Bridal Look",
+    "image": "images/products/bridal-package-7.jpg"
+  },
+  {
+    "id": 8,
+    "category": "bridal-makeup",
+    "name": "Reception Makeup Package",
+    "price": "₹7,999",
+    "description": "Reception HD Makeup and Hairstyle",
+    "image": "images/products/bridal-package-8.jpg"
+  },
+  {
+    "id": 9,
+    "category": "bridal-makeup",
+    "name": "Engagement Makeup Package",
+    "price": "₹5,999",
+    "description": "Elegant Engagement Makeup Styling",
+    "image": "images/products/bridal-package-9.jpg"
+  },
+  {
+    "id": 10,
+    "category": "bridal-makeup",
+    "name": "Royal Bridal Package",
+    "price": "₹19,999",
+    "description": "Luxury Bridal Transformation Experience",
+    "image": "images/products/bridal-package-10.jpg"
+  },
+{
+  "id": 11,
+  "category": "saree-draping",
+  "name": "Traditional Saree Draping",
+  "price": "₹799",
+  "description": "Classic traditional saree draping for family functions and ceremonies.",
+  "image": "images/products/draping-1.webp"
+},
+{
+  "id": 12,
+  "category": "saree-draping",
+  "name": "Bridal Saree Draping",
+  "price": "₹1,499",
+  "description": "Professional bridal saree draping with perfect pleats and styling.",
+  "image": "images/products/draping-2.webp"
+},
+{
+  "id": 13,
+  "category": "saree-draping",
+  "name": "Reception Saree Draping",
+  "price": "₹1,299",
+  "description": "Elegant reception saree draping for a premium bridal appearance.",
+  "image": "images/products/draping-3.webp"
+},
+{
+  "id": 14,
+  "category": "saree-draping",
+  "name": "Temple Style Draping",
+  "price": "₹1,199",
+  "description": "Traditional South Indian temple style saree draping.",
+  "image": "images/products/draping-4.webp"
+},
+{
+  "id": 15,
+  "category": "saree-draping",
+  "name": "Modern Saree Draping",
+  "price": "₹999",
+  "description": "Contemporary draping style suitable for receptions and events.",
+  "image": "images/products/draping-5.webp"
+},
+{
+  "id": 16,
+  "category": "saree-draping",
+  "name": "Party Wear Saree Draping",
+  "price": "₹899",
+  "description": "Stylish saree draping designed for parties and celebrations.",
+  "image": "images/products/draping-6.webp"
+},
+{
+  "id": 17,
+  "category": "saree-draping",
+  "name": "Muhurtham Saree Draping",
+  "price": "₹1,599",
+  "description": "Special bridal draping service for wedding muhurtham ceremonies.",
+  "image": "images/products/draping-7.webp"
+},
+{
+  "id": 18,
+  "category": "saree-draping",
+  "name": "Engagement Saree Draping",
+  "price": "₹999",
+  "description": "Elegant saree draping service for engagement events.",
+  "image": "images/products/draping-8.webp"
+},
+{
+  "id": 19,
+  "category": "saree-draping",
+  "name": "Designer Saree Draping",
+  "price": "₹1,799",
+  "description": "Premium designer draping style for luxury bridal appearances.",
+  "image": "images/products/draping-9.webp"
+},
+{
+  "id": 20,
+  "category": "saree-draping",
+  "name": "VIP Bridal Draping Service",
+  "price": "₹2,499",
+  "description": "Luxury bridal draping with complete styling assistance.",
+  "image": "images/products/draping-10.webp"
+},
+{
+  "id": 21,
+  "category": "bridal-saree",
+  "name": "Kanchipuram Silk Bridal Saree",
+  "price": "₹8,999",
+  "description": "Premium Kanchipuram silk saree with traditional zari weaving.",
+  "image": "images/products/saree-1.webp"
+},
+{
+  "id": 22,
+  "category": "bridal-saree",
+  "name": "Royal Red Wedding Saree",
+  "price": "₹9,499",
+  "description": "Elegant bridal red saree designed for wedding ceremonies.",
+  "image": "images/products/saree-2.webp"
+},
+{
+  "id": 23,
+  "category": "bridal-saree",
+  "name": "Golden Zari Bridal Saree",
+  "price": "₹10,999",
+  "description": "Luxury bridal saree with rich golden zari work.",
+  "image": "images/products/saree-3.webp"
+},
+{
+  "id": 24,
+  "category": "bridal-saree",
+  "name": "Temple Border Silk Saree",
+  "price": "₹7,999",
+  "description": "Traditional temple border silk saree for bridal occasions.",
+  "image": "images/products/saree-4.webp"
+},
+{
+  "id": 25,
+  "category": "bridal-saree",
+  "name": "Premium Reception Saree",
+  "price": "₹6,999",
+  "description": "Stylish reception saree with contemporary bridal design.",
+  "image": "images/products/saree-5.webp"
+},
+{
+  "id": 26,
+  "category": "bridal-saree",
+  "name": "Designer Wedding Silk Saree",
+  "price": "₹12,499",
+  "description": "Exclusive designer silk saree crafted for modern brides.",
+  "image": "images/products/saree-6.webp"
+},
+{
+  "id": 27,
+  "category": "bridal-saree",
+  "name": "Maroon Bridal Silk Saree",
+  "price": "₹8,499",
+  "description": "Rich maroon silk saree with elegant wedding finish.",
+  "image": "images/products/saree-7.webp"
+},
+{
+  "id": 28,
+  "category": "bridal-saree",
+  "name": "Peacock Design Bridal Saree",
+  "price": "₹11,999",
+  "description": "Traditional bridal saree featuring premium peacock motifs.",
+  "image": "images/products/saree-8.webp"
+},
+{
+  "id": 29,
+  "category": "bridal-saree",
+  "name": "Pure Zari Wedding Saree",
+  "price": "₹14,999",
+  "description": "Luxury bridal saree woven with pure zari craftsmanship.",
+  "image": "images/products/saree-9.webp"
+},
+{
+  "id": 30,
+  "category": "bridal-saree",
+  "name": "Grand Bridal Collection Saree",
+  "price": "₹15,999",
+  "description": "Premium bridal collection saree for grand wedding celebrations.",
+  "image": "images/products/saree-10.webp"
+},
+{
+  "id": 31,
+  "category": "blouse",
+  "name": "Aari Work Designer Blouse",
+  "price": "₹1,999",
+  "description": "Premium handcrafted Aari work blouse with elegant embroidery.",
+  "image": "images/products/blouse-1.webp"
+},
+{
+  "id": 32,
+  "category": "blouse",
+  "name": "Bridal Stone Work Blouse",
+  "price": "₹2,499",
+  "description": "Luxury bridal blouse with premium stone embellishments.",
+  "image": "images/products/blouse-2.webp"
+},
+{
+  "id": 33,
+  "category": "blouse",
+  "name": "Maggam Work Blouse",
+  "price": "₹2,999",
+  "description": "Traditional maggam work blouse crafted for bridal occasions.",
+  "image": "images/products/blouse-3.webp"
+},
+{
+  "id": 34,
+  "category": "blouse",
+  "name": "Princess Cut Bridal Blouse",
+  "price": "₹1,799",
+  "description": "Elegant princess-cut blouse with modern bridal styling.",
+  "image": "images/products/blouse-4.webp"
+},
+{
+  "id": 35,
+  "category": "blouse",
+  "name": "Designer Puff Sleeve Blouse",
+  "price": "₹1,599",
+  "description": "Stylish puff sleeve blouse suitable for bridal and reception wear.",
+  "image": "images/products/blouse-5.webp"
+},
+{
+  "id": 36,
+  "category": "blouse",
+  "name": "Mirror Work Designer Blouse",
+  "price": "₹2,299",
+  "description": "Premium mirror work blouse for festive and bridal looks.",
+  "image": "images/products/blouse-6.webp"
+},
+{
+  "id": 37,
+  "category": "blouse",
+  "name": "Velvet Bridal Blouse",
+  "price": "₹2,799",
+  "description": "Rich velvet blouse designed for luxury bridal styling.",
+  "image": "images/products/blouse-7.webp"
+},
+{
+  "id": 38,
+  "category": "blouse",
+  "name": "Cutwork Designer Blouse",
+  "price": "₹2,199",
+  "description": "Modern cutwork blouse with elegant handcrafted detailing.",
+  "image": "images/products/blouse-8.webp"
+},
+{
+  "id": 39,
+  "category": "blouse",
+  "name": "Wedding Special Blouse",
+  "price": "₹3,499",
+  "description": "Exclusive bridal blouse designed for wedding ceremonies.",
+  "image": "images/products/blouse-9.webp"
+},
+{
+  "id": 40,
+  "category": "blouse",
+  "name": "Luxury Boutique Blouse",
+  "price": "₹3,999",
+  "description": "Premium boutique collection blouse with designer finishing.",
+  "image": "images/products/blouse-10.webp"
+},
+{
+  "id": 41,
+  "category": "dress-material",
+  "name": "Silk Cotton Dress Material",
+  "price": "₹1,299",
+  "description": "Premium silk cotton dress material suitable for festive wear.",
+  "image": "images/products/dress-material-1.webp"
+},
+{
+  "id": 42,
+  "category": "dress-material",
+  "name": "Designer Salwar Material",
+  "price": "₹1,499",
+  "description": "Elegant designer salwar material with modern patterns.",
+  "image": "images/products/dress-material-2.webp"
+},
+{
+  "id": 43,
+  "category": "dress-material",
+  "name": "Party Wear Dress Material",
+  "price": "₹1,799",
+  "description": "Premium party wear dress material for special occasions.",
+  "image": "images/products/dress-material-3.webp"
+},
+{
+  "id": 44,
+  "category": "dress-material",
+  "name": "Embroidery Dress Material",
+  "price": "₹2,299",
+  "description": "Beautiful embroidery work dress material with elegant finish.",
+  "image": "images/products/dress-material-4.webp"
+},
+{
+  "id": 45,
+  "category": "dress-material",
+  "name": "Cotton Designer Material",
+  "price": "₹999",
+  "description": "Comfortable cotton designer dress material for daily wear.",
+  "image": "images/products/dress-material-5.webp"
+},
+{
+  "id": 46,
+  "category": "dress-material",
+  "name": "Premium Georgette Material",
+  "price": "₹1,899",
+  "description": "Stylish georgette dress material for trendy outfits.",
+  "image": "images/products/dress-material-6.webp"
+},
+{
+  "id": 47,
+  "category": "dress-material",
+  "name": "Wedding Collection Material",
+  "price": "₹2,799",
+  "description": "Luxury wedding collection dress material with rich design.",
+  "image": "images/products/dress-material-7.webp"
+},
+{
+  "id": 48,
+  "category": "dress-material",
+  "name": "Boutique Exclusive Material",
+  "price": "₹3,299",
+  "description": "Exclusive boutique dress material for premium custom stitching.",
+  "image": "images/products/dress-material-8.webp"
+},
+{
+  "id": 49,
+  "category": "dress-material",
+  "name": "Bridal Special Dress Material",
+  "price": "₹3,999",
+  "description": "Premium bridal dress material designed for special occasions.",
+  "image": "images/products/dress-material-9.webp"
+},
+{
+  "id": 50,
+  "category": "dress-material",
+  "name": "Luxury Designer Dress Material",
+  "price": "₹4,499",
+  "description": "High-end luxury designer dress material from boutique collection.",
+  "image": "images/products/dress-material-10.webp"
+}
+]
