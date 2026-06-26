@@ -1,0 +1,2580 @@
+/*==================================================
+MKZORA Luxury Wedding Reception Invitation
+Style.css Part 3.1
+==================================================*/
+
+/*=========================
+RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+    background:#120904;
+    color:#fff;
+    font-family:'Poppins',sans-serif;
+}
+
+/*=========================
+VARIABLES
+=========================*/
+
+:root{
+
+    --gold:#D4AF37;
+    --gold-light:#f7d774;
+    --rose:#c89b6f;
+
+    --bg:#120904;
+    --bg2:#1b1009;
+    --card:rgba(255,255,255,.06);
+
+    --white:#ffffff;
+
+    --shadow:0 15px 40px rgba(0,0,0,.45);
+
+    --radius:20px;
+
+}
+
+/*=========================
+SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#160d07;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(var(--gold),#8e6b18);
+    border-radius:20px;
+}
+
+/*=========================
+SELECTION
+=========================*/
+
+::selection{
+    background:var(--gold);
+    color:#000;
+}
+
+/*=========================
+IMAGES
+=========================*/
+
+img{
+    width:100%;
+    display:block;
+}
+
+/*=========================
+LINK
+=========================*/
+
+a{
+    text-decoration:none;
+}
+
+/*=========================
+SECTION
+=========================*/
+
+section{
+
+    padding:70px 18px;
+
+    position:relative;
+
+}
+
+/*=========================
+SECTION TITLE
+=========================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.section-title h2{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:32px;
+
+    letter-spacing:1px;
+
+}
+
+.section-title p{
+
+    color:#ddd;
+
+    margin-top:10px;
+
+    font-size:15px;
+
+}
+
+/*=========================
+LOADER
+=========================*/
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#090401;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.loader-center{
+
+    text-align:center;
+
+}
+
+.gold-ring{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    border:4px solid rgba(255,255,255,.08);
+
+    border-top:4px solid var(--gold);
+
+    margin:auto;
+
+    animation:rotate 1s linear infinite;
+
+}
+
+.loader-center h1{
+
+    margin-top:25px;
+
+    color:var(--gold);
+
+    font-family:'Cinzel';
+
+    letter-spacing:5px;
+
+}
+
+.loader-center p{
+
+    margin-top:10px;
+
+    color:#ddd;
+
+}
+
+.loading-line{
+
+    width:180px;
+
+    height:5px;
+
+    background:#2d2d2d;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-top:20px;
+
+}
+
+.loading-line span{
+
+    display:block;
+
+    width:40%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,var(--gold),#fff,var(--gold));
+
+    animation:loading 2s infinite;
+
+}
+
+/*=========================
+MUSIC BUTTON
+=========================*/
+
+#musicBtn{
+
+    position:fixed;
+
+    right:18px;
+
+    bottom:20px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(145deg,var(--gold),#8d6516);
+
+    color:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    box-shadow:0 10px 30px rgba(212,175,55,.35);
+
+}
+
+/*=========================
+PROGRESS BAR
+=========================*/
+
+#progressBar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    height:4px;
+
+    width:0;
+
+    background:linear-gradient(90deg,var(--gold),#fff);
+
+    z-index:9999;
+
+}
+
+/*=========================
+PARTICLES
+=========================*/
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+/*=========================
+HERO
+=========================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:25px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.55),
+
+    rgba(0,0,0,.65)),
+
+    url("../images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle,
+
+    transparent,
+
+    rgba(0,0,0,.55));
+
+}
+
+.moon{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    top:70px;
+
+    right:-40px;
+
+    background:rgba(255,233,170,.12);
+
+    box-shadow:
+
+    0 0 100px rgba(255,223,120,.35);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero h3{
+
+    color:var(--gold-light);
+
+    font-size:20px;
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+
+}
+
+.hero h1{
+
+    font-family:'Cinzel';
+
+    font-size:52px;
+
+    line-height:1.2;
+
+    color:#fff;
+
+}
+
+.hero h1 span{
+
+    display:block;
+
+    color:var(--gold);
+
+    margin:10px 0;
+
+    font-size:36px;
+
+}
+
+.hero p{
+
+    margin-top:25px;
+
+    color:#eee;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+.hero-date{
+
+    margin-top:30px;
+
+    color:var(--gold);
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.hero-date i{
+
+    margin-right:10px;
+
+}
+
+.scroll-down{
+
+    position:absolute;
+
+    bottom:40px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.scroll-down span{
+
+    width:28px;
+
+    height:45px;
+
+    display:block;
+
+    border:2px solid #fff;
+
+    border-radius:20px;
+
+    position:relative;
+
+}
+
+.scroll-down span::before{
+
+    content:"";
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    top:8px;
+
+    animation:scroll 1.5s infinite;
+
+}
+
+/*=========================
+BUTTON
+=========================*/
+
+.gold-btn{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:15px 36px;
+
+    border-radius:50px;
+
+    background:linear-gradient(145deg,var(--gold),#8f6815);
+
+    color:#fff;
+
+    font-weight:600;
+
+    box-shadow:0 15px 30px rgba(212,175,55,.3);
+
+    transition:.35s;
+
+}
+
+.gold-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 40px rgba(212,175,55,.45);
+
+}
+
+/*=========================
+COUPLE
+=========================*/
+
+.couple-card{
+
+    max-width:500px;
+
+    margin:auto;
+
+    padding:22px;
+
+    border-radius:25px;
+
+    background:var(--card);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:var(--shadow);
+
+}
+
+.couple-image{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+.couple-image img{
+
+    transition:.6s;
+
+}
+
+.couple-card:hover img{
+
+    transform:scale(1.06);
+
+}
+
+.couple-content{
+
+    text-align:center;
+
+    padding-top:25px;
+
+}
+
+.couple-content h2{
+
+    font-family:'Cinzel';
+
+    color:var(--gold);
+
+    font-size:32px;
+
+}
+
+.couple-content span{
+
+    display:block;
+
+    margin:12px 0;
+
+}
+
+.couple-content p{
+
+    margin-top:20px;
+
+    line-height:1.8;
+
+    color:#ddd;
+
+}
+
+/*=========================
+INVITATION CARD
+=========================*/
+
+.invite-card{
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:40px 25px;
+
+    border-radius:25px;
+
+    background:linear-gradient(180deg,
+
+    rgba(255,255,255,.07),
+
+    rgba(255,255,255,.03));
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(212,175,55,.25);
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.invite-card h5{
+
+    color:var(--gold);
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+
+}
+
+.invite-card h2{
+
+    font-family:'Cinzel';
+
+    font-size:34px;
+
+    color:#fff;
+
+}
+
+.invite-card h1{
+
+    margin-top:30px;
+
+    color:var(--gold);
+
+    font-family:'Cinzel';
+
+    font-size:44px;
+
+    line-height:1.4;
+
+}
+
+.invite-card h1 span{
+
+    display:block;
+
+    font-size:32px;
+
+    margin:12px 0;
+
+}
+
+.invite-card p{
+
+    color:#ddd;
+
+    line-height:1.9;
+
+    margin-top:18px;
+
+}
+
+.divider{
+
+    width:110px;
+
+    height:3px;
+
+    background:linear-gradient(90deg,
+
+    transparent,
+
+    var(--gold),
+
+    transparent);
+
+    margin:30px auto;
+
+}
+/*==================================================
+STYLE.CSS PART 3.2
+Countdown • Timeline • Venue • Details
+Family • Blessings • Wishes • Share • Footer
+==================================================*/
+
+/*=========================
+COUNTDOWN
+=========================*/
+
+.countdown-section{
+    text-align:center;
+    background:linear-gradient(180deg,#140904,#1b1009);
+}
+
+.countdown-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    max-width:500px;
+    margin:40px auto 0;
+}
+
+.time-box{
+    padding:28px 15px;
+    border-radius:22px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(212,175,55,.15);
+    box-shadow:var(--shadow);
+    transition:.35s;
+}
+
+.time-box:hover{
+    transform:translateY(-8px);
+    border-color:var(--gold);
+}
+
+.time-box h1{
+    font-size:48px;
+    color:var(--gold);
+    font-family:'Cinzel',serif;
+}
+
+.time-box span{
+    display:block;
+    margin-top:10px;
+    color:#ddd;
+    font-size:15px;
+    letter-spacing:1px;
+}
+
+/*=========================
+TIMELINE
+=========================*/
+
+.timeline{
+    position:relative;
+    max-width:600px;
+    margin:auto;
+    padding-left:22px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:15px;
+    top:0;
+    width:3px;
+    height:100%;
+    background:linear-gradient(var(--gold),transparent);
+}
+
+.timeline-item{
+    position:relative;
+    margin-bottom:35px;
+    padding:22px 22px 22px 60px;
+    border-radius:20px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(212,175,55,.12);
+    transition:.35s;
+}
+
+.timeline-item:hover{
+    transform:translateX(8px);
+    border-color:var(--gold);
+}
+
+.timeline-item i{
+    position:absolute;
+    left:-7px;
+    top:25px;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:linear-gradient(var(--gold),#8d6718);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+}
+
+.timeline-item h3{
+    color:var(--gold);
+    margin-bottom:8px;
+}
+
+.timeline-item p{
+    color:#ddd;
+}
+
+/*=========================
+VENUE
+=========================*/
+
+.venue-card{
+    max-width:550px;
+    margin:auto;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:25px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(212,175,55,.18);
+    box-shadow:var(--shadow);
+}
+
+.venue-card i{
+    font-size:55px;
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+.venue-card h2{
+    font-family:'Cinzel';
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+.venue-card p{
+    line-height:1.8;
+    color:#ddd;
+}
+
+.venue-card h3{
+    margin-top:25px;
+    line-height:1.8;
+    color:#fff;
+}
+
+/*==================================================
+LUXURY MAP
+==================================================*/
+/*==================================================
+LUXURY MAP
+==================================================*/
+
+.map{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    margin:35px auto;
+
+    border:2px solid rgba(212,175,55,.25);
+
+    background:#1b110b;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.45),
+        0 0 30px rgba(212,175,55,.12);
+
+    transition:.4s ease;
+
+}
+
+.map:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.55),
+        0 0 40px rgba(212,175,55,.25);
+
+}
+
+.map iframe{
+
+    width:100%;
+
+    height:350px;
+
+    border:0;
+
+    display:block;
+
+    transition:.4s;
+
+    filter:
+        grayscale(8%)
+        contrast(1.05)
+        brightness(.96)
+        saturate(1.1);
+
+}
+
+/* Gold Border */
+
+.map::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:24px;
+
+    padding:2px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(212,175,55,.8),
+        rgba(255,215,0,.2),
+        rgba(212,175,55,.8)
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+/* Gold Shine */
+
+.map::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-60%;
+
+    width:45%;
+
+    height:300%;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.15),
+
+    transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    animation:mapShine 8s infinite;
+
+}
+
+@keyframes mapShine{
+
+    100%{
+
+        left:180%;
+
+    }
+
+}
+
+/*========================================
+Buttons
+========================================*/
+
+.map-buttons{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.map-buttons .gold-btn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+/*========================================
+Mobile
+========================================*/
+
+@media(max-width:768px){
+
+    .map{
+
+        border-radius:18px;
+
+    }
+
+    .map iframe{
+
+        height:260px;
+
+    }
+
+    .map-buttons{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .map-buttons .gold-btn{
+
+        width:100%;
+
+    }
+
+}
+/*=========================
+DETAILS
+=========================*/
+
+.details-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.detail-card{
+    text-align:center;
+    padding:25px 15px;
+    border-radius:20px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(212,175,55,.12);
+    transition:.35s;
+}
+
+.detail-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--gold);
+}
+
+.detail-card i{
+    font-size:38px;
+    color:var(--gold);
+    margin-bottom:18px;
+}
+
+.detail-card h3{
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.detail-card p{
+    color:#ddd;
+}
+
+/*=========================
+FAMILY
+=========================*/
+
+.family-grid{
+    display:grid;
+    gap:20px;
+}
+
+.family-card{
+    padding:28px;
+    text-align:center;
+    border-radius:22px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(212,175,55,.15);
+    transition:.35s;
+}
+
+.family-card:hover{
+    transform:translateY(-8px);
+}
+
+.family-card h3{
+    color:var(--gold);
+    margin-bottom:18px;
+    font-family:'Cinzel';
+}
+
+.family-card p{
+    color:#ddd;
+    margin:8px 0;
+}
+
+/*=========================
+BLESSINGS
+=========================*/
+
+.blessing-box{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    padding:45px 25px;
+    border-radius:25px;
+    background:linear-gradient(180deg,
+        rgba(212,175,55,.10),
+        rgba(255,255,255,.04));
+    border:1px solid rgba(212,175,55,.25);
+}
+
+.blessing-box i{
+    font-size:60px;
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+.blessing-box h2{
+    font-family:'Cinzel';
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+.blessing-box p{
+    line-height:1.9;
+    color:#eee;
+}
+
+/*=========================
+WISHES
+=========================*/
+
+#wishForm{
+    max-width:650px;
+    margin:40px auto;
+}
+
+#wishForm input,
+#wishForm textarea{
+    width:100%;
+    padding:18px;
+    margin-bottom:18px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    background:rgba(255,255,255,.06);
+    color:#fff;
+    font-size:15px;
+}
+
+#wishForm textarea{
+    resize:none;
+}
+
+#wishForm input::placeholder,
+#wishForm textarea::placeholder{
+    color:#bbb;
+}
+
+#wishList{
+    max-width:650px;
+    margin:auto;
+}
+
+/*=========================
+SHARE
+=========================*/
+
+.share-icons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.share-icons a{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(var(--gold),#8d6517);
+    color:#fff;
+    font-size:24px;
+    transition:.35s;
+}
+
+.share-icons a:hover{
+    transform:translateY(-8px) rotate(10deg);
+}
+
+/*=========================
+FOOTER
+=========================*/
+
+footer{
+    padding:70px 20px 40px;
+    text-align:center;
+    background:#0b0502;
+}
+
+footer h2{
+    font-family:'Cinzel';
+    color:var(--gold);
+    margin-bottom:20px;
+    font-size:34px;
+}
+
+footer p{
+    max-width:600px;
+    margin:auto;
+    line-height:1.9;
+    color:#ddd;
+}
+
+footer h3{
+    margin-top:25px;
+    color:#fff;
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+}
+
+.footer-bottom{
+    margin-top:35px;
+    padding-top:25px;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#999;
+    font-size:14px;
+}
+
+.footer-bottom strong{
+    color:var(--gold);
+}
+
+/*=========================
+MOBILE
+=========================*/
+
+@media (max-width:480px){
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .invite-card h1{
+        font-size:34px;
+    }
+
+    .invite-card h2{
+        font-size:28px;
+    }
+
+    .countdown-container{
+        gap:15px;
+    }
+
+    .time-box h1{
+        font-size:38px;
+    }
+
+    .details-grid{
+        grid-template-columns:1fr;
+    }
+
+    .timeline-item{
+        padding:20px 18px 20px 55px;
+    }
+
+    .share-icons a{
+        width:58px;
+        height:58px;
+    }
+
+}
+/*==================================================
+MKZORA Luxury Wedding Invitation
+STYLE.CSS PART 3.3
+Premium Effects + Animations + Responsive
+==================================================*/
+
+/*=========================
+PREMIUM GLASS EFFECT
+=========================*/
+
+.glass{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.12);
+}
+
+/*=========================
+GOLD GLOW
+=========================*/
+
+.gold-glow{
+
+    box-shadow:
+    0 0 15px rgba(212,175,55,.25),
+    0 0 35px rgba(212,175,55,.20),
+    0 0 60px rgba(212,175,55,.15);
+
+}
+
+/*=========================
+CARD SHINE
+=========================*/
+
+.invite-card,
+.couple-card,
+.detail-card,
+.family-card,
+.time-box,
+.venue-card{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+.invite-card::before,
+.couple-card::before,
+.detail-card::before,
+.family-card::before,
+.time-box::before,
+.venue-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-60%;
+
+    width:60%;
+
+    height:300%;
+
+    background:
+
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.20),
+    transparent);
+
+    transform:rotate(25deg);
+
+    transition:1.2s;
+
+}
+
+.invite-card:hover::before,
+.couple-card:hover::before,
+.detail-card:hover::before,
+.family-card:hover::before,
+.time-box:hover::before,
+.venue-card:hover::before{
+
+    left:150%;
+
+}
+
+/*=========================
+SECTION GLOW
+=========================*/
+
+section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(212,175,55,.08),
+    transparent);
+
+    filter:blur(40px);
+
+    top:20px;
+
+    right:-80px;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+BUTTON EFFECT
+=========================*/
+
+.gold-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.gold-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:35px;
+
+    height:200%;
+
+    background:
+
+    rgba(255,255,255,.35);
+
+    top:-50%;
+
+    left:-60px;
+
+    transform:rotate(25deg);
+
+}
+
+.gold-btn:hover::before{
+
+    animation:buttonshine .8s linear;
+
+}
+
+.gold-btn:hover{
+
+    transform:translateY(-6px) scale(1.03);
+
+}
+
+/*=========================
+FLOATING PARTICLES
+=========================*/
+
+#particles{
+
+    background-image:
+
+    radial-gradient(circle at 20% 20%,
+    rgba(212,175,55,.20) 2px,
+    transparent 2px),
+
+    radial-gradient(circle at 70% 40%,
+    rgba(255,255,255,.15) 2px,
+    transparent 2px),
+
+    radial-gradient(circle at 40% 70%,
+    rgba(212,175,55,.18) 1px,
+    transparent 1px);
+
+    background-size:
+
+    180px 180px;
+
+    animation:
+
+    particleMove 20s linear infinite;
+
+}
+
+/*=========================
+HERO TEXT
+=========================*/
+
+.hero h1{
+
+    animation:
+
+    fadeUp 1.5s ease;
+
+}
+
+.hero p{
+
+    animation:
+
+    fadeUp 2s ease;
+
+}
+
+.hero-date{
+
+    animation:
+
+    fadeUp 2.5s ease;
+
+}
+
+/*=========================
+MOON GLOW
+=========================*/
+
+.moon{
+
+    animation:
+
+    moonGlow 5s ease-in-out infinite;
+
+}
+
+/*=========================
+COUPLE IMAGE
+=========================*/
+
+.couple-image{
+
+    animation:
+
+    floatImage 5s ease-in-out infinite;
+
+}
+
+/*=========================
+ICONS
+=========================*/
+
+.share-icons a:hover{
+
+    box-shadow:
+
+    0 10px 30px rgba(212,175,55,.45);
+
+}
+
+.detail-card:hover i{
+
+    transform:scale(1.2);
+
+}
+
+.timeline-item:hover i{
+
+    transform:rotate(360deg);
+
+    transition:.8s;
+
+}
+
+/*=========================
+ANIMATIONS
+=========================*/
+
+@keyframes rotate{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes loading{
+
+    0%{
+
+        transform:translateX(-180px);
+
+    }
+
+    100%{
+
+        transform:translateX(220px);
+
+    }
+
+}
+
+@keyframes scroll{
+
+    0%{
+
+        opacity:0;
+
+        top:8px;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        top:25px;
+
+    }
+
+}
+
+@keyframes moonGlow{
+
+    0%,100%{
+
+        transform:scale(1);
+
+        box-shadow:
+
+        0 0 80px rgba(212,175,55,.18);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+        box-shadow:
+
+        0 0 140px rgba(212,175,55,.35);
+
+    }
+
+}
+
+@keyframes floatImage{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes buttonshine{
+
+    from{
+
+        left:-60px;
+
+    }
+
+    to{
+
+        left:150%;
+
+    }
+
+}
+
+@keyframes particleMove{
+
+    from{
+
+        background-position:0 0;
+
+    }
+
+    to{
+
+        background-position:0 500px;
+
+    }
+
+}
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media (max-width:430px){
+
+    section{
+
+        padding:60px 16px;
+
+    }
+
+    .hero{
+
+        min-height:100svh;
+
+        padding:20px;
+
+    }
+
+    .hero h1{
+
+        font-size:38px;
+
+        line-height:1.25;
+
+    }
+
+    .hero h3{
+
+        font-size:18px;
+
+    }
+
+    .hero p{
+
+        font-size:15px;
+
+    }
+
+    .hero-date{
+
+        font-size:16px;
+
+    }
+
+    .couple-content h2{
+
+        font-size:28px;
+
+    }
+
+    .invite-card{
+
+        padding:30px 18px;
+
+    }
+
+    .invite-card h1{
+
+        font-size:32px;
+
+    }
+
+    .invite-card h2{
+
+        font-size:26px;
+
+    }
+
+    .section-title h2{
+
+        font-size:28px;
+
+    }
+
+    .time-box{
+
+        padding:22px 10px;
+
+    }
+
+    .time-box h1{
+
+        font-size:34px;
+
+    }
+
+}
+
+@media (min-width:768px){
+
+    .countdown-container{
+
+        grid-template-columns:repeat(4,1fr);
+
+        max-width:900px;
+
+    }
+
+    .family-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .details-grid{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
+}
+/*====================================
+GOLD PARTICLES
+====================================*/
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+.gold-particle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    #fff7d4,
+    #d4af37);
+
+    box-shadow:
+    0 0 10px rgba(212,175,55,.8),
+    0 0 20px rgba(212,175,55,.4);
+
+    animation:
+    floatGold linear infinite;
+
+}
+
+@keyframes floatGold{
+
+    0%{
+
+        transform:
+        translateY(120vh)
+        scale(.5);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(-120vh)
+        scale(1.3);
+
+    }
+
+}
+/*=========================================
+ROSE PETALS
+=========================================*/
+
+.rose-petal{
+
+    position:fixed;
+
+    top:-50px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    box-shadow:
+
+    0 4px 12px rgba(255,120,160,.35);
+
+    animation:
+
+    petalFall linear forwards;
+
+}
+
+@keyframes petalFall{
+
+    0%{
+
+        transform:
+
+        translate3d(0,-40px,0)
+
+        rotate(0deg);
+
+    }
+
+    25%{
+
+        transform:
+
+        translate3d(35px,25vh,0)
+
+        rotate(90deg);
+
+    }
+
+    50%{
+
+        transform:
+
+        translate3d(-30px,50vh,0)
+
+        rotate(180deg);
+
+    }
+
+    75%{
+
+        transform:
+
+        translate3d(40px,75vh,0)
+
+        rotate(270deg);
+
+    }
+
+    100%{
+
+        transform:
+
+        translate3d(-20px,110vh,0)
+
+        rotate(360deg);
+
+    }
+
+}
+/*=========================================
+FIREFLIES
+=========================================*/
+
+.firefly{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    z-index:3;
+
+    background:
+
+    radial-gradient(circle,
+    #fffef4,
+    #ffe27a,
+    #d4af37);
+
+    box-shadow:
+
+    0 0 8px #ffe27a,
+
+    0 0 16px #d4af37,
+
+    0 0 28px rgba(212,175,55,.7);
+
+    animation:
+
+    fireflyBlink 2.5s infinite ease-in-out;
+
+}
+
+@keyframes fireflyBlink{
+
+    0%{
+
+        opacity:.15;
+
+    }
+
+    25%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:.4;
+
+    }
+
+    75%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.2;
+
+    }
+
+}
+/*=====================================
+SHARE TOAST
+=====================================*/
+
+.share-toast{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:35px;
+
+    transform:translateX(-50%) translateY(30px);
+
+    background:#1d1d1d;
+
+    color:#fff;
+
+    padding:14px 22px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(212,175,55,.35);
+
+    box-shadow:
+
+    0 12px 35px rgba(0,0,0,.4);
+
+    opacity:0;
+
+    transition:.35s;
+
+    z-index:99999;
+
+    font-size:15px;
+
+}
+
+.share-toast.show{
+
+    opacity:1;
+
+    transform:translateX(-50%) translateY(0);
+
+}
+/*=================================
+WISHES
+=================================*/
+
+#wishList{
+
+    margin-top:40px;
+
+}
+
+.wish-card{
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(212,175,55,.18);
+
+    border-radius:20px;
+
+    padding:22px;
+
+    margin-bottom:20px;
+
+    transition:.4s;
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.wish-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.wish-card.new{
+
+    animation:popWish .6s ease;
+
+}
+
+.wish-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:15px;
+
+}
+
+.wish-avatar{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+
+    135deg,
+
+    #D4AF37,
+
+    #FFD76A);
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+
+    font-size:22px;
+
+}
+
+.wish-header h3{
+
+    color:#fff;
+
+    margin-bottom:4px;
+
+}
+
+.wish-header span{
+
+    font-size:13px;
+
+    color:#bbb;
+
+}
+
+.wish-card p{
+
+    color:#eee;
+
+    line-height:1.8;
+
+}
+
+@keyframes popWish{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        scale(1);
+
+    }
+
+}
+/*==============================
+Gallery
+==============================*/
+/*==================================================
+Luxury Featured Gallery
+==================================================*/
+
+.gallery{
+
+  
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:80px 20px;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:15px;
+
+}
+
+.gallery-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+.gallery-item.large{
+
+    grid-row:span 2;
+
+    min-height:500px;
+
+}
+
+.gallery-item:not(.large){
+
+    min-height:250px;
+
+}
+
+.gallery-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.18)
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.gallery-item:hover::after{
+
+    opacity:1;
+
+}
+
+.gallery-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border:2px solid rgba(212,175,55,.18);
+
+    border-radius:22px;
+
+    opacity:0;
+
+    transition:.4s;
+
+    z-index:2;
+
+}
+
+.gallery-item:hover::before{
+
+    opacity:1;
+
+}
+
+@media(max-width:768px){
+
+.gallery-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery-item.large{
+
+grid-row:auto;
+
+min-height:340px;
+
+}
+
+.gallery-item{
+
+min-height:220px;
+
+}
+
+}
+/*====================================
+Cursor Glow
+====================================*/
+
+#cursorGlow{
+
+position:fixed;
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+background:radial-gradient(
+
+rgba(212,175,55,.20),
+
+transparent);
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+z-index:999;
+
+filter:blur(35px);
+
+}
+
+/*====================================
+Ripple
+====================================*/
+
+.gold-btn{
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.ripple{
+
+position:absolute;
+
+width:10px;
+
+height:10px;
+
+background:rgba(255,255,255,.6);
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+animation:ripple .7s linear;
+
+}
+
+@keyframes ripple{
+
+to{
+
+width:350px;
+
+height:350px;
+
+opacity:0;
+
+}
+
+}
+
+/*====================================
+Click Hearts
+====================================*/
+
+.click-heart{
+
+position:absolute;
+
+font-size:22px;
+
+color:#ff4d7d;
+
+pointer-events:none;
+
+animation:heartFly 1.5s forwards;
+
+z-index:99999;
+
+}
+
+@keyframes heartFly{
+
+0%{
+
+opacity:1;
+
+transform:translateY(0) scale(.8);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translateY(-120px) scale(1.6);
+
+}
+
+}
+
+/*====================================
+Sparkles
+====================================*/
+
+.sparkle{
+
+position:fixed;
+
+width:5px;
+
+height:5px;
+
+border-radius:50%;
+
+background:#FFD700;
+
+box-shadow:
+
+0 0 10px #FFD700,
+
+0 0 20px #FFD700;
+
+animation:sparkle 2.5s forwards;
+
+pointer-events:none;
+
+}
+
+@keyframes sparkle{
+
+0%{
+
+opacity:1;
+
+transform:scale(0);
+
+}
+
+50%{
+
+transform:scale(2);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:scale(0);
+
+}
+}
+.wish-actions{
+
+    text-align:center;
+
+    margin:25px 0;
+
+}
+
+.delete-btn{
+
+    background:linear-gradient(135deg,#c62828,#ff5252);
+
+}
+
+.delete-btn:hover{
+
+    background:linear-gradient(135deg,#b71c1c,#e53935);
+
+}
