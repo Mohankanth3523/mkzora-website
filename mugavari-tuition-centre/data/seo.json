@@ -1,0 +1,207 @@
+{
+    "global": {
+
+        "siteName": "",
+
+        "siteUrl": "",
+
+        "defaultTitle": "",
+
+        "titleSeparator": "|",
+
+        "defaultDescription": "",
+
+        "defaultKeywords": [],
+
+        "defaultAuthor": "",
+
+        "defaultLanguage": "en",
+
+        "defaultLocale": "en_IN",
+
+        "defaultRobots": "index, follow",
+
+        "themeColor": "",
+
+        "canonical": "",
+
+        "favicon": "assets/icons/favicon.ico",
+
+        "manifest": "manifest.webmanifest"
+
+    },
+
+    "openGraph": {
+
+        "type": "website",
+
+        "image": {
+
+            "url": "",
+
+            "width": 1200,
+
+            "height": 630,
+
+            "alt": ""
+
+        }
+
+    },
+
+    "twitter": {
+
+        "card": "summary_large_image",
+
+        "site": "",
+
+        "creator": ""
+
+    },
+
+    "pages": {
+
+        "index": {
+
+            "title": "",
+
+            "description": "",
+
+            "keywords": [],
+
+            "canonical": "",
+
+            "robots": "index, follow",
+
+            "ogImage": ""
+
+        },
+
+        "about": {
+
+            "title": "",
+
+            "description": "",
+
+            "keywords": [],
+
+            "canonical": "",
+
+            "robots": "index, follow",
+
+            "ogImage": ""
+
+        },
+
+        "courses": {
+
+            "title": "",
+
+            "description": "",
+
+            "keywords": [],
+
+            "canonical": "",
+
+            "robots": "index, follow",
+
+            "ogImage": ""
+
+        },
+
+        "faculty": {
+
+            "title": "",
+
+            "description": "",
+
+            "keywords": [],
+
+            "canonical": "",
+
+            "robots": "index, follow",
+
+            "ogImage": ""
+
+        },
+
+        "whyChooseUs": {
+
+            "title": "",
+
+            "description": "",
+
+            "keywords": [],
+
+            "canonical": "",
+
+            "robots": "index, follow",
+
+            "ogImage": ""
+
+        },
+
+        "testimonials": {
+
+            "title": "",
+
+            "description": "",
+
+            "keywords": [],
+
+            "canonical": "",
+
+            "robots": "index, follow",
+
+            "ogImage": ""
+
+        },
+
+        "faq": {
+
+            "title": "",
+
+            "description": "",
+
+            "keywords": [],
+
+            "canonical": "",
+
+            "robots": "index, follow",
+
+            "ogImage": ""
+
+        },
+
+        "contact": {
+
+            "title": "",
+
+            "description": "",
+
+            "keywords": [],
+
+            "canonical": "",
+
+            "robots": "index, follow",
+
+            "ogImage": ""
+
+        }
+
+    },
+
+    "structuredData": {
+
+        "organization": true,
+
+        "website": true,
+
+        "breadcrumb": true,
+
+        "localBusiness": true,
+
+        "faq": true
+
+    }
+}

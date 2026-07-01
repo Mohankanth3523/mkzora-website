@@ -1,0 +1,136 @@
+{
+    "site": {
+        "name": "",
+        "shortName": "",
+        "tagline": "",
+        "url": "",
+        "language": "en",
+        "themeColor": "",
+        "backgroundColor": "",
+        "copyright": "",
+        "developer": {
+            "name": "",
+            "url": ""
+        }
+    },
+
+    "branding": {
+        "logo": {
+            "header": "",
+            "footer": "",
+            "favicon": "",
+            "appleTouchIcon": ""
+        }
+    },
+
+    "header": {
+        "primaryButton": {
+            "text": "",
+            "link": ""
+        }
+    },
+
+    "hero": {
+        "badge": "",
+        "title": "",
+        "description": "",
+
+        "primaryButton": {
+            "text": "",
+            "link": ""
+        },
+
+        "secondaryButton": {
+            "text": "",
+            "link": ""
+        },
+
+        "image": {
+            "webp": "",
+            "fallback": "",
+            "alt": ""
+        },
+
+        "highlights": [],
+
+        "statistics": [
+            {
+                "number": "",
+                "label": ""
+            }
+        ]
+    },
+
+    "cta": {
+        "badge": "",
+        "title": "",
+        "description": "",
+
+        "features": [],
+
+        "primaryButton": {
+            "text": "",
+            "link": ""
+        },
+
+        "secondaryButton": {
+            "text": "",
+            "link": ""
+        }
+    },
+
+    "contactForm": {
+        "badge": "",
+        "title": "",
+        "description": "",
+
+        "labels": {},
+
+        "placeholders": {},
+
+        "buttons": {
+            "submit": "",
+            "reset": ""
+        },
+
+        "validation": {},
+
+        "consent": ""
+    },
+
+    "courseEnquiryForm": {
+        "badge": "",
+        "title": "",
+        "description": "",
+
+        "buttons": {
+            "submit": "",
+            "reset": ""
+        },
+
+        "consent": ""
+    },
+
+    "breadcrumb": {
+        "homeTitle": "",
+        "homeLink": "index.html"
+    },
+
+    "footer": {
+        "description": "",
+
+        "navigationTitle": "",
+
+        "courseTitle": "",
+
+        "contactTitle": "",
+
+        "copyright": "",
+
+        "developer": {
+            "label": "",
+            "name": "",
+            "url": ""
+        }
+    }
+}

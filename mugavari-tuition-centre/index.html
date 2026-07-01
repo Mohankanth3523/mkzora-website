@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==================================================
+         META
+    ================================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mugavari Tuition Centre</title>
+
+    <meta name="description" content="Best tuition centre for academic excellence">
+
+    <!-- ==================================================
+         SEO / PWA (placeholders from seo.json later)
+    ================================================== -->
+
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- ==================================================
+         STYLES
+    ================================================== -->
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+
+    <!-- ==================================================
+         LOADER (optional if you have loader UI)
+    ================================================== -->
+
+    <div id="loader"></div>
+
+    <!-- ==================================================
+         HEADER (layout component)
+    ================================================== -->
+
+    <div data-component="header"></div>
+
+    <!-- ==================================================
+         NAVIGATION (mobile/desktop if separate)
+    ================================================== -->
+
+    <div data-component="navigation"></div>
+
+    <!-- ==================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main>
+
+        <!-- ==================================================
+             HERO SECTION
+        ================================================== -->
+
+        <section data-component="hero"></section>
+
+        <!-- ==================================================
+             COURSES SECTION
+        ================================================== -->
+
+        <section data-component="courses"></section>
+
+        <!-- ==================================================
+             FACULTY SECTION
+        ================================================== -->
+
+        <section data-component="faculty"></section>
+
+        <!-- ==================================================
+             CTA SECTION
+        ================================================== -->
+
+        <section data-component="cta"></section>
+
+        <!-- ==================================================
+             TESTIMONIALS SECTION
+        ================================================== -->
+
+        <section data-component="testimonials"></section>
+
+        <!-- ==================================================
+             FAQ SECTION
+        ================================================== -->
+
+        <section data-component="faq"></section>
+
+        <!-- ==================================================
+             CONTACT SECTION
+        ================================================== -->
+
+        <section data-component="contact"></section>
+
+    </main>
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <div data-component="footer"></div>
+
+<!-- ==================================================
+     SCRIPTS - CORE SYSTEM
+================================================== -->
+
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/loader.js"></script>
+
+<!-- ==================================================
+     MODULES (UI ENGINE)
+================================================== -->
+
+<script src="assets/js/modules/modal.js"></script>
+<script src="assets/js/modules/slider.js"></script>
+<script src="assets/js/modules/validation.js"></script>
+
+<!-- ==================================================
+     CORE SYSTEM
+================================================== -->
+
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/forms.js"></script>
+<script src="assets/js/lazyload.js"></script>
+<script src="assets/js/accessibility.js"></script>
+
+<!-- ==================================================
+     RENDERERS
+================================================== -->
+
+<script src="assets/js/renderers/hero.js"></script>
+<script src="assets/js/renderers/courses.js"></script>
+<script src="assets/js/renderers/faculty.js"></script>
+<script src="assets/js/renderers/cta.js"></script>
+<script src="assets/js/renderers/testimonials.js"></script>
+<script src="assets/js/renderers/faq.js"></script>
+<script src="assets/js/renderers/contact.js"></script>
+<script src="assets/js/renderers/footer.js"></script>
+
+<!-- ==================================================
+     MAIN APP BOOTSTRAP
+================================================== -->
+
+<script src="assets/js/main.js"></script>
+
+<!-- ==================================================
+     INITIALIZATION FLOW
+================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    try {
+
+        /* 1. LOAD SYSTEM */
+        Loader.initialize();
+
+        /* 2. CORE MODULES */
+        Navigation.initialize();
+        Forms.initialize();
+        LazyLoad.initialize();
+        Accessibility.initialize();
+
+        /* 3. UI MODULES */
+        Accordion?.initialize?.({ allowMultiple: false });
+        Slider.initialize();
+        Modal.initialize();
+        Validation.initialize();
+
+        /* 4. RENDER SYSTEM */
+        HeroRenderer.initialize();
+        CoursesRenderer.initialize();
+        FacultyRenderer.initialize();
+        CTARenderer.initialize();
+        TestimonialsRenderer.initialize();
+        FAQRenderer.initialize();
+        ContactRenderer.initialize();
+        FooterRenderer.initialize();
+
+        console.log("🚀 Mugavari Tuition Centre App Loaded Successfully");
+
+    } catch (error) {
+
+        console.error("App Initialization Error:", error);
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

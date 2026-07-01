@@ -1,0 +1,113 @@
+/* ==================================================
+   LAYOUT SYSTEM
+   File: layout.css
+================================================== */
+
+/* ===============================
+   CONTAINER SYSTEM
+=============================== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+/* ===============================
+   SECTION SPACING
+=============================== */
+
+section {
+    padding: var(--space-16) 0;
+}
+
+/* ===============================
+   PAGE WRAPPER
+=============================== */
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ===============================
+   GRID SYSTEM (BASIC FLEX GRID)
+=============================== */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(var(--space-4) * -1);
+}
+
+.col {
+    flex: 1;
+    padding: var(--space-4);
+}
+
+/* ===============================
+   TWO COLUMN LAYOUT
+=============================== */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+
+/* ===============================
+   THREE COLUMN LAYOUT
+=============================== */
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+/* ===============================
+   CENTER ALIGN HELPERS
+=============================== */
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===============================
+   PAGE HEADER LAYOUT
+=============================== */
+
+.page-header {
+    text-align: center;
+    padding: var(--space-20) 0 var(--space-12);
+    background: var(--bg-section);
+}
+
+/* ===============================
+   SECTION VARIANTS
+=============================== */
+
+.section-light {
+    background: var(--bg-section);
+}
+
+.section-dark {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* ===============================
+   RESPONSIVE CONTAINER SAFETY
+=============================== */
+
+@media (max-width: 768px) {
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+}

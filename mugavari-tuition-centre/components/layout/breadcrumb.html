@@ -1,0 +1,112 @@
+<!-- ==================================================
+     BREADCRUMB COMPONENT
+     Pure Reusable Template
+=================================================== -->
+
+<nav
+    class="breadcrumb"
+    aria-label="Breadcrumb Navigation">
+
+    <ol
+        class="breadcrumb-list"
+        data-breadcrumb-list>
+
+        <!--
+        ==============================================
+        HOME ITEM
+        ==============================================
+        -->
+
+        <li
+            class="breadcrumb-item"
+            data-home-item>
+
+            <a
+                class="breadcrumb-link"
+                data-home-link
+                href="">
+
+                <span
+                    data-home-title>
+                </span>
+
+            </a>
+
+        </li>
+
+        <!--
+        ==============================================
+        DYNAMIC ITEMS
+
+        Generated from:
+        breadcrumb.js / components.js
+        ==============================================
+        -->
+
+    </ol>
+
+</nav>
+
+<!-- ==================================================
+     BREADCRUMB ITEM TEMPLATE
+=================================================== -->
+
+<template id="breadcrumb-item-template">
+
+    <li
+        class="breadcrumb-item"
+        data-breadcrumb-item>
+
+        <!-- Separator -->
+
+        <span
+            class="breadcrumb-separator"
+            aria-hidden="true">
+
+            /
+
+        </span>
+
+        <!-- Link -->
+
+        <a
+            class="breadcrumb-link"
+            data-breadcrumb-link
+            href="">
+
+            <span
+                data-breadcrumb-title>
+            </span>
+
+        </a>
+
+    </li>
+
+</template>
+
+<!-- ==================================================
+     ACTIVE BREADCRUMB TEMPLATE
+=================================================== -->
+
+<template id="breadcrumb-active-template">
+
+    <li
+        class="breadcrumb-item active"
+        aria-current="page">
+
+        <span
+            class="breadcrumb-separator"
+            aria-hidden="true">
+
+            /
+
+        </span>
+
+        <span
+            class="breadcrumb-current"
+            data-current-title>
+        </span>
+
+    </li>
+
+</template>

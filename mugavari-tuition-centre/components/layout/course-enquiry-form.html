@@ -1,0 +1,315 @@
+<!-- ==================================================
+     COURSE ENQUIRY FORM COMPONENT
+     Pure Reusable Template
+=================================================== -->
+
+<section
+    class="course-enquiry-section"
+    id="course-enquiry-section"
+    aria-labelledby="course-enquiry-title">
+
+    <div class="container">
+
+        <div class="course-enquiry-wrapper">
+
+            <!-- =============================================
+                 SECTION CONTENT
+            ============================================== -->
+
+            <div class="course-enquiry-content">
+
+                <span
+                    class="section-badge"
+                    data-enquiry-badge>
+                </span>
+
+                <h2
+                    id="course-enquiry-title"
+                    class="section-title"
+                    data-enquiry-title>
+                </h2>
+
+                <p
+                    class="section-description"
+                    data-enquiry-description>
+                </p>
+
+            </div>
+
+            <!-- =============================================
+                 ENQUIRY FORM
+            ============================================== -->
+
+            <form
+                id="course-enquiry-form"
+                class="course-enquiry-form"
+                novalidate>
+
+                <!-- Parent Name -->
+
+                <div class="form-group">
+
+                    <label
+                        for="parent-name"
+                        data-parent-name-label>
+                    </label>
+
+                    <input
+                        id="parent-name"
+                        name="parentName"
+                        type="text"
+                        class="form-control"
+                        autocomplete="name"
+                        data-parent-name-placeholder
+                        required>
+
+                    <small
+                        class="form-error"
+                        data-parent-name-error>
+                    </small>
+
+                </div>
+
+                <!-- Student Name -->
+
+                <div class="form-group">
+
+                    <label
+                        for="student-name"
+                        data-student-name-label>
+                    </label>
+
+                    <input
+                        id="student-name"
+                        name="studentName"
+                        type="text"
+                        class="form-control"
+                        data-student-name-placeholder
+                        required>
+
+                    <small
+                        class="form-error"
+                        data-student-name-error>
+                    </small>
+
+                </div>
+
+                <!-- Mobile Number -->
+
+                <div class="form-group">
+
+                    <label
+                        for="mobile-number"
+                        data-mobile-label>
+                    </label>
+
+                    <input
+                        id="mobile-number"
+                        name="mobileNumber"
+                        type="tel"
+                        class="form-control"
+                        autocomplete="tel"
+                        data-mobile-placeholder
+                        required>
+
+                    <small
+                        class="form-error"
+                        data-mobile-error>
+                    </small>
+
+                </div>
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label
+                        for="email-address"
+                        data-email-label>
+                    </label>
+
+                    <input
+                        id="email-address"
+                        name="email"
+                        type="email"
+                        class="form-control"
+                        autocomplete="email"
+                        data-email-placeholder>
+
+                    <small
+                        class="form-error"
+                        data-email-error>
+                    </small>
+
+                </div>
+
+                <!-- Class -->
+
+                <div class="form-group">
+
+                    <label
+                        for="student-class"
+                        data-class-label>
+                    </label>
+
+                    <select
+                        id="student-class"
+                        name="studentClass"
+                        class="form-control"
+                        data-class-options
+                        required>
+
+                        <!-- Generated dynamically -->
+
+                    </select>
+
+                    <small
+                        class="form-error"
+                        data-class-error>
+                    </small>
+
+                </div>
+
+                <!-- Course -->
+
+                <div class="form-group">
+
+                    <label
+                        for="course"
+                        data-course-label>
+                    </label>
+
+                    <select
+                        id="course"
+                        name="course"
+                        class="form-control"
+                        data-course-options
+                        required>
+
+                        <!-- Generated dynamically -->
+
+                    </select>
+
+                    <small
+                        class="form-error"
+                        data-course-error>
+                    </small>
+
+                </div>
+
+                <!-- Subject -->
+
+                <div class="form-group">
+
+                    <label
+                        for="subject"
+                        data-subject-label>
+                    </label>
+
+                    <select
+                        id="subject"
+                        name="subject"
+                        class="form-control"
+                        data-subject-options>
+
+                        <!-- Generated dynamically -->
+
+                    </select>
+
+                    <small
+                        class="form-error"
+                        data-subject-error>
+                    </small>
+
+                </div>
+
+                <!-- Preferred Batch -->
+
+                <div class="form-group">
+
+                    <label
+                        for="preferred-batch"
+                        data-batch-label>
+                    </label>
+
+                    <select
+                        id="preferred-batch"
+                        name="preferredBatch"
+                        class="form-control"
+                        data-batch-options>
+
+                        <!-- Generated dynamically -->
+
+                    </select>
+
+                </div>
+
+                <!-- Message -->
+
+                <div class="form-group">
+
+                    <label
+                        for="message"
+                        data-message-label>
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        class="form-control"
+                        rows="5"
+                        data-message-placeholder>
+                    </textarea>
+
+                </div>
+
+                <!-- Privacy Consent -->
+
+                <div class="form-checkbox">
+
+                    <input
+                        id="course-consent"
+                        name="courseConsent"
+                        type="checkbox"
+                        required>
+
+                    <label
+                        for="course-consent"
+                        data-consent-text>
+                    </label>
+
+                </div>
+
+                <!-- Actions -->
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        <span
+                            data-submit-button>
+                        </span>
+
+                    </button>
+
+                    <button
+                        type="reset"
+                        class="btn btn-outline">
+
+                        <span
+                            data-reset-button>
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>

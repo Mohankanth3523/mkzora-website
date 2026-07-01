@@ -1,0 +1,23 @@
+{
+    "section": {
+        "badge": "Frequently Asked Questions",
+        "title": "Got Questions? We Have Answers",
+        "description": "Find answers to the most commonly asked questions about admissions, courses, classes, fees, and more."
+    },
+
+    "faq": [
+        {
+            "id": "faq-001",
+
+            "category": "",
+
+            "question": "",
+
+            "answer": "",
+
+            "displayOrder": 1,
+
+            "isFeatured": true
+        }
+    ]
+}

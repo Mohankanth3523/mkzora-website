@@ -1,0 +1,81 @@
+/* ==================================================
+   BASE CSS
+   File: base.css
+================================================== */
+
+/* ===============================
+   BODY DEFAULT STYLES
+=============================== */
+
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+    background-color: var(--bg-body);
+    line-height: 1.6;
+}
+
+/* ===============================
+   SMOOTH SCROLL & BEHAVIOR
+=============================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===============================
+   LINK DEFAULTS
+=============================== */
+
+a {
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+/* ===============================
+   BUTTON DEFAULT RESET ENHANCEMENT
+=============================== */
+
+button {
+    font-family: inherit;
+}
+
+/* ===============================
+   IMAGE DEFAULT BEHAVIOR
+=============================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===============================
+   SELECTION COLOR
+=============================== */
+
+::selection {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* ===============================
+   SCROLLBAR (OPTIONAL PREMIUM FEEL)
+=============================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-section);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+}

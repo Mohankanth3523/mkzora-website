@@ -1,0 +1,132 @@
+/* ==================================================
+   FORMS SYSTEM
+   File: forms.css
+================================================== */
+
+/* ===============================
+   FORM WRAPPER
+=============================== */
+
+form {
+    width: 100%;
+}
+
+/* ===============================
+   FORM GROUP
+=============================== */
+
+.form-group {
+    margin-bottom: var(--space-5);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===============================
+   LABEL
+=============================== */
+
+label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--space-2);
+    color: var(--color-text);
+}
+
+/* ===============================
+   INPUT FIELDS
+=============================== */
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: var(--space-3);
+
+    border: 1px solid #d1d5db;
+    border-radius: var(--radius-md);
+
+    font-size: var(--font-size-md);
+    background: var(--color-white);
+
+    transition: all var(--transition-fast);
+}
+
+/* ===============================
+   FOCUS STATE
+=============================== */
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ===============================
+   TEXTAREA
+=============================== */
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ===============================
+   ERROR STATE
+=============================== */
+
+input.error,
+textarea.error,
+select.error {
+    border-color: var(--color-danger);
+    background: #fff5f5;
+}
+
+/* ===============================
+   ERROR MESSAGE
+=============================== */
+
+.form-error {
+    font-size: var(--font-size-sm);
+    color: var(--color-danger);
+    margin-top: var(--space-1);
+}
+
+/* ===============================
+   SUCCESS STATE
+=============================== */
+
+input.success,
+textarea.success,
+select.success {
+    border-color: var(--color-success);
+}
+
+/* ===============================
+   SUBMIT BUTTON AREA
+=============================== */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--space-6);
+}
+
+/* ===============================
+   CHECKBOX & RADIO
+=============================== */
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: var(--space-2);
+}
+
+/* ===============================
+   PLACEHOLDER STYLE
+=============================== */
+
+input::placeholder,
+textarea::placeholder {
+    color: #9ca3af;
+}

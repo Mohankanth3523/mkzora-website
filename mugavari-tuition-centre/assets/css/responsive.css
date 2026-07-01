@@ -1,0 +1,91 @@
+/* ==================================================
+   RESPONSIVE SYSTEM
+   File: responsive.css
+================================================== */
+
+/* ===============================
+   LARGE DEVICES (<= 1024px)
+=============================== */
+
+@media (max-width: 1024px) {
+
+    .container {
+        padding: 0 var(--space-4);
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .courses-grid,
+    .faculty-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* ===============================
+   TABLETS (<= 768px)
+=============================== */
+
+@media (max-width: 768px) {
+
+    section {
+        padding: var(--space-12) 0;
+    }
+
+    .page-header h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .grid-2,
+    .grid-3,
+    .courses-grid,
+    .faculty-grid,
+    .testimonials-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+
+}
+
+/* ===============================
+   MOBILE DEVICES (<= 480px)
+=============================== */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: var(--font-size-sm);
+    }
+
+    .container {
+        padding: 0 var(--space-3);
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .page-header {
+        padding: var(--space-16) 0;
+    }
+
+    .cta-title {
+        font-size: var(--font-size-2xl);
+    }
+
+}
