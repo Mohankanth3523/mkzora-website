@@ -5,7 +5,7 @@
  * ==========================================================
  * Responsibilities
  * ----------------------------------------------------------
- * • Load HTML Components
+ * • Load HTML Components via data-component attributes
  * • Load HTML Templates
  * • Load JSON Data
  * • Cache Resources
@@ -152,32 +152,49 @@ const Loader = (() => {
     }
 
     /* ======================================================
-       Load Layout Component
+       Get JSON (convenience method for renderers)
     ====================================================== */
 
-    async function loadComponent(targetId, filePath) {
+    function getJSON(key) {
 
-        if (!targetId || !filePath) {
+        return getCache("json", key);
 
+    }
+
+    /* ======================================================
+       Load Layout Component (data-component architecture)
+    ====================================================== */
+
+    async function loadComponent(componentName, filePath) {
+
+        if (!componentName || !filePath) {
+
+            return;
+
+        }
+
+        const container = document.querySelector(
+
+            `[data-component="${componentName}"]`
+
+        );
+
+        if (!container) {
+
+            // Component not on this page — skip silently
             return;
 
         }
 
         if (hasCache("html", filePath)) {
 
-            const container = Utils.$(`#${targetId}`);
+            container.innerHTML = getCache(
 
-            if (container) {
+                "html",
 
-                container.innerHTML = getCache(
+                filePath
 
-                    "html",
-
-                    filePath
-
-                );
-
-            }
+            );
 
             return;
 
@@ -194,20 +211,6 @@ const Loader = (() => {
             html
 
         );
-
-        const container = Utils.$(`#${targetId}`);
-
-        if (!container) {
-
-            Utils.warn(
-
-                `Container not found: ${targetId}`
-
-            );
-
-            return;
-
-        }
 
         container.innerHTML = html;
 
@@ -423,7 +426,9 @@ const Loader = (() => {
 
         getCache,
 
-        hasCache
+        hasCache,
+
+        getJSON
 
     };
 

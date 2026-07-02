@@ -84,92 +84,6 @@ const Utils = (() => {
     }
 
     /* ======================================================
-       Public API
-    ====================================================== */
-       return {
-
-        // DOM
-
-        $,
-        $$,
-
-        createElement,
-        cloneTemplate,
-
-        clearElement,
-
-        // Content
-
-        setText,
-        setHTML,
-
-        // Attributes
-
-        setAttribute,
-        removeAttribute,
-        setData,
-        getData,
-
-        // Images
-
-        setImage,
-
-        // Classes
-
-        addClass,
-        removeClass,
-        toggleClass,
-        hasClass,
-
-        // Visibility
-
-        show,
-        hide,
-
-        // Events
-
-        on,
-        off,
-        once,
-
-        // Performance
-
-        debounce,
-        throttle,
-
-        // Scroll
-
-        scrollToElement,
-        scrollToTop,
-
-        // Type
-
-        isElement,
-        isObject,
-        isEmpty,
-
-        // Utility
-
-        uniqueId,
-        deepClone,
-        wait,
-        nextFrame,
-
-        // URL
-
-        getCurrentPage,
-        isCurrentPage,
-
-        // Logger
-
-        log,
-        warn,
-        error
-
-    };
-
-})();
-    /* ======================================================
        Attribute Helpers
     ====================================================== */
 
@@ -194,6 +108,26 @@ const Utils = (() => {
         if (!element) return;
 
         element.removeAttribute(attribute);
+
+    }
+
+    /* ======================================================
+       Dataset Helpers
+    ====================================================== */
+
+    function setData(element, key, value) {
+
+        if (!element) return;
+
+        element.dataset[key] = value;
+
+    }
+
+    function getData(element, key) {
+
+        if (!element) return null;
+
+        return element.dataset[key] ?? null;
 
     }
 
@@ -278,7 +212,8 @@ const Utils = (() => {
         element.replaceChildren();
 
     }
-        /* ======================================================
+
+    /* ======================================================
        Event Helpers
     ====================================================== */
 
@@ -421,7 +356,8 @@ const Utils = (() => {
         });
 
     }
-        /* ======================================================
+
+    /* ======================================================
        Type Helpers
     ====================================================== */
 
@@ -480,6 +416,60 @@ const Utils = (() => {
     }
 
     /* ======================================================
+       URL Helpers
+    ====================================================== */
+
+    function getCurrentPage() {
+
+        const path = window.location.pathname;
+
+        const page = path.split("/").pop();
+
+        return page || "index.html";
+
+    }
+
+    function isCurrentPage(page) {
+
+        return getCurrentPage() === page;
+
+    }
+
+    /* ======================================================
+       Animation Helpers
+    ====================================================== */
+
+    function wait(milliseconds = 0) {
+
+        return new Promise(resolve => {
+
+            setTimeout(resolve, milliseconds);
+
+        });
+
+    }
+
+    function nextFrame() {
+
+        return new Promise(resolve => {
+
+            requestAnimationFrame(resolve);
+
+        });
+
+    }
+
+    /* ======================================================
+       Safe JSON Helper
+    ====================================================== */
+
+    function deepClone(value) {
+
+        return structuredClone(value);
+
+    }
+
+    /* ======================================================
        Logger
     ====================================================== */
 
@@ -518,76 +508,91 @@ const Utils = (() => {
         );
 
     }
-        /* ======================================================
-       URL Helpers
-    ====================================================== */
-
-    function getCurrentPage() {
-
-        const path = window.location.pathname;
-
-        const page = path.split("/").pop();
-
-        return page || "index.html";
-
-    }
-
-    function isCurrentPage(page) {
-
-        return getCurrentPage() === page;
-
-    }
 
     /* ======================================================
-       Dataset Helpers
+       Public API
     ====================================================== */
 
-    function setData(element, key, value) {
+    return {
 
-        if (!element) return;
+        // DOM
 
-        element.dataset[key] = value;
+        $,
+        $$,
 
-    }
+        createElement,
+        cloneTemplate,
 
-    function getData(element, key) {
+        clearElement,
 
-        if (!element) return null;
+        // Content
 
-        return element.dataset[key] ?? null;
+        setText,
+        setHTML,
 
-    }
+        // Attributes
 
-    /* ======================================================
-       Animation Helpers
-    ====================================================== */
+        setAttribute,
+        removeAttribute,
+        setData,
+        getData,
 
-    function wait(milliseconds = 0) {
+        // Images
 
-        return new Promise(resolve => {
+        setImage,
 
-            setTimeout(resolve, milliseconds);
+        // Classes
 
-        });
+        addClass,
+        removeClass,
+        toggleClass,
+        hasClass,
 
-    }
+        // Visibility
 
-    function nextFrame() {
+        show,
+        hide,
 
-        return new Promise(resolve => {
+        // Events
 
-            requestAnimationFrame(resolve);
+        on,
+        off,
+        once,
 
-        });
+        // Performance
 
-    }
+        debounce,
+        throttle,
 
-    /* ======================================================
-       Safe JSON Helper
-    ====================================================== */
+        // Scroll
 
-    function deepClone(value) {
+        scrollToElement,
+        scrollToTop,
 
-        return structuredClone(value);
+        // Type
 
-    }
+        isElement,
+        isObject,
+        isEmpty,
+
+        // Utility
+
+        uniqueId,
+        deepClone,
+        wait,
+        nextFrame,
+
+        // URL
+
+        getCurrentPage,
+        isCurrentPage,
+
+        // Logger
+
+        log,
+        warn,
+        error
+
+    };
+
+})();

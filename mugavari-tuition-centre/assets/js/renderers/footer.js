@@ -66,10 +66,13 @@ const FooterRenderer = (() => {
             siteConfig?.footer || {};
 
         siteData =
-            siteConfig?.site || {};
+            siteConfig || {};
+
+        const navJSON =
+            Loader.getJSON("navigation");
 
         navigationData =
-            Loader.getJSON("navigation") || [];
+            navJSON?.navigation?.desktop || [];
 
         const courses =
             Loader.getJSON("courses");
@@ -77,11 +80,22 @@ const FooterRenderer = (() => {
         coursesData =
             courses?.courses || [];
 
-        contactData =
-            Loader.getJSON("contact") || {};
+        const contactJSON =
+            Loader.getJSON("contact");
+
+        contactData = {
+            address: contactJSON?.location?.address
+                ? [contactJSON.location.address.line1, contactJSON.location.address.line2, contactJSON.location.address.city, contactJSON.location.address.state].filter(Boolean).join(", ")
+                : "",
+            phone: contactJSON?.contact?.primaryPhone || "",
+            email: contactJSON?.contact?.primaryEmail || ""
+        };
+
+        const socialJSON =
+            Loader.getJSON("socialLinks");
 
         socialData =
-            Loader.getJSON("socialLinks") || [];
+            socialJSON?.socialLinks || [];
 
     }
 
@@ -174,12 +188,12 @@ const FooterRenderer = (() => {
         if (elements.logo) {
 
             elements.logo.src =
-                siteData?.branding?.footer ||
-                siteData?.branding?.logo ||
+                siteData?.branding?.logo?.footer ||
+                siteData?.branding?.logo?.header ||
                 "";
 
             elements.logo.alt =
-                siteData.name || "";
+                siteData?.site?.name || "";
 
         }
 

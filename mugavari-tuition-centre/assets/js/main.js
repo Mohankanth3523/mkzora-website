@@ -40,53 +40,53 @@
 const AppConfig = {
 
     /* ======================================================
-       Layout Components
+       Layout Components (data-component targets)
     ====================================================== */
 
     layouts: [
 
         {
-            target: "header-container",
+            target: "header",
             path: "components/layout/header.html"
         },
 
         {
-            target: "navigation-container",
+            target: "navigation",
             path: "components/layout/navigation.html"
         },
 
         {
-            target: "breadcrumb-container",
+            target: "breadcrumb",
             path: "components/layout/breadcrumb.html"
         },
 
         {
-            target: "hero-container",
+            target: "hero",
             path: "components/layout/hero.html"
         },
 
         {
-            target: "cta-container",
+            target: "cta",
             path: "components/layout/cta.html"
         },
 
         {
-            target: "contact-form-container",
+            target: "contact-form",
             path: "components/layout/contact-form.html"
         },
 
         {
-            target: "course-enquiry-form-container",
+            target: "course-enquiry-form",
             path: "components/layout/course-enquiry-form.html"
         },
 
         {
-            target: "google-map-container",
+            target: "google-map",
             path: "components/layout/google-map.html"
         },
 
         {
-            target: "footer-container",
+            target: "footer",
             path: "components/layout/footer.html"
         }
 
@@ -146,6 +146,34 @@ const AppConfig = {
 };
 
 /* ==========================================================
+   SAFE INITIALIZER
+   Wraps each module init in try-catch so missing modules
+   on sub-pages don't crash the entire bootstrap.
+========================================================== */
+
+function safeInit(name, fn) {
+
+    try {
+
+        if (typeof fn === "function") {
+
+            fn();
+
+        }
+
+    } catch (error) {
+
+        Utils.warn(
+
+            `${name} skipped: ${error.message}`
+
+        );
+
+    }
+
+}
+
+/* ==========================================================
    APPLICATION STARTUP
 ========================================================== */
 
@@ -160,6 +188,20 @@ document.addEventListener(
 async function initializeApplication() {
 
     try {
+
+        if (window.MKTCBootstrapStarted) {
+
+            Utils.warn(
+
+                "Application bootstrap already started."
+
+            );
+
+            return;
+
+        }
+
+        window.MKTCBootstrapStarted = true;
 
         Utils.log(
 
@@ -177,37 +219,105 @@ async function initializeApplication() {
            Initialize Renderers
         ============================================== */
 
-        HeroRenderer.initialize();
+        safeInit("HeroRenderer", () => {
+            if (typeof HeroRenderer !== "undefined") {
+                HeroRenderer.initialize();
+            }
+        });
 
-        CTARenderer.initialize();
+        safeInit("CTARenderer", () => {
+            if (typeof CTARenderer !== "undefined") {
+                CTARenderer.initialize();
+            }
+        });
 
-        CourseRenderer.initialize();
+        safeInit("CoursesRenderer", () => {
+            if (typeof CoursesRenderer !== "undefined") {
+                CoursesRenderer.initialize();
+            }
+        });
 
-        FacultyRenderer.initialize();
+        safeInit("FacultyRenderer", () => {
+            if (typeof FacultyRenderer !== "undefined") {
+                FacultyRenderer.initialize();
+            }
+        });
 
-        ContactRenderer.initialize();
+        safeInit("ContactRenderer", () => {
+            if (typeof ContactRenderer !== "undefined") {
+                ContactRenderer.initialize();
+            }
+        });
 
-        FooterRenderer.initialize();
+        safeInit("FooterRenderer", () => {
+            if (typeof FooterRenderer !== "undefined") {
+                FooterRenderer.initialize();
+            }
+        });
 
-        FAQRenderer.initialize();
+        safeInit("FAQRenderer", () => {
+            if (typeof FAQRenderer !== "undefined") {
+                FAQRenderer.initialize();
+            }
+        });
 
-        TestimonialsRenderer.initialize();
+        safeInit("TestimonialsRenderer", () => {
+            if (typeof TestimonialsRenderer !== "undefined") {
+                TestimonialsRenderer.initialize();
+            }
+        });
 
         /* ==============================================
            Initialize Modules
         ============================================== */
 
-        Navigation.initialize();
+        safeInit("Navigation", () => {
+            if (typeof Navigation !== "undefined") {
+                Navigation.initialize();
+            }
+        });
 
-        Forms.initialize();
+        safeInit("Forms", () => {
+            if (typeof Forms !== "undefined") {
+                Forms.initialize();
+            }
+        });
 
-        LazyLoad.initialize();
+        safeInit("LazyLoad", () => {
+            if (typeof LazyLoad !== "undefined") {
+                LazyLoad.initialize();
+            }
+        });
 
-        Accessibility.initialize();
+        safeInit("Accessibility", () => {
+            if (typeof Accessibility !== "undefined") {
+                Accessibility.initialize();
+            }
+        });
+
+        safeInit("Accordion", () => {
+            if (typeof Accordion !== "undefined") {
+                Accordion.initialize();
+            }
+        });
+
+        safeInit("Modal", () => {
+            if (typeof Modal !== "undefined") {
+                Modal.initialize();
+            }
+        });
+
+        safeInit("Slider", () => {
+            if (typeof Slider !== "undefined") {
+                Slider.initialize();
+            }
+        });
 
         /* ==============================================
            Application Ready
         ============================================== */
+
+        window.MKTCBootstrapReady = true;
 
         Utils.log(
 

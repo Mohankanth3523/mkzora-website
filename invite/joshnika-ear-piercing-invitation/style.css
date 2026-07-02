@@ -103,7 +103,7 @@ body{
     rgba(0,0,0,.55),
     rgba(0,0,0,.55)
     ),
-    url("assets/temple-bg.jpg");
+    url("assets/temple-bg.webp");
 
     background-size:cover;
     background-position:center;
@@ -737,7 +737,7 @@ section{
     rgba(0,0,0,.6),
     rgba(0,0,0,.6)
     ),
-    url("assets/temple-bg.jpg");
+    url("assets/temple-bg.webp");
 
     background-size:cover;
     background-position:center;

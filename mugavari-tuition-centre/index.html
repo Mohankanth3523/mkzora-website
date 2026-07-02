@@ -12,15 +12,21 @@
 
     <title>Mugavari Tuition Centre</title>
 
-    <meta name="description" content="Best tuition centre for academic excellence">
+    <meta name="description" content="Best tuition centre for academic excellence — concept-based learning and personalized guidance.">
 
     <!-- ==================================================
-         SEO / PWA (placeholders from seo.json later)
+         FAVICON
+    ================================================== -->
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+    <!-- ==================================================
+         SEO / PWA
     ================================================== -->
 
     <link rel="manifest" href="manifest.webmanifest">
 
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#1a1a2e">
 
     <!-- ==================================================
          STYLES
@@ -33,19 +39,19 @@
 <body>
 
     <!-- ==================================================
-         LOADER (optional if you have loader UI)
+         LOADER
     ================================================== -->
 
-    <div id="loader"></div>
+    <div id="loader" aria-hidden="true"></div>
 
     <!-- ==================================================
-         HEADER (layout component)
+         HEADER
     ================================================== -->
 
     <div data-component="header"></div>
 
     <!-- ==================================================
-         NAVIGATION (mobile/desktop if separate)
+         NAVIGATION
     ================================================== -->
 
     <div data-component="navigation"></div>
@@ -117,6 +123,7 @@
      MODULES (UI ENGINE)
 ================================================== -->
 
+<script src="assets/js/modules/accordion.js"></script>
 <script src="assets/js/modules/modal.js"></script>
 <script src="assets/js/modules/slider.js"></script>
 <script src="assets/js/modules/validation.js"></script>
@@ -148,53 +155,6 @@
 ================================================== -->
 
 <script src="assets/js/main.js"></script>
-
-<!-- ==================================================
-     INITIALIZATION FLOW
-================================================== -->
-
-<script>
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    try {
-
-        /* 1. LOAD SYSTEM */
-        Loader.initialize();
-
-        /* 2. CORE MODULES */
-        Navigation.initialize();
-        Forms.initialize();
-        LazyLoad.initialize();
-        Accessibility.initialize();
-
-        /* 3. UI MODULES */
-        Accordion?.initialize?.({ allowMultiple: false });
-        Slider.initialize();
-        Modal.initialize();
-        Validation.initialize();
-
-        /* 4. RENDER SYSTEM */
-        HeroRenderer.initialize();
-        CoursesRenderer.initialize();
-        FacultyRenderer.initialize();
-        CTARenderer.initialize();
-        TestimonialsRenderer.initialize();
-        FAQRenderer.initialize();
-        ContactRenderer.initialize();
-        FooterRenderer.initialize();
-
-        console.log("🚀 Mugavari Tuition Centre App Loaded Successfully");
-
-    } catch (error) {
-
-        console.error("App Initialization Error:", error);
-
-    }
-
-});
-
-</script>
 
 </body>
 </html>

@@ -1,0 +1,1389 @@
+/*=========================================================
+    Baby Shower Invitation Website
+    MKZORA
+=========================================================*/
+
+/*=========================================================
+    GOOGLE FONTS
+=========================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+/*=========================================================
+    ROOT VARIABLES
+=========================================================*/
+
+:root{
+
+    /* Colors */
+
+    --pink:#ffd6e8;
+    --pink-light:#fff3f8;
+
+    --blue:#d7f1ff;
+    --blue-light:#eef9ff;
+
+    --lavender:#e8dcff;
+    --yellow:#fff6c8;
+
+    --white:#ffffff;
+
+    --text:#434343;
+    --text-light:#777777;
+
+    --primary:#ff7fa8;
+
+    --shadow:0 12px 40px rgba(0,0,0,.08);
+
+    --radius:24px;
+
+    --transition:.35s ease;
+
+    --container:1200px;
+
+}
+
+/*=========================================================
+    RESET
+=========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Lato',sans-serif;
+
+    color:var(--text);
+
+    background:linear-gradient(
+        180deg,
+        #fff8fb 0%,
+        #eef9ff 50%,
+        #fffef8 100%
+    );
+
+    overflow-x:hidden;
+
+    line-height:1.8;
+
+}
+
+/*=========================================================
+    TYPOGRAPHY
+=========================================================*/
+
+h1,
+h2,
+h3,
+h4{
+
+    font-family:'Playfair Display',serif;
+
+    font-weight:700;
+
+    color:#3d3d3d;
+
+}
+
+h1{
+
+    font-size:clamp(2.8rem,6vw,5rem);
+
+    line-height:1.2;
+
+}
+
+h2{
+
+    font-size:clamp(2rem,4vw,3rem);
+
+}
+
+h3{
+
+    font-size:1.4rem;
+
+}
+
+p{
+
+    color:var(--text-light);
+
+    font-size:1.05rem;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+button{
+
+    font-family:inherit;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+/*=========================================================
+    CONTAINER
+=========================================================*/
+
+.container{
+
+    width:min(92%,var(--container));
+
+    margin:auto;
+
+}
+
+/*=========================================================
+    SECTION
+=========================================================*/
+
+section{
+
+    padding:100px 0;
+
+    position:relative;
+
+}
+
+/*=========================================================
+    BACKGROUND
+=========================================================*/
+
+.background-animation{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    background:
+
+        radial-gradient(circle at top left,
+        rgba(255,214,232,.55),
+        transparent 40%),
+
+        radial-gradient(circle at bottom right,
+        rgba(214,241,255,.55),
+        transparent 40%),
+
+        radial-gradient(circle at center,
+        rgba(232,220,255,.35),
+        transparent 55%);
+
+}
+
+.floating-elements{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-1;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+/*=========================================================
+    MUSIC BUTTON
+=========================================================*/
+
+.music-toggle{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:#ffffffdd;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:var(--shadow);
+
+    display:grid;
+
+    place-items:center;
+
+    font-size:1.4rem;
+
+    transition:var(--transition);
+
+    z-index:999;
+
+}
+
+.music-toggle:hover{
+
+    transform:scale(1.08);
+
+    background:var(--pink);
+
+}
+
+/*=========================================================
+    HERO
+=========================================================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero .container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.event-tag{
+
+    background:linear-gradient(
+        90deg,
+        var(--pink),
+        var(--lavender)
+    );
+
+    padding:12px 28px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    color:#5f4764;
+
+    box-shadow:var(--shadow);
+
+}
+
+.hero h1{
+
+    max-width:850px;
+
+}
+
+.hero h1 span{
+
+    color:var(--primary);
+
+}
+
+.hero-date{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    font-weight:600;
+
+    color:#666;
+
+}
+
+.hero-illustration{
+
+    margin-top:20px;
+
+    max-width:520px;
+
+    width:100%;
+
+    animation:floatImage 5s ease-in-out infinite;
+
+}
+/*=========================================================
+    PARENTS SECTION
+=========================================================*/
+
+.parents{
+
+    position: relative;
+
+}
+
+.parents h2{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.parents-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+    align-items:stretch;
+
+}
+
+.parent-card{
+
+    position:relative;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.65);
+
+    border-radius:var(--radius);
+
+    padding:45px 35px;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.parent-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,214,232,.18),
+        rgba(215,241,255,.18)
+    );
+
+    opacity:0;
+
+    transition:var(--transition);
+
+}
+
+.parent-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.parent-card:hover::before{
+
+    opacity:1;
+
+}
+
+.parent-card img{
+
+    width:220px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+}
+
+.parent-card h3{
+
+    margin-bottom:18px;
+
+}
+
+.parent-card p{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+/*=========================================================
+    EVENT DETAILS
+=========================================================*/
+
+.event-details{
+
+    position:relative;
+
+}
+
+.event-details h2{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.details-card{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.detail{
+
+    position:relative;
+
+    background:#ffffffcc;
+
+    backdrop-filter:blur(16px);
+
+    border-radius:22px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    overflow:hidden;
+
+}
+
+.detail::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--pink),
+        var(--blue),
+        var(--lavender)
+    );
+
+}
+
+.detail:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.detail h3{
+
+    margin-bottom:18px;
+
+}
+
+.detail p{
+
+    color:var(--text);
+
+    font-weight:600;
+
+}
+
+/*=========================================================
+    INVITATION MESSAGE
+=========================================================*/
+
+.message{
+
+    position:relative;
+
+}
+
+.message-card{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:#ffffffcc;
+
+    backdrop-filter:blur(20px);
+
+    border-radius:30px;
+
+    padding:70px 60px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.message-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(255,214,232,.28);
+
+    top:-90px;
+
+    left:-70px;
+
+}
+
+.message-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(215,241,255,.25);
+
+    right:-80px;
+
+    bottom:-100px;
+
+}
+
+.message-card h2{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-bottom:28px;
+
+}
+
+.message-card p{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:1.08rem;
+
+    margin-bottom:18px;
+
+    max-width:700px;
+
+    margin-inline:auto;
+
+}
+
+/*=========================================================
+    FOOTER
+=========================================================*/
+
+.footer{
+
+    padding:90px 20px;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:1px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(0,0,0,.08),
+        transparent
+    );
+
+}
+
+.footer h2{
+
+    margin-bottom:20px;
+
+}
+
+.footer p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    margin-bottom:35px;
+
+}
+
+.footer h3{
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+}
+
+.footer h4{
+
+    font-size:2rem;
+
+}
+
+/*=========================================================
+    DECORATIVE BABY ICONS
+=========================================================*/
+
+.icon{
+
+    position:absolute;
+
+    opacity:.12;
+
+    pointer-events:none;
+
+}
+
+.icon-rattle{
+
+    width:80px;
+
+    top:8%;
+
+    left:6%;
+
+}
+
+.icon-teddy{
+
+    width:90px;
+
+    bottom:12%;
+
+    right:8%;
+
+}
+
+.icon-bottle{
+
+    width:75px;
+
+    top:20%;
+
+    right:10%;
+
+}
+
+.icon-star{
+
+    width:45px;
+
+}
+
+/*=========================================================
+    SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f7f7f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        var(--pink),
+        var(--lavender)
+    );
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary);
+
+}
+/*=========================================================
+    FLOATING DECORATIONS
+=========================================================*/
+
+.balloon,
+.star,
+.cloud,
+.sparkle,
+.confetti{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    user-select:none;
+
+}
+
+.balloon{
+
+    width:70px;
+
+    opacity:.85;
+    animation:floatBalloon linear infinite;
+
+}
+
+.star{
+
+    width:18px;
+
+    opacity:.8;
+
+    animation:twinkle 2.5s ease-in-out infinite;
+
+}
+
+.cloud{
+
+    opacity:.18;
+
+    animation:cloudMove 40s linear infinite;
+
+}
+
+.sparkle{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    box-shadow:
+    0 0 10px #fff,
+    0 0 20px #fff;
+
+    animation:sparkle 3s infinite;
+
+}
+
+.confetti{
+
+    width:10px;
+
+    height:18px;
+
+    border-radius:4px;
+
+    animation:confettiFall linear infinite;
+
+}
+
+/*=========================================================
+    GLASS EFFECT
+=========================================================*/
+
+.glass{
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    box-shadow:var(--shadow);
+
+}
+
+/*=========================================================
+    SECTION TITLE
+=========================================================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    margin-top:12px;
+
+}
+
+/*=========================================================
+    HOVER EFFECTS
+=========================================================*/
+
+.parent-card,
+.detail,
+.message-card{
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
+}
+
+.parent-card:hover,
+.detail:hover,
+.message-card:hover{
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.12);
+
+}
+
+img{
+
+    transition:transform .35s ease;
+
+}
+
+.parent-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/*=========================================================
+    FADE UTILITIES
+=========================================================*/
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+.fade-left{
+
+    opacity:0;
+
+    transform:translateX(-60px);
+
+}
+
+.fade-right{
+
+    opacity:0;
+
+    transform:translateX(60px);
+
+}
+
+.zoom-in{
+
+    opacity:0;
+
+    transform:scale(.9);
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:none;
+
+    transition:
+    all .8s ease;
+
+}
+
+/*=========================================================
+    KEYFRAMES
+=========================================================*/
+
+@keyframes floatImage{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floatBalloon{
+
+    0%{
+
+        transform:translateY(120vh);
+
+    }
+
+    100%{
+
+        transform:translateY(-150px);
+
+    }
+
+}
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:.2;
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+        transform:scale(1.25);
+
+    }
+
+    100%{
+
+        opacity:.2;
+        transform:scale(.8);
+
+    }
+
+}
+
+@keyframes sparkle{
+
+    0%{
+
+        opacity:0;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes cloudMove{
+
+    from{
+
+        transform:translateX(-300px);
+
+    }
+
+    to{
+
+        transform:translateX(calc(100vw + 300px));
+
+    }
+
+}
+
+@keyframes confettiFall{
+
+    0%{
+
+        transform:
+        translateY(-100px)
+        rotate(0deg);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(110vh)
+        rotate(720deg);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:
+        0 0 0 rgba(255,127,168,.2);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 35px rgba(255,127,168,.45);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 0 rgba(255,127,168,.2);
+
+    }
+
+}
+
+/*=========================================================
+    SELECTION
+=========================================================*/
+
+::selection{
+
+    background:var(--pink);
+
+    color:#444;
+
+}
+
+/*=========================================================
+    RESPONSIVE
+=========================================================*/
+
+@media(max-width:992px){
+
+    section{
+
+        padding:80px 0;
+
+    }
+
+    .parents-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .details-card{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .parent-card img{
+
+        width:180px;
+
+    }
+
+    .message-card{
+
+        padding:50px 35px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:2.8rem;
+
+    }
+
+    h2{
+
+        font-size:2rem;
+
+    }
+
+    .hero{
+
+        min-height:90vh;
+
+    }
+
+    .hero-date{
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+    .event-tag{
+
+        font-size:.95rem;
+
+    }
+
+    .parent-card{
+
+        padding:35px 25px;
+
+    }
+
+    .detail{
+
+        padding:35px 25px;
+
+    }
+
+    .message-card{
+
+        padding:40px 25px;
+
+    }
+
+    .footer h4{
+
+        font-size:1.6rem;
+
+    }
+
+    .music-toggle{
+
+        width:52px;
+
+        height:52px;
+
+        right:18px;
+
+        bottom:18px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    section{
+
+        padding:65px 0;
+
+    }
+
+    .container{
+
+        width:94%;
+
+    }
+
+    h1{
+
+        font-size:2.2rem;
+
+    }
+
+    h2{
+
+        font-size:1.7rem;
+
+    }
+
+    .hero-illustration{
+
+        max-width:300px;
+
+    }
+
+    .parent-card img{
+
+        width:150px;
+
+    }
+
+    p{
+
+        font-size:.96rem;
+
+    }
+
+}
+/*=========================================
+    Google Maps Button
+=========================================*/
+
+.map-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin-top:20px;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #ff7fa8,
+        #f7a8d4
+    );
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+    box-shadow:0 10px 25px rgba(255,127,168,.25);
+
+}
+
+.map-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 35px rgba(255,127,168,.35);
+
+}

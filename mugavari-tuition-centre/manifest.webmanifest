@@ -1,0 +1,20 @@
+{
+    "name": "Mugavari Tuition Centre",
+    "short_name": "Mugavari",
+    "description": "Best tuition centre for academic excellence — concept-based learning and personalized guidance.",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "theme_color": "#1a1a2e",
+    "background_color": "#ffffff",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "assets/icons/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ],
+    "categories": ["education"]
+}
