@@ -1387,3 +1387,59 @@ img{
     box-shadow:0 18px 35px rgba(255,127,168,.35);
 
 }
+/*=========================================
+    Footer Credit
+=========================================*/
+
+.footer-credit{
+
+    margin-top:40px;
+    padding-top:25px;
+
+    border-top:1px solid rgba(0,0,0,.08);
+
+}
+
+.footer-credit p{
+
+    margin-bottom:10px;
+
+    font-size:.95rem;
+
+    color:#777;
+
+}
+
+.footer-credit strong{
+
+    color:var(--primary);
+
+    letter-spacing:1px;
+
+}
+
+.footer-credit a{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#ffd6e8,#e8dcff);
+
+    color:#444;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+}
+
+.footer-credit a:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
