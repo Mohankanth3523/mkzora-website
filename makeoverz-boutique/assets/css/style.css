@@ -328,18 +328,101 @@ p {
    LOGO
 ===================================================== */
 
-.logo a {
+/* =====================================================
+   LOGO
+===================================================== */
 
-    font-size: 2rem;
+.logo{
 
-    font-family:
-        'Cormorant Garamond',
-        serif;
+    display:flex;
 
-    font-weight: 700;
+    align-items:center;
 
-    color:
-        var(--primary-maroon);
+    flex-shrink:0;
+
+}
+
+.logo a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    text-decoration:none;
+
+}
+
+.logo img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    display:block;
+
+    flex-shrink:0;
+
+}
+
+.logo-text{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.logo-text span{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+    color:var(--primary-maroon);
+
+    letter-spacing:.5px;
+
+    white-space:nowrap;
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+    .header .container{
+
+        height:80px;
+
+    }
+
+    .logo img{
+
+        width:80px;
+
+        height:80px;
+
+    }
+
+    .logo a{
+
+        gap:10px;
+
+    }
+
+    .logo-text span{
+
+        font-size:1.2rem;
+
+    }
 
 }
 
