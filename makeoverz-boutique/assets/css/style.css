@@ -356,9 +356,9 @@ p {
 
 .logo img{
 
-    width:70px;
+    width:90px;
 
-    height:70px;
+    height:90px;
 
     object-fit:contain;
 
@@ -420,7 +420,7 @@ p {
 
     .logo-text span{
 
-        font-size:0.8rem;
+        font-size:1rem;
 
     }
 
@@ -2968,7 +2968,7 @@ LIGHTBOX
 
     body{
 
-        padding-bottom:110px;
+        padding-bottom:90px;
 
     }
 
