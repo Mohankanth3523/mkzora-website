@@ -223,39 +223,84 @@ section{
 
     position:fixed;
 
-    right:25px;
+    right:20px;
 
-    bottom:25px;
+    bottom:20px;
 
-    width:58px;
+    width:60px;
 
-    height:58px;
+    height:60px;
+
+    border:none;
 
     border-radius:50%;
 
-    background:#ffffffdd;
+    display:flex;
 
-    backdrop-filter:blur(10px);
+    align-items:center;
 
-    box-shadow:var(--shadow);
+    justify-content:center;
 
-    display:grid;
+    cursor:pointer;
 
-    place-items:center;
+    font-size:24px;
 
-    font-size:1.4rem;
+    color:#ffffff;
 
-    transition:var(--transition);
+    background:linear-gradient(135deg,#ff7aa8,#8e6cff);
 
-    z-index:999;
+    box-shadow:
+        0 10px 30px rgba(255,122,168,.35),
+        0 0 0 4px rgba(255,255,255,.4);
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s ease;
+
+    z-index:9999;
 
 }
 
 .music-toggle:hover{
 
-    transform:scale(1.08);
+    transform:translateY(-3px) scale(1.08);
 
-    background:var(--pink);
+    box-shadow:
+        0 18px 40px rgba(255,122,168,.45);
+
+}
+
+.music-toggle.playing{
+
+    animation:musicPulse 1.5s infinite;
+
+}
+
+.music-toggle i{
+
+    pointer-events:none;
+
+}
+
+@keyframes musicPulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
 
 }
 

@@ -225,6 +225,7 @@ document.querySelectorAll(
 
 const musicButton = document.getElementById("musicToggle");
 const music = document.getElementById("bgMusic");
+const icon = musicButton.querySelector("i");
 
 if (musicButton && music) {
 
@@ -232,32 +233,39 @@ if (musicButton && music) {
 
     music.volume = 0.4;
 
-    musicButton.addEventListener("click", () => {
+    musicButton.addEventListener("click", async () => {
 
-        if (playing) {
+        try {
 
-            music.pause();
+            if (playing) {
 
-            musicButton.innerHTML = "♪";
+                music.pause();
 
-            musicButton.classList.remove("playing");
+                icon.className = "fas fa-music";
 
-        } else {
+                musicButton.classList.remove("playing");
 
-            music.play();
+            } else {
 
-            musicButton.innerHTML = "❚❚";
+                await music.play();
 
-            musicButton.classList.add("playing");
+                icon.className = "fas fa-pause";
+
+                musicButton.classList.add("playing");
+
+            }
+
+            playing = !playing;
+
+        } catch (err) {
+
+            console.log("Autoplay blocked:", err);
 
         }
-
-        playing = !playing;
 
     });
 
 }
-
 
 /*=========================================================
     Hero Floating Effect

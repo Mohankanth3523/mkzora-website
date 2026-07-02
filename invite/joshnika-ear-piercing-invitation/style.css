@@ -973,32 +973,74 @@ footer small{
     }
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
     section{
-        padding:80px 15px;
+        padding:50px 16px;
+    }
+
+    .glass-card{
+        padding:24px 18px;
+        border-radius:18px;
     }
 
     #nameReveal{
-        font-size:2.2rem;
+        font-size:2.4rem;
+        line-height:1.2;
     }
 
     .welcome{
-        font-size:.9rem;
+        font-size:0.9rem;
+        letter-spacing:2px;
     }
 
     .subtitle{
-        font-size:1rem;
+        font-size:1.1rem;
+    }
+
+    .section-title{
+        font-size:2rem;
+        margin-bottom:30px;
     }
 
     .baby-wrapper{
-        width:220px;
-        height:220px;
+        width:180px;
+        height:180px;
+    }
+
+    .baby-section h2{
+        font-size:2.2rem;
+    }
+
+    .parents-image{
+        max-width:280px;
+    }
+
+    .parents h3{
+        font-size:1.7rem;
+    }
+
+    .invitation-card p{
+        font-size:17px;
+        line-height:1.8;
+    }
+
+    .gp-card,
+    .event-card{
+        min-height:80px;
+        height:auto;
+        padding:18px;
+    }
+
+    .countdown{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
     }
 
     .time-box{
-        width:100px;
-        height:100px;
+        width:100%;
+        height:90px;
     }
 
     .time-box span{
@@ -1006,45 +1048,87 @@ footer small{
     }
 
     .gallery-slider{
-        height:300px;
+        height:260px;
     }
 
     .glow-text{
-        font-size:2rem;
+        font-size:2.2rem;
     }
 
     #blessingText{
-        font-size:1.3rem;
+        font-size:1.2rem;
+        line-height:1.6;
     }
 
     .venue iframe{
-        height:280px;
+        height:250px;
+    }
+
+    .map-buttons{
+        flex-direction:column;
+    }
+
+    .map-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    #musicBtn{
+        width:55px;
+        height:55px;
+        right:15px;
+        bottom:15px;
+        font-size:18px;
     }
 }
 
-@media(max-width:480px){
+@media (max-width:480px){
+
+    section{
+        padding:40px 12px;
+    }
 
     .glass-card{
-        padding:25px;
+        padding:20px 15px;
+    }
+
+    #nameReveal{
+        font-size:2rem;
+    }
+
+    .section-title{
+        font-size:1.7rem;
+    }
+
+    .baby-wrapper{
+        width:160px;
+        height:160px;
+    }
+
+    .parents-image{
+        max-width:240px;
     }
 
     .time-box{
-        width:85px;
-        height:85px;
+        height:80px;
     }
 
     .time-box span{
         font-size:1.5rem;
     }
 
-    .leaf{
-        width:60px;
-        height:60px;
-        font-size:2rem;
+    .gallery-slider{
+        height:220px;
     }
 
-    .gallery-slider{
-        height:240px;
+    .leaf{
+        width:55px;
+        height:55px;
+        font-size:1.8rem;
+    }
+
+    .glow-text{
+        font-size:1.8rem;
     }
 }
 /* ==========================================
