@@ -324,9 +324,13 @@ section{
 
     overflow:hidden;
 
+    padding:100px 0 80px;
+
 }
 
 .hero .container{
+
+    width:min(92%,900px);
 
     display:flex;
 
@@ -334,7 +338,9 @@ section{
 
     align-items:center;
 
-    gap:25px;
+    justify-content:center;
+
+    gap:18px;
 
 }
 
@@ -362,7 +368,11 @@ section{
 
 .hero h1{
 
-    max-width:850px;
+    font-size:clamp(2rem,4vw,3.5rem);
+
+    line-height:1.25;
+
+    max-width:700px;
 
 }
 
