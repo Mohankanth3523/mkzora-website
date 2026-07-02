@@ -1284,71 +1284,37 @@ img{
 
 @media(max-width:768px){
 
-    h1{
-
-        font-size:2.8rem;
-
-    }
-
-    h2{
-
-        font-size:2rem;
-
-    }
-
     .hero{
 
-        min-height:90vh;
+        min-height:85vh;
+
+        padding:70px 0 50px;
+
+    }
+
+    .hero h1{
+
+        font-size:1.9rem;
+
+        line-height:1.35;
 
     }
 
     .hero-date{
 
+        font-size:.95rem;
+
         flex-direction:column;
 
-        gap:10px;
+        gap:8px;
 
     }
 
     .event-tag{
 
-        font-size:.95rem;
+        font-size:.85rem;
 
-    }
-
-    .parent-card{
-
-        padding:35px 25px;
-
-    }
-
-    .detail{
-
-        padding:35px 25px;
-
-    }
-
-    .message-card{
-
-        padding:40px 25px;
-
-    }
-
-    .footer h4{
-
-        font-size:1.6rem;
-
-    }
-
-    .music-toggle{
-
-        width:52px;
-
-        height:52px;
-
-        right:18px;
-
-        bottom:18px;
+        padding:8px 18px;
 
     }
 
@@ -1356,45 +1322,37 @@ img{
 
 @media(max-width:480px){
 
-    section{
+    .hero{
 
-        padding:65px 0;
-
-    }
-
-    .container{
-
-        width:94%;
+        min-height:80vh;
 
     }
 
-    h1{
+    .hero h1{
 
-        font-size:2.2rem;
+        font-size:1.6rem;
+
+        line-height:1.4;
 
     }
 
-    h2{
+    .hero-date{
 
-        font-size:1.7rem;
+        font-size:.85rem;
+
+    }
+
+    .event-tag{
+
+        font-size:.8rem;
+
+        padding:7px 16px;
 
     }
 
     .hero-illustration{
 
-        max-width:300px;
-
-    }
-
-    .parent-card img{
-
-        width:150px;
-
-    }
-
-    p{
-
-        font-size:.96rem;
+        max-width:260px;
 
     }
 
