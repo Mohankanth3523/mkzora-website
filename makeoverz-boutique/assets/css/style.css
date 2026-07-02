@@ -311,15 +311,15 @@ p {
 
 }
 
-.header .container {
+.header .container{
 
-    display: flex;
+    display:flex;
 
-    justify-content: space-between;
+    justify-content:space-between;
 
-    align-items: center;
+    align-items:center;
 
-    height: 90px;
+    height:110px;
 
 }
 
@@ -420,7 +420,7 @@ p {
 
     .logo-text span{
 
-        font-size:1.2rem;
+        font-size:1rem;
 
     }
 
@@ -663,7 +663,7 @@ p {
             #fdf3f5 100%
         );
 
-    padding-top: 120px;
+    padding-top: 90px;
 
 }
 
@@ -2968,7 +2968,7 @@ LIGHTBOX
 
     body{
 
-        padding-bottom:90px;
+        padding-bottom:110px;
 
     }
 
