@@ -1,8 +1,31 @@
+<!-- browserconfig.xml -->
+
 <?xml version="1.0" encoding="utf-8"?>
+
 <browserconfig>
+
     <msapplication>
+
         <tile>
-            <TileColor>#1a1a2e</TileColor>
+
+            <square70x70logo
+                src="/assets/images/favicon/mstile-70x70.png"/>
+
+            <square150x150logo
+                src="/assets/images/favicon/mstile-150x150.png"/>
+
+            <square310x310logo
+                src="/assets/images/favicon/mstile-310x310.png"/>
+
+            <wide310x150logo
+                src="/assets/images/favicon/mstile-310x150.png"/>
+
+            <TileColor>
+                #2563EB
+            </TileColor>
+
         </tile>
+
     </msapplication>
+
 </browserconfig>

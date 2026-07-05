@@ -1,0 +1,15 @@
+
+robots.txt
+
+User-agent: *
+
+Allow: /
+
+Disallow: /assets/private/
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /drafts/
+
+Sitemap: https://example.com/sitemap.xml
+
+Host: example.com

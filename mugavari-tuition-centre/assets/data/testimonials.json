@@ -1,0 +1,70 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "type": "Student",
+      "studentName": "Student Name",
+      "parentName": "",
+      "class": "Grade 10",
+      "marks": "96%",
+      "photo": "assets/images/testimonials/student-01.webp",
+      "rating": 5,
+      "review": "The concept-based teaching, daily practice tests, and handwritten notes helped me improve my confidence and score above my expectations in the CBSE board examination."
+    },
+    {
+      "id": 2,
+      "type": "Parent",
+      "studentName": "Student Name",
+      "parentName": "Parent Name",
+      "class": "Grade 12",
+      "marks": "95%",
+      "photo": "assets/images/testimonials/parent-01.webp",
+      "rating": 5,
+      "review": "The faculty regularly updated us about our child's progress. The structured assessments and personal guidance made a significant difference."
+    },
+    {
+      "id": 3,
+      "type": "Student",
+      "studentName": "Student Name",
+      "parentName": "",
+      "class": "Grade 12",
+      "marks": "97%",
+      "photo": "assets/images/testimonials/student-02.webp",
+      "rating": 5,
+      "review": "The revision sessions, board model examinations, and previous year question papers were extremely helpful during my final preparation."
+    },
+    {
+      "id": 4,
+      "type": "Parent",
+      "studentName": "Student Name",
+      "parentName": "Parent Name",
+      "class": "Grade 10",
+      "marks": "94%",
+      "photo": "assets/images/testimonials/parent-02.webp",
+      "rating": 5,
+      "review": "Excellent faculty, disciplined environment, and quality study materials. We noticed remarkable improvement in our child's academic performance."
+    },
+    {
+      "id": 5,
+      "type": "Student",
+      "studentName": "Student Name",
+      "parentName": "",
+      "class": "Grade 10",
+      "marks": "95%",
+      "photo": "assets/images/testimonials/student-03.webp",
+      "rating": 5,
+      "review": "Every worksheet, revision note, and monthly examination strengthened my understanding and prepared me well for the board exams."
+    },
+    {
+      "id": 6,
+      "type": "Parent",
+      "studentName": "Student Name",
+      "parentName": "Parent Name",
+      "class": "Grade 12",
+      "marks": "98%",
+      "photo": "assets/images/testimonials/parent-03.webp",
+      "rating": 5,
+      "review": "The institute focuses on concepts rather than memorization. The regular parent meetings and performance tracking gave us complete confidence."
+    }
+  ]
+}

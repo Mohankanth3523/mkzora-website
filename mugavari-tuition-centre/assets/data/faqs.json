@@ -1,0 +1,76 @@
+{
+  "faqs": [
+    {
+      "id": 1,
+      "category": "General",
+      "question": "Which syllabus do you teach?",
+      "answer": "We provide coaching exclusively for the CBSE syllabus for Grade 10 and Grade 12 students."
+    },
+    {
+      "id": 2,
+      "category": "General",
+      "question": "Which grades are available?",
+      "answer": "We currently offer coaching for Grade 10 and Grade 12 CBSE students."
+    },
+    {
+      "id": 3,
+      "category": "Courses",
+      "question": "Which subjects are taught?",
+      "answer": "Mathematics, Physics, and Chemistry are taught by experienced faculty members."
+    },
+    {
+      "id": 4,
+      "category": "Faculty",
+      "question": "Who teaches Mathematics?",
+      "answer": "The Founder with over 10 years of teaching experience handles Mathematics."
+    },
+    {
+      "id": 5,
+      "category": "Faculty",
+      "question": "Who teaches Physics?",
+      "answer": "An experienced guest faculty member with 15 years of teaching experience teaches Physics."
+    },
+    {
+      "id": 6,
+      "category": "Faculty",
+      "question": "Who teaches Chemistry?",
+      "answer": "Chemistry is taught by a guest faculty member with 7 years of teaching experience."
+    },
+    {
+      "id": 7,
+      "category": "Schedule",
+      "question": "What are the class timings?",
+      "answer": "Monday to Friday classes are conducted from 6:00 PM to 8:00 PM. Sunday classes are held from 8:00 AM to 12:00 PM. Saturday is a holiday."
+    },
+    {
+      "id": 8,
+      "category": "Study Materials",
+      "question": "Will study materials be provided?",
+      "answer": "Yes. Every enrolled student receives worksheets, handwritten notes, revision materials, formula sheets, and previous year questions."
+    },
+    {
+      "id": 9,
+      "category": "Assessment",
+      "question": "How often are tests conducted?",
+      "answer": "Students attend daily practice tests, weekly assessments, monthly examinations, and model board examinations."
+    },
+    {
+      "id": 10,
+      "category": "Admissions",
+      "question": "How can I enroll?",
+      "answer": "You can visit the institute, contact us by phone, send a WhatsApp message, or submit the admission enquiry form through the website."
+    },
+    {
+      "id": 11,
+      "category": "Admissions",
+      "question": "Can I visit the institute before admission?",
+      "answer": "Yes. Parents and students are welcome to visit the institute during business hours."
+    },
+    {
+      "id": 12,
+      "category": "Contact",
+      "question": "How can I contact the institute?",
+      "answer": "You can reach us by phone, WhatsApp, email, or by visiting the institute directly."
+    }
+  ]
+}

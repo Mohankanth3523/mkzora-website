@@ -1,262 +1,158 @@
-/**
- * ==========================================================
- * Mugavari Tuition Centre
- * Forms Module
- * ==========================================================
- * Responsibilities
- * ----------------------------------------------------------
- * • Bind form submission handlers
- * • Integrate with Validation module
- * • Handle form reset
- * • Prevent double submission
- *
- * Dependencies
- * ----------------------------------------------------------
- * • utils.js
- * • modules/validation.js
- * ==========================================================
- */
+// File: assets/js/forms.js
 
-"use strict";
+'use strict';
 
-const Forms = (() => {
+document.addEventListener('DOMContentLoaded', () => {
 
-    /* ======================================================
-       STATE
-    ====================================================== */
+    initializeForms();
 
-    const forms = [];
+});
 
-    /* ======================================================
-       INITIALIZE
-    ====================================================== */
+function initializeForms() {
 
-    function initialize() {
+    const forms = document.querySelectorAll('form');
 
-        try {
+    if (!forms.length) {
 
-            const allForms =
-                document.querySelectorAll(
-                    "form[data-validate]"
-                );
-
-            allForms.forEach(form => {
-
-                bindForm(form);
-
-                forms.push(form);
-
-            });
-
-            Utils.log(
-                "Forms initialized."
-            );
-
-        } catch (error) {
-
-            Utils.error(
-                "Forms Error",
-                error
-            );
-
-        }
+        return;
 
     }
 
-    /* ======================================================
-       BIND FORM
-    ====================================================== */
+    forms.forEach(form => {
 
-    function bindForm(form) {
+        form.addEventListener('submit', event => {
 
-        form.addEventListener(
+            event.preventDefault();
 
-            "submit",
+            if (validateForm(form)) {
 
-            handleSubmit
+                showSuccess(form);
 
-        );
-
-        /* Live validation on blur */
-
-        const inputs =
-            form.querySelectorAll(
-                "input, textarea, select"
-            );
-
-        inputs.forEach(input => {
-
-            input.addEventListener(
-
-                "blur",
-
-                () => {
-
-                    if (
-                        typeof Validation !== "undefined"
-                    ) {
-
-                        const error =
-                            Validation.validateField(
-                                input,
-                                getFieldRules(input)
-                            );
-
-                        if (error) {
-
-                            Validation.showError(
-                                input,
-                                error
-                            );
-
-                        } else {
-
-                            Validation.clearError(
-                                input
-                            );
-
-                        }
-
-                    }
-
-                }
-
-            );
+            }
 
         });
 
-    }
+    });
 
-    /* ======================================================
-       GET FIELD RULES
-    ====================================================== */
+}
 
-    function getFieldRules(input) {
+function validateForm(form) {
 
-        const rules = {};
+    let valid = true;
 
-        if (input.required) {
-            rules.required = true;
-        }
+    const requiredFields =
+        form.querySelectorAll('[required]');
 
-        if (input.type === "email") {
-            rules.email = true;
-        }
+    requiredFields.forEach(field => {
 
-        if (input.type === "tel") {
-            rules.phone = true;
-        }
+        clearError(field);
 
-        if (input.minLength > 0) {
-            rules.minLength = input.minLength;
-        }
+        const value = field.value.trim();
 
-        if (input.maxLength > 0 && input.maxLength < 524288) {
-            rules.maxLength = input.maxLength;
-        }
+        if (!value) {
 
-        return rules;
-
-    }
-
-    /* ======================================================
-       HANDLE SUBMIT
-    ====================================================== */
-
-    function handleSubmit(event) {
-
-        event.preventDefault();
-
-        const form = event.target;
-
-        /* Prevent double submission */
-
-        const submitBtn =
-            form.querySelector(
-                "button[type='submit']"
+            showError(
+                field,
+                'This field is required.'
             );
 
-        if (submitBtn && submitBtn.disabled) {
+            valid = false;
+
             return;
-        }
-
-        /* Validate if Validation module is available */
-
-        if (typeof Validation !== "undefined") {
-
-            const schema = buildSchema(form);
-
-            const isValid =
-                Validation.validateForm(
-                    form,
-                    schema
-                );
-
-            if (!isValid) {
-                return;
-            }
 
         }
 
-        /* Disable submit button */
+        if (
+            field.type === 'email' &&
+            !isValidEmail(value)
+        ) {
 
-        if (submitBtn) {
-            submitBtn.disabled = true;
-        }
-
-        Utils.log(
-            "Form submitted.",
-            new FormData(form)
-        );
-
-        /* Re-enable after delay (simulated) */
-
-        setTimeout(() => {
-
-            if (submitBtn) {
-                submitBtn.disabled = false;
-            }
-
-        }, 2000);
-
-    }
-
-    /* ======================================================
-       BUILD SCHEMA
-    ====================================================== */
-
-    function buildSchema(form) {
-
-        const schema = {};
-
-        const inputs =
-            form.querySelectorAll(
-                "input, textarea, select"
+            showError(
+                field,
+                'Please enter a valid email address.'
             );
 
-        inputs.forEach(input => {
+            valid = false;
 
-            if (input.name) {
+        }
 
-                schema[input.name] =
-                    getFieldRules(input);
+        if (
+            field.type === 'tel' &&
+            !isValidPhone(value)
+        ) {
 
-            }
+            showError(
+                field,
+                'Please enter a valid phone number.'
+            );
 
-        });
+            valid = false;
 
-        return schema;
+        }
+
+    });
+
+    return valid;
+
+}
+
+function showError(field, message) {
+
+    field.setAttribute(
+        'aria-invalid',
+        'true'
+    );
+
+    let error =
+        field.parentElement.querySelector('.form-error');
+
+    if (!error) {
+
+        error = document.createElement('small');
+
+        error.className = 'form-error';
+
+        field.parentElement.appendChild(error);
 
     }
 
-    /* ======================================================
-       PUBLIC API
-    ====================================================== */
+    error.textContent = message;
 
-    return {
+}
 
-        initialize
+function clearError(field) {
 
-    };
+    field.removeAttribute('aria-invalid');
 
-})();
+    const error =
+        field.parentElement.querySelector('.form-error');
+
+    if (error) {
+
+        error.remove();
+
+    }
+
+}
+
+function showSuccess(form) {
+
+    form.reset();
+
+    alert(
+        'Your enquiry has been submitted successfully.'
+    );
+
+}
+
+function isValidEmail(email) {
+
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+}
+
+function isValidPhone(phone) {
+
+    return /^[0-9+\-\s()]{10,15}$/.test(phone);
+
+}

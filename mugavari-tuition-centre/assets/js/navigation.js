@@ -1,324 +1,97 @@
-/**
- * =====================================================
- * Mugavari Tuition Centre
- * Navigation Module
- * =====================================================
- */
+// File: assets/js/navigation.js
 
-"use strict";
+'use strict';
 
-const Navigation = (() => {
+document.addEventListener('DOMContentLoaded', () => {
 
-    let navigationData = null;
+    initializeNavigation();
 
-    let desktopNavigation = null;
+});
 
-    let mobileNavigation = null;
+function initializeNavigation() {
 
-    let menuToggle = null;
+    const header = document.querySelector('.site-header');
 
-    let menuClose = null;
+    const menu = document.getElementById('primary-navigation');
 
-    let menuBackdrop = null;
+    const toggle = document.getElementById('mobile-menu-toggle');
 
-    let mobileMenu = null;
+    if (!menu || !toggle) {
 
-    /* =====================================================
-       Initialize
-    ===================================================== */
+        return;
 
-    function initialize() {
+    }
 
-        navigationData = window.AppData.navigation;
+    toggle.addEventListener('click', () => {
 
-        if (!navigationData) {
+        const expanded =
+            toggle.getAttribute('aria-expanded') === 'true';
 
-            console.error("Navigation data unavailable.");
+        toggle.setAttribute(
+            'aria-expanded',
+            String(!expanded)
+        );
+
+        menu.classList.toggle('active');
+
+        document.body.classList.toggle('menu-open');
+
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+
+        link.addEventListener('click', () => {
+
+            menu.classList.remove('active');
+
+            document.body.classList.remove('menu-open');
+
+            toggle.setAttribute(
+                'aria-expanded',
+                'false'
+            );
+
+        });
+
+    });
+
+    document.addEventListener('keydown', event => {
+
+        if (event.key !== 'Escape') {
 
             return;
 
         }
 
-        cacheDOM();
+        menu.classList.remove('active');
 
-        renderDesktopNavigation();
+        document.body.classList.remove('menu-open');
 
-        renderMobileNavigation();
-
-        renderCTAButtons();
-
-        setActiveNavigation();
-
-        bindEvents();
-
-    }
-
-    /* =====================================================
-       Cache DOM
-    ===================================================== */
-
-    function cacheDOM() {
-
-        desktopNavigation = Utils.$("#desktop-navigation");
-
-        mobileNavigation = Utils.$("#mobile-navigation-list");
-
-        menuToggle = Utils.$("#mobile-menu-toggle");
-
-        menuClose = Utils.$("#mobile-menu-close");
-
-        menuBackdrop = Utils.$("#mobile-menu-backdrop");
-
-        mobileMenu = Utils.$("#mobile-navigation");
-
-    }
-
-    /* =====================================================
-       Desktop Navigation
-    ===================================================== */
-
-    function renderDesktopNavigation() {
-
-        if (!desktopNavigation) return;
-
-        Utils.clearElement(desktopNavigation);
-
-        navigationData.navigation.desktop.forEach(item => {
-
-            const li = Utils.createElement("li", "nav-item");
-
-            const link = Utils.createElement("a", "nav-link");
-
-            link.href = item.url;
-
-            link.target = item.target;
-
-            link.textContent = item.title;
-
-            li.appendChild(link);
-
-            desktopNavigation.appendChild(li);
-
-        });
-
-    }
-
-    /* =====================================================
-       Mobile Navigation
-    ===================================================== */
-
-    function renderMobileNavigation() {
-
-        if (!mobileNavigation) return;
-
-        Utils.clearElement(mobileNavigation);
-
-        navigationData.navigation.mobile.forEach(item => {
-
-            const li = Utils.createElement("li", "mobile-nav-item");
-
-            const link = Utils.createElement("a", "mobile-nav-link");
-
-            link.href = item.url;
-
-            link.target = item.target;
-
-            link.textContent = item.title;
-
-            li.appendChild(link);
-
-            mobileNavigation.appendChild(li);
-
-        });
-
-    }
-
-    /* =====================================================
-       CTA Buttons
-    ===================================================== */
-
-    function renderCTAButtons() {
-
-        const desktopCTA = Utils.$("[data-cta-link]");
-
-        const desktopText = Utils.$("[data-cta-text]");
-
-        const mobileCTA = Utils.$("[data-mobile-cta-link]");
-
-        const mobileText = Utils.$("[data-mobile-cta-text]");
-
-        if (desktopCTA) {
-
-            desktopCTA.href = navigationData.navigation.headerButton.url;
-
-        }
-
-        if (desktopText) {
-
-            desktopText.textContent =
-                navigationData.navigation.headerButton.text;
-
-        }
-
-        if (mobileCTA) {
-
-            mobileCTA.href = navigationData.navigation.mobileButton.url;
-
-        }
-
-        if (mobileText) {
-
-            mobileText.textContent =
-                navigationData.navigation.mobileButton.text;
-
-        }
-
-    }
-
-    /* =====================================================
-       Active Navigation
-    ===================================================== */
-
-    function setActiveNavigation() {
-
-        const currentPage =
-            window.location.pathname.split("/").pop() ||
-            "index.html";
-
-        Utils.$$(".nav-link").forEach(link => {
-
-            if (link.getAttribute("href") === currentPage) {
-
-                link.classList.add("active");
-
-                link.setAttribute("aria-current", "page");
-
-            }
-
-        });
-
-        Utils.$$(".mobile-nav-link").forEach(link => {
-
-            if (link.getAttribute("href") === currentPage) {
-
-                link.classList.add("active");
-
-                link.setAttribute("aria-current", "page");
-
-            }
-
-        });
-
-    }
-
-    /* =====================================================
-       Events
-    ===================================================== */
-
-    function bindEvents() {
-
-        if (menuToggle) {
-
-            menuToggle.addEventListener(
-
-                "click",
-
-                openMenu
-
-            );
-
-        }
-
-        if (menuClose) {
-
-            menuClose.addEventListener(
-
-                "click",
-
-                closeMenu
-
-            );
-
-        }
-
-        if (menuBackdrop) {
-
-            menuBackdrop.addEventListener(
-
-                "click",
-
-                closeMenu
-
-            );
-
-        }
-
-        document.addEventListener(
-
-            "keydown",
-
-            event => {
-
-                if (event.key === "Escape") {
-
-                    closeMenu();
-
-                }
-
-            }
-
+        toggle.setAttribute(
+            'aria-expanded',
+            'false'
         );
 
-    }
+    });
 
-    /* =====================================================
-       Open Menu
-    ===================================================== */
+    window.addEventListener('scroll', () => {
 
-    function openMenu() {
+        if (!header) {
 
-        mobileMenu.classList.add("is-open");
+            return;
 
-        menuBackdrop.hidden = false;
+        }
 
-        menuToggle.setAttribute(
+        if (window.scrollY > 20) {
 
-            "aria-expanded",
+            header.classList.add('scrolled');
 
-            "true"
+        } else {
 
-        );
+            header.classList.remove('scrolled');
 
-    }
+        }
 
-    /* =====================================================
-       Close Menu
-    ===================================================== */
+    });
 
-    function closeMenu() {
-
-        mobileMenu.classList.remove("is-open");
-
-        menuBackdrop.hidden = true;
-
-        menuToggle.setAttribute(
-
-            "aria-expanded",
-
-            "false"
-
-        );
-
-    }
-
-    /* =====================================================
-       Public API
-    ===================================================== */
-
-    return {
-
-        initialize
-
-    };
-
-})();
+}

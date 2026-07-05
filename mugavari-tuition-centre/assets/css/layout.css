@@ -1,113 +1,626 @@
-/* ==================================================
-   LAYOUT SYSTEM
-   File: layout.css
-================================================== */
+/* File: assets/css/layout.css */
 
-/* ===============================
-   CONTAINER SYSTEM
-=============================== */
+.container{
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-4);
+    width:min(100% - 2rem,var(--container-width));
+
+    margin-inline:auto;
+
 }
 
-/* ===============================
-   SECTION SPACING
-=============================== */
+.section-header{
 
-section {
-    padding: var(--space-16) 0;
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto var(--space-8);
+
 }
 
-/* ===============================
-   PAGE WRAPPER
-=============================== */
+.section-header h2{
 
-main {
-    width: 100%;
-    min-height: 100vh;
+    margin-bottom:var(--space-4);
+
 }
 
-/* ===============================
-   GRID SYSTEM (BASIC FLEX GRID)
-=============================== */
+.section-header p{
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: calc(var(--space-4) * -1);
+    font-size:1.05rem;
+
 }
 
-.col {
-    flex: 1;
-    padding: var(--space-4);
+.site-header{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:#ffffff;
+
+    border-bottom:1px solid var(--color-border);
+
+    transition:var(--transition);
+
 }
 
-/* ===============================
-   TWO COLUMN LAYOUT
-=============================== */
+.site-header.scrolled{
 
-.grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-6);
+    box-shadow:var(--shadow-small);
+
 }
 
-/* ===============================
-   THREE COLUMN LAYOUT
-=============================== */
+.navbar{
 
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-6);
+    min-height:82px;
+
+    display:flex;
+
+    align-items:center;
+
 }
 
-/* ===============================
-   CENTER ALIGN HELPERS
-=============================== */
+.navbar .container{
 
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:var(--space-6);
+
 }
 
-/* ===============================
-   PAGE HEADER LAYOUT
-=============================== */
+.logo{
 
-.page-header {
-    text-align: center;
-    padding: var(--space-20) 0 var(--space-12);
-    background: var(--bg-section);
+    display:flex;
+
+    align-items:center;
+
+    flex-shrink:0;
+
 }
 
-/* ===============================
-   SECTION VARIANTS
-=============================== */
+.logo img{
 
-.section-light {
-    background: var(--bg-section);
+    width:170px;
+
+    height:auto;
+
 }
 
-.section-dark {
-    background: var(--color-primary);
-    color: var(--color-white);
+.nav-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+    margin-left:auto;
+
 }
 
-/* ===============================
-   RESPONSIVE CONTAINER SAFETY
-=============================== */
+.nav-menu a{
 
-@media (max-width: 768px) {
+    position:relative;
 
-    .grid-2,
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
+    font-weight:600;
+
+    color:var(--color-text);
+
+}
+
+.nav-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--color-primary);
+
+    transition:var(--transition);
+
+}
+
+.nav-menu a:hover::after,
+
+.nav-menu a:focus-visible::after,
+
+.nav-menu a[aria-current="page"]::after{
+
+    width:100%;
+
+}
+
+.mobile-menu-toggle{
+
+    display:none;
+
+}
+
+.hero-section{
+
+    padding-top:var(--space-9);
+
+    padding-bottom:var(--space-9);
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #F8FAFC
+    );
+
+}
+
+.hero-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:72px;
+
+    align-items:center;
+
+}
+
+.hero-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-5);
+
+}
+
+.hero-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    width:max-content;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:#DBEAFE;
+
+    color:var(--color-primary);
+
+    font-weight:600;
+
+}
+
+.hero-content p{
+
+    max-width:620px;
+
+    font-size:1.08rem;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:var(--space-2);
+
+}
+
+.hero-image img{
+
+    border-radius:var(--radius-large);
+
+    box-shadow:var(--shadow-large);
+
+}
+.why-us-section{
+
+    background:var(--color-background);
+
+}
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+.course-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:32px;
+
+}
+
+.faculty-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:32px;
+
+}
+
+.timeline{
+
+    display:grid;
+
+    gap:24px;
+
+    max-width:900px;
+
+    margin-inline:auto;
+
+}
+
+.timeline-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:24px;
+
+}
+
+.timeline-number{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:var(--color-primary);
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+.timeline-content{
+
+    flex:1;
+
+    padding:28px;
+
+    border-radius:var(--radius-medium);
+
+    background:#ffffff;
+
+    border:1px solid var(--color-border);
+
+    box-shadow:var(--shadow-small);
+
+}
+
+.schedule-table{
+
+    overflow-x:auto;
+
+}
+
+.assessment-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+.materials-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+.formula-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+.statistics-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+    margin-bottom:var(--space-8);
+
+}
+
+.success-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+.testimonial-slider{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+.accordion{
+
+    display:grid;
+
+    gap:20px;
+
+}
+
+.cta-box{
+
+    max-width:900px;
+
+    margin-inline:auto;
+
+    text-align:center;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1.2fr;
+
+    gap:48px;
+
+}
+
+.footer-bottom{
+
+    margin-top:64px;
+
+    padding-top:32px;
+
+    border-top:1px solid var(--color-border);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:24px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-bottom nav{
+
+    display:flex;
+
+    gap:24px;
+
+    flex-wrap:wrap;
+
+}
+.site-footer{
+
+    background:var(--color-text);
+
+    color:#ffffff;
+
+    padding:96px 0 32px;
+
+}
+
+.site-footer h2,
+.site-footer h3{
+
+    color:#ffffff;
+
+    margin-bottom:20px;
+
+}
+
+.site-footer p,
+.site-footer li,
+.site-footer address{
+
+    color:#D1D5DB;
+
+}
+
+.site-footer ul{
+
+    display:grid;
+
+    gap:12px;
+
+}
+
+.site-footer a{
+
+    color:#D1D5DB;
+
+    transition:var(--transition);
+
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible{
+
+    color:#ffffff;
+
+}
+
+.section-action{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:56px;
+
+}
+
+.final-cta{
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #1D4ED8
+    );
+
+}
+
+.cta-box{
+
+    color:#ffffff;
+
+}
+
+.cta-tag{
+
+    display:inline-flex;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.15);
+
+    margin-bottom:20px;
+
+    font-weight:600;
+
+}
+
+.cta-box h2{
+
+    color:#ffffff;
+
+    margin-bottom:24px;
+
+}
+
+.cta-box p{
+
+    color:#E5E7EB;
+
+    max-width:720px;
+
+    margin-inline:auto;
+
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+.footer-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.footer-title{
+
+    font-size:1.75rem;
+
+}
+
+.footer-column address{
+
+    line-height:1.8;
+
+}
+
+.footer-bottom p{
+
+    margin:0;
+
+}
+
+main>section:nth-child(even){
+
+    background:var(--color-background-alt);
+
+}
+
+.hero-section,
+.final-cta{
+
+    overflow:hidden;
 
 }

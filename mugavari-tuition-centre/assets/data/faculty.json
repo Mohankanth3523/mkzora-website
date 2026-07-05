@@ -1,0 +1,94 @@
+{
+  "faculty": [
+    {
+      "id": "founder-mathematics",
+      "name": "Founder",
+      "designation": "Founder & Mathematics Faculty",
+      "subject": "Mathematics",
+      "experience": "10 Years",
+      "qualification": "B.Sc., Mathematics",
+      "photo": "assets/images/faculty/founder.webp",
+      "email": "",
+      "phone": "",
+      "specializations": [
+        "Algebra",
+        "Geometry",
+        "Trigonometry",
+        "Calculus",
+        "Coordinate Geometry",
+        "Board Examination Preparation"
+      ],
+      "teachingStyle": [
+        "Concept-Based Learning",
+        "Interactive Classroom Sessions",
+        "Step-by-Step Problem Solving",
+        "Daily Practice",
+        "Personal Guidance"
+      ],
+      "achievements": [
+        "10+ Years Teaching Experience",
+        "Board Examination Mentor",
+        "Hundreds of Students Guided",
+        "Structured Learning Methodology"
+      ],
+      "message": "Understanding concepts and consistent practice are the keys to scoring above 95%."
+    },
+    {
+      "id": "physics-faculty",
+      "name": "Guest Faculty",
+      "designation": "Physics Faculty",
+      "subject": "Physics",
+      "experience": "15 Years",
+      "qualification": "M.Sc., Physics",
+      "photo": "assets/images/faculty/physics.webp",
+      "specializations": [
+        "Mechanics",
+        "Electricity",
+        "Magnetism",
+        "Optics",
+        "Modern Physics",
+        "Board Numericals"
+      ],
+      "teachingStyle": [
+        "Concept Demonstration",
+        "Numerical Practice",
+        "Board-Oriented Teaching",
+        "Revision Sessions"
+      ],
+      "achievements": [
+        "15+ Years Experience",
+        "Board Examination Specialist",
+        "Advanced Problem Solving"
+      ],
+      "message": "Physics becomes simple when every concept is understood from the fundamentals."
+    },
+    {
+      "id": "chemistry-faculty",
+      "name": "Guest Faculty",
+      "designation": "Chemistry Faculty",
+      "subject": "Chemistry",
+      "experience": "7 Years",
+      "qualification": "M.Sc., Chemistry",
+      "photo": "assets/images/faculty/chemistry.webp",
+      "specializations": [
+        "Organic Chemistry",
+        "Physical Chemistry",
+        "Inorganic Chemistry",
+        "Chemical Reactions",
+        "Electrochemistry"
+      ],
+      "teachingStyle": [
+        "Reaction-Based Learning",
+        "Memory Techniques",
+        "Concept Revision",
+        "Exam-Oriented Practice"
+      ],
+      "achievements": [
+        "7+ Years Experience",
+        "Structured Revision System",
+        "Board Exam Coaching"
+      ],
+      "message": "Learning chemistry becomes easier through concepts, practice, and regular revision."
+    }
+  ]
+}

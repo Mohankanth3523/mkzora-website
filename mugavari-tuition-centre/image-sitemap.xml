@@ -1,0 +1,133 @@
+<!-- image-sitemap.xml -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <url>
+
+        <loc>https://example.com/</loc>
+
+        <image:image>
+
+            <image:loc>
+                https://example.com/assets/images/hero/classroom.webp
+            </image:loc>
+
+            <image:title>
+                Professional CBSE Classroom
+            </image:title>
+
+            <image:caption>
+                Modern classroom for Grade 10 and Grade 12 CBSE coaching.
+            </image:caption>
+
+        </image:image>
+
+    </url>
+
+    <url>
+
+        <loc>https://example.com/faculty</loc>
+
+        <image:image>
+
+            <image:loc>
+                https://example.com/assets/images/faculty/founder.webp
+            </image:loc>
+
+            <image:title>
+                Mathematics Faculty
+            </image:title>
+
+        </image:image>
+
+        <image:image>
+
+            <image:loc>
+                https://example.com/assets/images/faculty/physics.webp
+            </image:loc>
+
+            <image:title>
+                Physics Faculty
+            </image:title>
+
+        </image:image>
+
+        <image:image>
+
+            <image:loc>
+                https://example.com/assets/images/faculty/chemistry.webp
+            </image:loc>
+
+            <image:title>
+                Chemistry Faculty
+            </image:title>
+
+        </image:image>
+
+    </url>
+
+    <url>
+
+        <loc>https://example.com/gallery</loc>
+
+        <image:image>
+
+            <image:loc>
+                https://example.com/assets/images/gallery/classroom-01.webp
+            </image:loc>
+
+            <image:title>
+                Classroom Session
+            </image:title>
+
+        </image:image>
+
+        <image:image>
+
+            <image:loc>
+                https://example.com/assets/images/gallery/students-01.webp
+            </image:loc>
+
+            <image:title>
+                Student Learning
+            </image:title>
+
+        </image:image>
+
+        <image:image>
+
+            <image:loc>
+                https://example.com/assets/images/gallery/award-01.webp
+            </image:loc>
+
+            <image:title>
+                Academic Achievement
+            </image:title>
+
+        </image:image>
+
+    </url>
+
+    <url>
+
+        <loc>https://example.com/results</loc>
+
+        <image:image>
+
+            <image:loc>
+                https://example.com/assets/images/results/student-01.webp
+            </image:loc>
+
+            <image:title>
+                Top Achiever
+            </image:title>
+
+        </image:image>
+
+    </url>
+
+</urlset>

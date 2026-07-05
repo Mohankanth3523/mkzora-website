@@ -1,342 +1,206 @@
-/**
- * ==========================================================
- * Mugavari Tuition Centre
- * Main Application Entry
- * ==========================================================
- *
- * Responsibilities
- * ----------------------------------------------------------
- * • Load HTML Components
- * • Load HTML Templates
- * • Load JSON Data
- * • Initialize Renderers
- * • Initialize Modules
- *
- * Dependencies
- * ----------------------------------------------------------
- * utils.js
- * loader.js
- * hero.js
- * cta.js
- * courses.js
- * faculty.js
- * contact.js
- * footer.js
- * faq.js
- * testimonials.js
- * navigation.js
- * forms.js
- * lazyload.js
- * accessibility.js
- * ==========================================================
- */
+// File: assets/js/main.js
 
-"use strict";
+'use strict';
 
-/* ==========================================================
-   APPLICATION CONFIGURATION
-========================================================== */
+document.addEventListener('DOMContentLoaded', () => {
 
-const AppConfig = {
+    initializeApplication();
 
-    /* ======================================================
-       Layout Components (data-component targets)
-    ====================================================== */
+});
 
-    layouts: [
+function initializeApplication() {
 
-        {
-            target: "header",
-            path: "components/layout/header.html"
-        },
+    initializeCurrentYear();
 
-        {
-            target: "navigation",
-            path: "components/layout/navigation.html"
-        },
+    initializeSmoothScroll();
 
-        {
-            target: "breadcrumb",
-            path: "components/layout/breadcrumb.html"
-        },
+    initializeCounters();
 
-        {
-            target: "hero",
-            path: "components/layout/hero.html"
-        },
+    initializeRevealAnimations();
 
-        {
-            target: "cta",
-            path: "components/layout/cta.html"
-        },
-
-        {
-            target: "contact-form",
-            path: "components/layout/contact-form.html"
-        },
-
-        {
-            target: "course-enquiry-form",
-            path: "components/layout/course-enquiry-form.html"
-        },
-
-        {
-            target: "google-map",
-            path: "components/layout/google-map.html"
-        },
-
-        {
-            target: "footer",
-            path: "components/layout/footer.html"
-        }
-
-    ],
-
-    /* ======================================================
-       Template Components
-    ====================================================== */
-
-    templates: [
-
-        "components/templates/course-card.html",
-
-        "components/templates/faculty-card.html",
-
-        "components/templates/testimonial-card.html",
-
-        "components/templates/faq-item.html"
-
-    ],
-
-    /* ======================================================
-       JSON Data
-    ====================================================== */
-
-    data: {
-
-        siteConfig:
-            "data/site-config.json",
-
-        navigation:
-            "data/navigation.json",
-
-        courses:
-            "data/courses.json",
-
-        faculty:
-            "data/faculty.json",
-
-        testimonials:
-            "data/testimonials.json",
-
-        faq:
-            "data/faq.json",
-
-        contact:
-            "data/contact.json",
-
-        socialLinks:
-            "data/social-links.json",
-
-        seo:
-            "data/seo.json"
-
-    }
-
-};
-
-/* ==========================================================
-   SAFE INITIALIZER
-   Wraps each module init in try-catch so missing modules
-   on sub-pages don't crash the entire bootstrap.
-========================================================== */
-
-function safeInit(name, fn) {
-
-    try {
-
-        if (typeof fn === "function") {
-
-            fn();
-
-        }
-
-    } catch (error) {
-
-        Utils.warn(
-
-            `${name} skipped: ${error.message}`
-
-        );
-
-    }
+    initializeBackToTop();
 
 }
 
-/* ==========================================================
-   APPLICATION STARTUP
-========================================================== */
+function initializeCurrentYear() {
 
-document.addEventListener(
+    const yearElements = document.querySelectorAll('[data-current-year]');
 
-    "DOMContentLoaded",
+    const currentYear = new Date().getFullYear();
 
-    initializeApplication
+    yearElements.forEach(element => {
 
-);
+        element.textContent = currentYear;
 
-async function initializeApplication() {
+    });
 
-    try {
+}
 
-        if (window.MKTCBootstrapStarted) {
+function initializeSmoothScroll() {
 
-            Utils.warn(
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
-                "Application bootstrap already started."
+    anchorLinks.forEach(link => {
 
-            );
+        link.addEventListener('click', event => {
 
-            return;
+            const targetId = link.getAttribute('href');
+
+            if (!targetId || targetId === '#') {
+
+                return;
+
+            }
+
+            const targetElement = document.querySelector(targetId);
+
+            if (!targetElement) {
+
+                return;
+
+            }
+
+            event.preventDefault();
+
+            targetElement.scrollIntoView({
+
+                behavior: 'smooth',
+                block: 'start'
+
+            });
+
+        });
+
+    });
+
+}
+
+function initializeCounters() {
+
+    const counters = document.querySelectorAll('.stat-number');
+
+    if (!counters.length) {
+
+        return;
+
+    }
+
+    const observer = new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) {
+
+                return;
+
+            }
+
+            animateCounter(entry.target);
+
+            observer.unobserve(entry.target);
+
+        });
+
+    }, {
+
+        threshold: 0.5
+
+    });
+
+    counters.forEach(counter => {
+
+        observer.observe(counter);
+
+    });
+
+}
+
+function animateCounter(element) {
+
+    const target = Number(element.dataset.count);
+
+    const duration = 1800;
+
+    const start = performance.now();
+
+    function update(time) {
+
+        const progress = Math.min((time - start) / duration, 1);
+
+        const value = Math.floor(progress * target);
+
+        element.textContent = value + '+';
+
+        if (progress < 1) {
+
+            requestAnimationFrame(update);
 
         }
 
-        window.MKTCBootstrapStarted = true;
+    }
 
-        Utils.log(
+    requestAnimationFrame(update);
 
-            "Application starting..."
+}
 
-        );
+function initializeRevealAnimations() {
 
-        await Loader.initialize(
+    const revealItems = document.querySelectorAll('.fade-in');
 
-            AppConfig
+    if (!revealItems.length) {
 
-        );
-
-        /* ==============================================
-           Initialize Renderers
-        ============================================== */
-
-        safeInit("HeroRenderer", () => {
-            if (typeof HeroRenderer !== "undefined") {
-                HeroRenderer.initialize();
-            }
-        });
-
-        safeInit("CTARenderer", () => {
-            if (typeof CTARenderer !== "undefined") {
-                CTARenderer.initialize();
-            }
-        });
-
-        safeInit("CoursesRenderer", () => {
-            if (typeof CoursesRenderer !== "undefined") {
-                CoursesRenderer.initialize();
-            }
-        });
-
-        safeInit("FacultyRenderer", () => {
-            if (typeof FacultyRenderer !== "undefined") {
-                FacultyRenderer.initialize();
-            }
-        });
-
-        safeInit("ContactRenderer", () => {
-            if (typeof ContactRenderer !== "undefined") {
-                ContactRenderer.initialize();
-            }
-        });
-
-        safeInit("FooterRenderer", () => {
-            if (typeof FooterRenderer !== "undefined") {
-                FooterRenderer.initialize();
-            }
-        });
-
-        safeInit("FAQRenderer", () => {
-            if (typeof FAQRenderer !== "undefined") {
-                FAQRenderer.initialize();
-            }
-        });
-
-        safeInit("TestimonialsRenderer", () => {
-            if (typeof TestimonialsRenderer !== "undefined") {
-                TestimonialsRenderer.initialize();
-            }
-        });
-
-        /* ==============================================
-           Initialize Modules
-        ============================================== */
-
-        safeInit("Navigation", () => {
-            if (typeof Navigation !== "undefined") {
-                Navigation.initialize();
-            }
-        });
-
-        safeInit("Forms", () => {
-            if (typeof Forms !== "undefined") {
-                Forms.initialize();
-            }
-        });
-
-        safeInit("LazyLoad", () => {
-            if (typeof LazyLoad !== "undefined") {
-                LazyLoad.initialize();
-            }
-        });
-
-        safeInit("Accessibility", () => {
-            if (typeof Accessibility !== "undefined") {
-                Accessibility.initialize();
-            }
-        });
-
-        safeInit("Accordion", () => {
-            if (typeof Accordion !== "undefined") {
-                Accordion.initialize();
-            }
-        });
-
-        safeInit("Modal", () => {
-            if (typeof Modal !== "undefined") {
-                Modal.initialize();
-            }
-        });
-
-        safeInit("Slider", () => {
-            if (typeof Slider !== "undefined") {
-                Slider.initialize();
-            }
-        });
-
-        /* ==============================================
-           Application Ready
-        ============================================== */
-
-        window.MKTCBootstrapReady = true;
-
-        Utils.log(
-
-            "Application initialized successfully."
-
-        );
+        return;
 
     }
 
-    catch (error) {
+    const observer = new IntersectionObserver(entries => {
 
-        Utils.error(
+        entries.forEach(entry => {
 
-            "Application startup failed.",
+            if (entry.isIntersecting) {
 
-            error
+                entry.target.classList.add('visible');
 
-        );
+            }
+
+        });
+
+    }, {
+
+        threshold: 0.15
+
+    });
+
+    revealItems.forEach(item => {
+
+        observer.observe(item);
+
+    });
+
+}
+
+function initializeBackToTop() {
+
+    const button = document.querySelector('[href="#hero"]');
+
+    if (!button) {
+
+        return;
 
     }
+
+    button.addEventListener('click', event => {
+
+        event.preventDefault();
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: 'smooth'
+
+        });
+
+    });
 
 }

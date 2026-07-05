@@ -1,0 +1,87 @@
+{
+  "results": {
+    "statistics": {
+      "yearsOfExperience": 10,
+      "studentsGuided": 500,
+      "testsConducted": 1000,
+      "worksheetsProvided": 2500,
+      "averageBoardPercentage": 92,
+      "topScorers95Plus": 75
+    },
+
+    "topAchievers": [
+      {
+        "id": 1,
+        "name": "Student Name",
+        "grade": "Grade 10",
+        "subject": "Mathematics",
+        "percentage": 98,
+        "marks": 98,
+        "academicYear": "2025-2026",
+        "photo": "assets/images/results/student-01.webp",
+        "achievement": "School Topper"
+      },
+      {
+        "id": 2,
+        "name": "Student Name",
+        "grade": "Grade 12",
+        "subject": "Physics",
+        "percentage": 97,
+        "marks": 97,
+        "academicYear": "2025-2026",
+        "photo": "assets/images/results/student-02.webp",
+        "achievement": "Subject Topper"
+      },
+      {
+        "id": 3,
+        "name": "Student Name",
+        "grade": "Grade 12",
+        "subject": "Chemistry",
+        "percentage": 96,
+        "marks": 96,
+        "academicYear": "2025-2026",
+        "photo": "assets/images/results/student-03.webp",
+        "achievement": "95+ Achiever"
+      }
+    ],
+
+    "boardResults": [
+      {
+        "year": "2025-2026",
+        "studentsAppeared": 68,
+        "passPercentage": 100,
+        "highestMarks": 98,
+        "averageMarks": 92
+      },
+      {
+        "year": "2024-2025",
+        "studentsAppeared": 61,
+        "passPercentage": 100,
+        "highestMarks": 97,
+        "averageMarks": 91
+      },
+      {
+        "year": "2023-2024",
+        "studentsAppeared": 55,
+        "passPercentage": 100,
+        "highestMarks": 96,
+        "averageMarks": 90
+      }
+    ],
+
+    "subjectToppers": {
+      "mathematics": {
+        "name": "Student Name",
+        "marks": 99
+      },
+      "physics": {
+        "name": "Student Name",
+        "marks": 98
+      },
+      "chemistry": {
+        "name": "Student Name",
+        "marks": 97
+      }
+    }
+  }
+}

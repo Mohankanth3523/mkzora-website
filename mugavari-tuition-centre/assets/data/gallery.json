@@ -1,0 +1,114 @@
+{
+  "gallery": [
+    {
+      "id": 1,
+      "category": "Institute",
+      "title": "Institute Entrance",
+      "image": "assets/images/gallery/institute-01.webp",
+      "thumbnail": "assets/images/gallery/thumbs/institute-01.webp",
+      "alt": "Front view of the CBSE Tuition Center building",
+      "caption": "Professional institute entrance welcoming students.",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "category": "Classroom",
+      "title": "Interactive Classroom",
+      "image": "assets/images/gallery/classroom-01.webp",
+      "thumbnail": "assets/images/gallery/thumbs/classroom-01.webp",
+      "alt": "Faculty teaching students in a modern classroom",
+      "caption": "Concept-based classroom learning session.",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "category": "Faculty",
+      "title": "Faculty Session",
+      "image": "assets/images/gallery/faculty-01.webp",
+      "thumbnail": "assets/images/gallery/thumbs/faculty-01.webp",
+      "alt": "Mathematics faculty explaining concepts",
+      "caption": "Experienced faculty conducting classroom sessions."
+    },
+    {
+      "id": 4,
+      "category": "Students",
+      "title": "Learning Session",
+      "image": "assets/images/gallery/students-01.webp",
+      "thumbnail": "assets/images/gallery/thumbs/students-01.webp",
+      "alt": "Students participating in classroom learning",
+      "caption": "Students engaged in concept-based learning."
+    },
+    {
+      "id": 5,
+      "category": "Study Materials",
+      "title": "Worksheets",
+      "image": "assets/images/gallery/materials-01.webp",
+      "thumbnail": "assets/images/gallery/thumbs/materials-01.webp",
+      "alt": "Topic-wise worksheets prepared by faculty",
+      "caption": "Premium worksheets for chapter-wise practice."
+    },
+    {
+      "id": 6,
+      "category": "Formula Library",
+      "title": "Handwritten Notes",
+      "image": "assets/images/gallery/formula-01.webp",
+      "thumbnail": "assets/images/gallery/thumbs/formula-01.webp",
+      "alt": "Handwritten formula notebook for students",
+      "caption": "Quick revision handwritten formula notes."
+    },
+    {
+      "id": 7,
+      "category": "Revision",
+      "title": "Revision Class",
+      "image": "assets/images/gallery/revision-01.webp",
+      "thumbnail": "assets/images/gallery/thumbs/revision-01.webp",
+      "alt": "Faculty conducting revision class before examinations",
+      "caption": "Special revision sessions before board exams."
+    },
+    {
+      "id": 8,
+      "category": "Assessment",
+      "title": "Monthly Examination",
+      "image": "assets/images/gallery/exam-01.webp",
+      "thumbnail": "assets/images/gallery/thumbs/exam-01.webp",
+      "alt": "Students writing monthly examination",
+      "caption": "Board-oriented assessment system."
+    },
+    {
+      "id": 9,
+      "category": "Awards",
+      "title": "Academic Achievement",
+      "image": "assets/images/gallery/award-01.webp",
+      "thumbnail": "assets/images/gallery/thumbs/award-01.webp",
+      "alt": "Students receiving academic awards",
+      "caption": "Celebrating outstanding academic performance."
+    },
+    {
+      "id": 10,
+      "category": "Events",
+      "title": "Academic Event",
+      "image": "assets/images/gallery/event-01.webp",
+      "thumbnail": "assets/images/gallery/thumbs/event-01.webp",
+      "alt": "Educational event conducted by the institute",
+      "caption": "Motivational and educational activities."
+    },
+    {
+      "id": 11,
+      "category": "Parent Meeting",
+      "title": "Progress Discussion",
+      "image": "assets/images/gallery/parent-01.webp",
+      "thumbnail": "assets/images/gallery/thumbs/parent-01.webp",
+      "alt": "Faculty discussing student progress with parents",
+      "caption": "Regular parent feedback meetings."
+    },
+    {
+      "id": 12,
+      "category": "Campus",
+      "title": "Learning Environment",
+      "image": "assets/images/gallery/campus-01.webp",
+      "thumbnail": "assets/images/gallery/thumbs/campus-01.webp",
+      "alt": "Professional classroom environment",
+      "caption": "A focused and disciplined learning atmosphere."
+    }
+  ]
+}

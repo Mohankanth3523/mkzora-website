@@ -1,132 +1,450 @@
+
 <!DOCTYPE html>
 <html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Courses | CBSE Tuition Center
+  </title>
+  <meta content="Explore Grade 10 and Grade 12 CBSE coaching courses in Mathematics, Physics, and Chemistry." name="description"/>
+  <link href="https://example.com/courses" rel="canonical"/>
+  <link href="favicon.ico" rel="icon"/>
+  <link href="assets/css/base.css" rel="stylesheet"/>
+  <link href="assets/css/layout.css" rel="stylesheet"/>
+  <link href="assets/css/components.css" rel="stylesheet"/>
+  <link href="assets/css/utilities.css" rel="stylesheet"/>
+  <link href="assets/css/responsive.css" rel="stylesheet"/>
+ </head>
+ <body>
+ <header class="site-header">
 
-<head>
+<nav
+    class="navbar"
+    aria-label="Primary Navigation">
 
-    <!-- ==================================================
-         META
-    ================================================== -->
+<div class="container">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<a
+    href="index.html"
+    class="logo">
 
-    <title>Courses | Mugavari Tuition Centre</title>
+<img
+    src="assets/images/logo.webp"
+    alt="CBSE Tuition Center Logo"
+    width="180"
+    height="60">
 
-    <meta name="description" content="Explore academic courses designed to strengthen concepts and improve student performance.">
+</a>
 
-    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-    <link rel="manifest" href="manifest.webmanifest">
+<button
+    id="mobile-menu-toggle"
+    class="mobile-menu-toggle"
+    aria-expanded="false"
+    aria-controls="primary-navigation"
+    aria-label="Toggle Navigation">
 
-    <meta name="theme-color" content="#1a1a2e">
+<span></span>
+<span></span>
+<span></span>
 
-    <!-- ==================================================
-         CSS
-    ================================================== -->
+</button>
 
-    <link rel="stylesheet" href="assets/css/main.css">
+<ul
+    id="primary-navigation"
+    class="nav-menu">
 
-</head>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="courses.html">Courses</a></li>
+<li><a href="faculty.html">Faculty</a></li>
+<li><a href="study-materials.html">Study Materials</a></li>
+<li><a href="formula-library.html">Formula Library</a></li>
+<li><a href="gallery.html" aria-current="page">Gallery</a></li>
+<li><a href="results.html">Results</a></li>
+<li><a href="contact.html">Contact</a></li>
 
-<body>
+</ul>
 
-    <!-- ==================================================
-         HEADER
-    ================================================== -->
+<a
+    href="contact.html"
+    class="btn btn-primary">
 
-    <div data-component="header"></div>
+Enroll Now
 
-    <!-- ==================================================
-         NAVIGATION
-    ================================================== -->
+</a>
 
-    <div data-component="navigation"></div>
+</div>
 
-    <!-- ==================================================
-         MAIN CONTENT
-    ================================================== -->
+</nav>
 
-    <main>
-
-        <!-- ==================================================
-             PAGE HEADER
-        ================================================== -->
-
-        <section class="page-header">
-
-            <div class="container">
-
-                <h1>Courses We Offer</h1>
-
-                <p>
-                    Choose the right course designed to strengthen concepts and improve academic performance.
-                </p>
-
-            </div>
-
-        </section>
-
-        <!-- ==================================================
-             COURSES SECTION (RENDERER TARGET)
-        ================================================== -->
-
-        <section data-component="courses">
-
-            <!-- JS WILL INJECT COURSES HERE -->
-
-        </section>
-
-        <!-- ==================================================
-             CTA SECTION
-        ================================================== -->
-
-        <section data-component="cta"></section>
-
-    </main>
-
-    <!-- ==================================================
-         FOOTER
-    ================================================== -->
-
-    <div data-component="footer"></div>
-
-    <!-- ==================================================
-         SCRIPTS - CORE SYSTEM
-    ================================================== -->
-
-    <script src="assets/js/utils.js"></script>
-    <script src="assets/js/loader.js"></script>
-
-    <!-- ==================================================
-         MODULES
-    ================================================== -->
-
-    <script src="assets/js/modules/modal.js"></script>
-    <script src="assets/js/modules/slider.js"></script>
-    <script src="assets/js/modules/validation.js"></script>
-
-    <!-- ==================================================
-         CORE
-    ================================================== -->
-
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/forms.js"></script>
-    <script src="assets/js/lazyload.js"></script>
-    <script src="assets/js/accessibility.js"></script>
-
-    <!-- ==================================================
-         RENDERERS
-    ================================================== -->
-
-    <script src="assets/js/renderers/courses.js"></script>
-    <script src="assets/js/renderers/cta.js"></script>
-    <script src="assets/js/renderers/footer.js"></script>
-
-    <!-- ==================================================
-         MAIN BOOTSTRAP
-    ================================================== -->
-
-    <script src="assets/js/main.js"></script>
-
-</body>
-
+</header>
+  <main>
+   <section class="hero-section">
+    <div class="container hero-grid">
+     <div class="hero-content">
+      <span class="hero-tag">
+       CBSE Courses
+      </span>
+      <h1>
+       Comprehensive Coaching Programs
+      </h1>
+      <p>
+       Professionally designed academic programs
+for Grade 10 and Grade 12 students with
+concept-based teaching,
+daily practice,
+weekly assessments,
+monthly examinations,
+and board-focused preparation.
+      </p>
+      <div class="hero-buttons">
+       <a class="btn btn-primary" href="#courses-list">
+        View Courses
+       </a>
+       <a class="btn btn-secondary" href="contact.html">
+        Admission Enquiry
+       </a>
+      </div>
+     </div>
+     <div class="hero-image">
+      <img alt="CBSE Courses" height="650" src="assets/images/hero/courses.webp" width="700"/>
+     </div>
+    </div>
+   </section>
+   <section id="courses-list">
+    <div class="container">
+     <header class="section-header">
+      <h2>
+       Our Academic Programs
+      </h2>
+      <p>
+       Choose the right coaching program designed
+to maximize conceptual understanding,
+problem-solving ability,
+and board examination success.
+      </p>
+     </header>
+     <div class="course-grid">
+      <article class="course-card">
+       <div class="course-card-header">
+        <span class="course-badge">
+         Grade 10
+        </span>
+        <h3>
+         Mathematics
+        </h3>
+       </div>
+       <p>
+        Complete CBSE Mathematics coaching covering
+                    Algebra, Geometry, Trigonometry,
+                    Statistics, Probability,
+                    and board examination preparation
+                    with daily practice and revision.
+       </p>
+       <ul class="course-features">
+        <li>
+         Concept-Based Learning
+        </li>
+        <li>
+         Daily Worksheets
+        </li>
+        <li>
+         Weekly Tests
+        </li>
+        <li>
+         Monthly Exams
+        </li>
+        <li>
+         Board Revision
+        </li>
+       </ul>
+      </article>
+      <article class="course-card">
+       <div class="course-card-header">
+        <span class="course-badge">
+         Grade 10
+        </span>
+        <h3>
+         Physics
+        </h3>
+       </div>
+       <p>
+        Learn Physics through practical explanations,
+                    numerical problem solving,
+                    concept clarification,
+                    revision classes,
+                    and board-oriented preparation.
+       </p>
+       <ul class="course-features">
+        <li>
+         Interactive Teaching
+        </li>
+        <li>
+         Concept Building
+        </li>
+        <li>
+         Numerical Practice
+        </li>
+        <li>
+         Model Exams
+        </li>
+        <li>
+         Revision Notes
+        </li>
+       </ul>
+      </article>
+      <article class="course-card">
+       <div class="course-card-header">
+        <span class="course-badge">
+         Grade 10
+        </span>
+        <h3>
+         Chemistry
+        </h3>
+       </div>
+       <p>
+        Comprehensive Chemistry coaching with
+                    reaction mechanisms,
+                    practical examples,
+                    handwritten notes,
+                    worksheets,
+                    and board exam preparation.
+       </p>
+       <ul class="course-features">
+        <li>
+         Reaction Charts
+        </li>
+        <li>
+         Organic Basics
+        </li>
+        <li>
+         Formula Sheets
+        </li>
+        <li>
+         Practice Papers
+        </li>
+        <li>
+         Revision Classes
+        </li>
+       </ul>
+      </article>
+      <article class="course-card">
+       <div class="course-card-header">
+        <span class="course-badge">
+         Grade 12
+        </span>
+        <h3>
+         Mathematics
+        </h3>
+       </div>
+       <p>
+        Advanced Mathematics coaching covering
+                    Calculus,
+                    Matrices,
+                    Determinants,
+                    Vectors,
+                    Probability,
+                    and intensive board examination revision.
+       </p>
+       <ul class="course-features">
+        <li>
+         Advanced Concepts
+        </li>
+        <li>
+         Weekly Assessment
+        </li>
+        <li>
+         Problem Solving
+        </li>
+        <li>
+         Model Papers
+        </li>
+        <li>
+         Board Preparation
+        </li>
+       </ul>
+      </article>
+      <article class="course-card">
+       <div class="course-card-header">
+        <span class="course-badge">
+         Grade 12
+        </span>
+        <h3>
+         Physics
+        </h3>
+       </div>
+       <p>
+        Board-focused Physics coaching including
+                    derivations,
+                    numericals,
+                    conceptual discussions,
+                    practical applications,
+                    and examination strategies.
+       </p>
+       <ul class="course-features">
+        <li>
+         Derivations
+        </li>
+        <li>
+         Numericals
+        </li>
+        <li>
+         Board Pattern Tests
+        </li>
+        <li>
+         Doubt Sessions
+        </li>
+        <li>
+         Revision Program
+        </li>
+       </ul>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="final-cta">
+    <div class="container">
+     <div class="cta-box">
+      <span class="cta-tag">
+       Admissions Open
+      </span>
+      <h2>
+       Start Your Journey Towards Academic Excellence
+      </h2>
+      <p>
+       Join our structured CBSE coaching program and
+                receive expert classroom teaching,
+                premium study materials,
+                handwritten formula notes,
+                continuous assessments,
+                and personalized academic guidance designed
+                to help you score above 95%.
+      </p>
+      <div class="cta-buttons">
+       <a class="btn btn-primary" href="contact.html">
+        Apply for Admission
+       </a>
+       <a class="btn btn-secondary" href="study-materials.html">
+        Explore Study Materials
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <div class="container">
+    <div class="footer-grid">
+     <section class="footer-column">
+      <h2 class="footer-title">
+       CBSE Tuition Center
+      </h2>
+      <p>
+       Dedicated to providing high-quality
+                    concept-based coaching for Grade 10 and
+                    Grade 12 students through experienced
+                    faculty, structured learning, and
+                    continuous academic support.
+      </p>
+     </section>
+     <section class="footer-column">
+      <h3>
+       Quick Links
+      </h3>
+      <ul>
+       <li>
+        <a href="index.html">
+         Home
+        </a>
+       </li>
+       <li>
+        <a href="about.html">
+         About
+        </a>
+       </li>
+       <li>
+        <a href="courses.html">
+         Courses
+        </a>
+       </li>
+       <li>
+        <a href="faculty.html">
+         Faculty
+        </a>
+       </li>
+       <li>
+        <a href="contact.html">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </section>
+     <section class="footer-column">
+      <h3>
+       Student Resources
+      </h3>
+      <ul>
+       <li>
+        <a href="study-materials.html">
+         Study Materials
+        </a>
+       </li>
+       <li>
+        <a href="formula-library.html">
+         Formula Library
+        </a>
+       </li>
+       <li>
+        <a href="results.html">
+         Results
+        </a>
+       </li>
+       <li>
+        <a href="faqs.html">
+         FAQs
+        </a>
+       </li>
+      </ul>
+     </section>
+     <section class="footer-column">
+      <h3>
+       Contact Information
+      </h3>
+      <address>
+       Institute Address
+       <br/>
+       City, State
+       <br/>
+       India
+      </address>
+      <p>
+       Phone:
+       <a href="tel:+910000000000">
+        +91 00000 00000
+       </a>
+      </p>
+      <p>
+       Email:
+       <a href="mailto:info@example.com">
+        info@example.com
+       </a>
+      </p>
+     </section>
+    </div>
+    <div class="footer-bottom">
+     <p>
+      © 2026 CBSE Tuition Center.
+                All Rights Reserved.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script defer="" src="assets/js/navigation.js">
+  </script>
+  <script defer="" src="assets/js/animations.js">
+  </script>
+  <script defer="" src="assets/js/main.js">
+  </script>
+ </body>
 </html>

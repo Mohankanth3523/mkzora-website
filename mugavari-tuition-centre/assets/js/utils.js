@@ -1,598 +1,189 @@
-/**
- * ==========================================================
- * Mugavari Tuition Centre
- * Utility Library
- * ==========================================================
- * Shared helper functions used across the application.
- * Dependencies: None
- * ==========================================================
- */
+// File: assets/js/utils.js
 
-"use strict";
+'use strict';
 
-const Utils = (() => {
+/* ==========================
+   Debounce
+========================== */
 
-    /* ======================================================
-       DOM Selection
-    ====================================================== */
+function debounce(callback, delay = 250) {
 
-    const $ = (selector, scope = document) =>
-        scope.querySelector(selector);
+    let timer;
 
-    const $$ = (selector, scope = document) =>
-        [...scope.querySelectorAll(selector)];
+    return (...args) => {
 
-    /* ======================================================
-       Element Creation
-    ====================================================== */
+        clearTimeout(timer);
 
-    function createElement(tag, className = "") {
+        timer = setTimeout(() => {
 
-        const element = document.createElement(tag);
+            callback(...args);
 
-        if (className) {
+        }, delay);
 
-            element.className = className;
+    };
 
-        }
+}
 
-        return element;
+/* ==========================
+   Throttle
+========================== */
 
-    }
+function throttle(callback, limit = 200) {
 
-    /* ======================================================
-       Template Clone
-    ====================================================== */
+    let waiting = false;
 
-    function cloneTemplate(templateId) {
+    return (...args) => {
 
-        const template =
-            document.getElementById(templateId);
-
-        if (!template) {
-
-            console.error(
-                `Template not found: ${templateId}`
-            );
-
-            return null;
-
-        }
-
-        return template.content.cloneNode(true);
-
-    }
-
-    /* ======================================================
-       Text Helpers
-    ====================================================== */
-
-    function setText(element, value = "") {
-
-        if (!element) return;
-
-        element.textContent = value;
-
-    }
-
-    function setHTML(element, value = "") {
-
-        if (!element) return;
-
-        element.innerHTML = value;
-
-    }
-
-    /* ======================================================
-       Attribute Helpers
-    ====================================================== */
-
-    function setAttribute(element, attribute, value) {
-
-        if (!element) return;
-
-        if (value === null || value === undefined) {
-
-            element.removeAttribute(attribute);
+        if (waiting) {
 
             return;
 
         }
 
-        element.setAttribute(attribute, value);
+        callback(...args);
+
+        waiting = true;
+
+        setTimeout(() => {
+
+            waiting = false;
+
+        }, limit);
+
+    };
+
+}
+
+/* ==========================
+   Smooth Scroll
+========================== */
+
+function smoothScrollTo(target) {
+
+    if (!target) {
+
+        return;
 
     }
 
-    function removeAttribute(element, attribute) {
+    target.scrollIntoView({
 
-        if (!element) return;
+        behavior: 'smooth',
 
-        element.removeAttribute(attribute);
+        block: 'start'
 
-    }
+    });
 
-    /* ======================================================
-       Dataset Helpers
-    ====================================================== */
+}
 
-    function setData(element, key, value) {
+/* ==========================
+   Element Visibility
+========================== */
 
-        if (!element) return;
+function isElementVisible(element) {
 
-        element.dataset[key] = value;
-
-    }
-
-    function getData(element, key) {
-
-        if (!element) return null;
-
-        return element.dataset[key] ?? null;
-
-    }
-
-    /* ======================================================
-       Image Helpers
-    ====================================================== */
-
-    function setImage(element, src = "", alt = "") {
-
-        if (!element) return;
-
-        element.src = src;
-
-        element.alt = alt;
-
-    }
-
-    /* ======================================================
-       Class Helpers
-    ====================================================== */
-
-    function addClass(element, ...classNames) {
-
-        if (!element) return;
-
-        element.classList.add(...classNames);
-
-    }
-
-    function removeClass(element, ...classNames) {
-
-        if (!element) return;
-
-        element.classList.remove(...classNames);
-
-    }
-
-    function toggleClass(element, className, force) {
-
-        if (!element) return;
-
-        element.classList.toggle(className, force);
-
-    }
-
-    function hasClass(element, className) {
-
-        if (!element) return false;
-
-        return element.classList.contains(className);
-
-    }
-
-    /* ======================================================
-       Visibility Helpers
-    ====================================================== */
-
-    function show(element) {
-
-        if (!element) return;
-
-        element.hidden = false;
-
-    }
-
-    function hide(element) {
-
-        if (!element) return;
-
-        element.hidden = true;
-
-    }
-
-    /* ======================================================
-       DOM Helpers
-    ====================================================== */
-
-    function clearElement(element) {
-
-        if (!element) return;
-
-        element.replaceChildren();
-
-    }
-
-    /* ======================================================
-       Event Helpers
-    ====================================================== */
-
-    function on(element, event, handler, options = false) {
-
-        if (!element) return;
-
-        element.addEventListener(
-
-            event,
-
-            handler,
-
-            options
-
-        );
-
-    }
-
-    function off(element, event, handler, options = false) {
-
-        if (!element) return;
-
-        element.removeEventListener(
-
-            event,
-
-            handler,
-
-            options
-
-        );
-
-    }
-
-    function once(element, event, handler) {
-
-        if (!element) return;
-
-        element.addEventListener(
-
-            event,
-
-            handler,
-
-            {
-
-                once: true
-
-            }
-
-        );
-
-    }
-
-    /* ======================================================
-       Debounce
-    ====================================================== */
-
-    function debounce(callback, delay = 300) {
-
-        let timeout;
-
-        return (...args) => {
-
-            clearTimeout(timeout);
-
-            timeout = setTimeout(() => {
-
-                callback(...args);
-
-            }, delay);
-
-        };
-
-    }
-
-    /* ======================================================
-       Throttle
-    ====================================================== */
-
-    function throttle(callback, delay = 300) {
-
-        let waiting = false;
-
-        return (...args) => {
-
-            if (waiting) return;
-
-            callback(...args);
-
-            waiting = true;
-
-            setTimeout(() => {
-
-                waiting = false;
-
-            }, delay);
-
-        };
-
-    }
-
-    /* ======================================================
-       Scroll Helpers
-    ====================================================== */
-
-    function scrollToElement(
-
-        element,
-
-        behavior = "smooth"
-
-    ) {
-
-        if (!element) return;
-
-        element.scrollIntoView({
-
-            behavior,
-
-            block: "start"
-
-        });
-
-    }
-
-    function scrollToTop(
-
-        behavior = "smooth"
-
-    ) {
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior
-
-        });
-
-    }
-
-    /* ======================================================
-       Type Helpers
-    ====================================================== */
-
-    function isElement(value) {
-
-        return value instanceof Element;
-
-    }
-
-    function isObject(value) {
-
-        return value !== null &&
-            typeof value === "object" &&
-            !Array.isArray(value);
-
-    }
-
-    function isEmpty(value) {
-
-        if (value === null || value === undefined) {
-
-            return true;
-
-        }
-
-        if (typeof value === "string") {
-
-            return value.trim() === "";
-
-        }
-
-        if (Array.isArray(value)) {
-
-            return value.length === 0;
-
-        }
-
-        if (isObject(value)) {
-
-            return Object.keys(value).length === 0;
-
-        }
+    if (!element) {
 
         return false;
 
     }
 
-    /* ======================================================
-       ID Generator
-    ====================================================== */
+    const rect = element.getBoundingClientRect();
 
-    function uniqueId(prefix = "id") {
+    return (
 
-        return `${prefix}-${crypto.randomUUID()}`;
+        rect.top < window.innerHeight &&
 
-    }
+        rect.bottom > 0
 
-    /* ======================================================
-       URL Helpers
-    ====================================================== */
+    );
 
-    function getCurrentPage() {
+}
 
-        const path = window.location.pathname;
+/* ==========================
+   Unique ID
+========================== */
 
-        const page = path.split("/").pop();
+function uniqueId(prefix = 'id') {
 
-        return page || "index.html";
+    return `${prefix}-${crypto.randomUUID()}`;
 
-    }
+}
 
-    function isCurrentPage(page) {
+/* ==========================
+   Query Helpers
+========================== */
 
-        return getCurrentPage() === page;
+function $(selector, scope = document) {
 
-    }
+    return scope.querySelector(selector);
 
-    /* ======================================================
-       Animation Helpers
-    ====================================================== */
+}
 
-    function wait(milliseconds = 0) {
+function $$(selector, scope = document) {
 
-        return new Promise(resolve => {
+    return [...scope.querySelectorAll(selector)];
 
-            setTimeout(resolve, milliseconds);
+}
 
-        });
+/* ==========================
+   Class Helpers
+========================== */
 
-    }
+function addClass(element, className) {
 
-    function nextFrame() {
+    if (element) {
 
-        return new Promise(resolve => {
-
-            requestAnimationFrame(resolve);
-
-        });
+        element.classList.add(className);
 
     }
 
-    /* ======================================================
-       Safe JSON Helper
-    ====================================================== */
+}
 
-    function deepClone(value) {
+function removeClass(element, className) {
 
-        return structuredClone(value);
+    if (element) {
 
-    }
-
-    /* ======================================================
-       Logger
-    ====================================================== */
-
-    function log(message, data = null) {
-
-        console.log(
-
-            `[MKTC] ${message}`,
-
-            data ?? ""
-
-        );
+        element.classList.remove(className);
 
     }
 
-    function warn(message, data = null) {
+}
 
-        console.warn(
+function toggleClass(element, className) {
 
-            `[MKTC] ${message}`,
+    if (element) {
 
-            data ?? ""
-
-        );
+        element.classList.toggle(className);
 
     }
 
-    function error(message, data = null) {
+}
 
-        console.error(
+/* ==========================
+   Export
+========================== */
 
-            `[MKTC] ${message}`,
+window.AppUtils = {
 
-            data ?? ""
+    debounce,
 
-        );
+    throttle,
 
-    }
+    smoothScrollTo,
 
-    /* ======================================================
-       Public API
-    ====================================================== */
+    isElementVisible,
 
-    return {
+    uniqueId,
 
-        // DOM
+    $,
 
-        $,
-        $$,
+    $$,
 
-        createElement,
-        cloneTemplate,
+    addClass,
 
-        clearElement,
+    removeClass,
 
-        // Content
+    toggleClass
 
-        setText,
-        setHTML,
-
-        // Attributes
-
-        setAttribute,
-        removeAttribute,
-        setData,
-        getData,
-
-        // Images
-
-        setImage,
-
-        // Classes
-
-        addClass,
-        removeClass,
-        toggleClass,
-        hasClass,
-
-        // Visibility
-
-        show,
-        hide,
-
-        // Events
-
-        on,
-        off,
-        once,
-
-        // Performance
-
-        debounce,
-        throttle,
-
-        // Scroll
-
-        scrollToElement,
-        scrollToTop,
-
-        // Type
-
-        isElement,
-        isObject,
-        isEmpty,
-
-        // Utility
-
-        uniqueId,
-        deepClone,
-        wait,
-        nextFrame,
-
-        // URL
-
-        getCurrentPage,
-        isCurrentPage,
-
-        // Logger
-
-        log,
-        warn,
-        error
-
-    };
-
-})();
+};

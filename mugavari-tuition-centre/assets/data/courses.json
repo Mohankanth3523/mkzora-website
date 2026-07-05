@@ -1,0 +1,136 @@
+{
+  "courses": [
+    {
+      "id": "g10-mathematics",
+      "grade": "Grade 10",
+      "subject": "Mathematics",
+      "duration": "Academic Year",
+      "mode": "Offline",
+      "faculty": "Founder",
+      "overview": "Complete CBSE Mathematics coaching with concept-based learning and board exam preparation.",
+      "objectives": [
+        "Build conceptual understanding",
+        "Improve problem solving",
+        "Board examination preparation",
+        "Time management"
+      ],
+      "topics": [
+        "Real Numbers",
+        "Polynomials",
+        "Linear Equations",
+        "Quadratic Equations",
+        "Arithmetic Progressions",
+        "Triangles",
+        "Coordinate Geometry",
+        "Trigonometry",
+        "Circles",
+        "Statistics",
+        "Probability"
+      ],
+      "assessment": [
+        "Daily Test",
+        "Weekly Test",
+        "Monthly Exam",
+        "Model Examination"
+      ],
+      "studyMaterials": [
+        "Worksheets",
+        "Revision Notes",
+        "Formula Sheets",
+        "Previous Year Questions"
+      ]
+    },
+    {
+      "id": "g10-physics",
+      "grade": "Grade 10",
+      "subject": "Physics",
+      "duration": "Academic Year",
+      "mode": "Offline",
+      "faculty": "Physics Guest Faculty",
+      "overview": "Concept-based Physics coaching with practical explanations and board-oriented preparation.",
+      "topics": [
+        "Light",
+        "Electricity",
+        "Magnetic Effects",
+        "Sources of Energy",
+        "Human Eye",
+        "Reflection",
+        "Refraction"
+      ],
+      "assessment": [
+        "Daily Practice",
+        "Weekly Tests",
+        "Monthly Exams"
+      ]
+    },
+    {
+      "id": "g10-chemistry",
+      "grade": "Grade 10",
+      "subject": "Chemistry",
+      "duration": "Academic Year",
+      "mode": "Offline",
+      "faculty": "Chemistry Guest Faculty",
+      "overview": "Structured Chemistry coaching covering reactions, concepts, and board preparation.",
+      "topics": [
+        "Chemical Reactions",
+        "Acids Bases",
+        "Metals",
+        "Carbon Compounds",
+        "Periodic Classification"
+      ]
+    },
+    {
+      "id": "g12-mathematics",
+      "grade": "Grade 12",
+      "subject": "Mathematics",
+      "duration": "Academic Year",
+      "mode": "Offline",
+      "faculty": "Founder",
+      "overview": "Advanced Mathematics coaching for CBSE Grade 12 board examinations.",
+      "topics": [
+        "Relations",
+        "Matrices",
+        "Determinants",
+        "Continuity",
+        "Differentiation",
+        "Integration",
+        "Vectors",
+        "Probability"
+      ]
+    },
+    {
+      "id": "g12-physics",
+      "grade": "Grade 12",
+      "subject": "Physics",
+      "duration": "Academic Year",
+      "mode": "Offline",
+      "faculty": "Physics Guest Faculty",
+      "overview": "Board-oriented Physics coaching emphasizing numericals and derivations.",
+      "topics": [
+        "Electrostatics",
+        "Current Electricity",
+        "Magnetism",
+        "Electromagnetic Waves",
+        "Optics",
+        "Modern Physics"
+      ]
+    },
+    {
+      "id": "g12-chemistry",
+      "grade": "Grade 12",
+      "subject": "Chemistry",
+      "duration": "Academic Year",
+      "mode": "Offline",
+      "faculty": "Chemistry Guest Faculty",
+      "overview": "Comprehensive Chemistry coaching covering Organic, Physical, and Inorganic Chemistry.",
+      "topics": [
+        "Solutions",
+        "Electrochemistry",
+        "Chemical Kinetics",
+        "Organic Chemistry",
+        "Biomolecules",
+        "Polymers"
+      ]
+    }
+  ]
+}

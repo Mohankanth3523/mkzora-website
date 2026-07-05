@@ -1,141 +1,247 @@
-/* ==================================================
-   UTILITIES SYSTEM
-   File: utilities.css
-================================================== */
+/* File: assets/css/utilities.css */
 
-/* ===============================
-   DISPLAY UTILITIES
-=============================== */
+.text-center{
 
-.d-none {
-    display: none !important;
+    text-align:center;
+
 }
 
-.d-block {
-    display: block !important;
+.text-left{
+
+    text-align:left;
+
 }
 
-.d-flex {
-    display: flex !important;
+.text-right{
+
+    text-align:right;
+
 }
 
-.d-grid {
-    display: grid !important;
+.d-flex{
+
+    display:flex;
+
 }
 
-/* ===============================
-   FLEX UTILITIES
-=============================== */
+.d-grid{
 
-.flex {
-    display: flex;
+    display:grid;
+
 }
 
-.flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.flex-column{
+
+    flex-direction:column;
+
 }
 
-.flex-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.align-center{
+
+    align-items:center;
+
 }
 
-.flex-column {
-    display: flex;
-    flex-direction: column;
+.justify-center{
+
+    justify-content:center;
+
 }
 
-/* ===============================
-   TEXT ALIGNMENT
-=============================== */
+.justify-between{
 
-.text-left {
-    text-align: left;
+    justify-content:space-between;
+
 }
 
-.text-center {
-    text-align: center;
+.flex-wrap{
+
+    flex-wrap:wrap;
+
 }
 
-.text-right {
-    text-align: right;
+.w-100{
+
+    width:100%;
+
 }
 
-/* ===============================
-   MARGIN UTILITIES
-=============================== */
+.h-100{
 
-.mt-1 { margin-top: var(--space-1); }
-.mt-2 { margin-top: var(--space-2); }
-.mt-3 { margin-top: var(--space-3); }
-.mt-4 { margin-top: var(--space-4); }
-.mt-5 { margin-top: var(--space-5); }
-.mt-6 { margin-top: var(--space-6); }
+    height:100%;
 
-.mb-1 { margin-bottom: var(--space-1); }
-.mb-2 { margin-bottom: var(--space-2); }
-.mb-3 { margin-bottom: var(--space-3); }
-.mb-4 { margin-bottom: var(--space-4); }
-.mb-5 { margin-bottom: var(--space-5); }
-.mb-6 { margin-bottom: var(--space-6); }
-
-/* ===============================
-   PADDING UTILITIES
-=============================== */
-
-.pt-1 { padding-top: var(--space-1); }
-.pt-2 { padding-top: var(--space-2); }
-.pt-3 { padding-top: var(--space-3); }
-.pt-4 { padding-top: var(--space-4); }
-.pt-5 { padding-top: var(--space-5); }
-
-.pb-1 { padding-bottom: var(--space-1); }
-.pb-2 { padding-bottom: var(--space-2); }
-.pb-3 { padding-bottom: var(--space-3); }
-.pb-4 { padding-bottom: var(--space-4); }
-.pb-5 { padding-bottom: var(--space-5); }
-
-/* ===============================
-   WIDTH HELPERS
-=============================== */
-
-.w-full {
-    width: 100%;
 }
 
-.w-auto {
-    width: auto;
+.mx-auto{
+
+    margin-inline:auto;
+
 }
 
-/* ===============================
-   VISIBILITY HELPERS
-=============================== */
+.mt-1{margin-top:var(--space-1);}
+.mt-2{margin-top:var(--space-2);}
+.mt-3{margin-top:var(--space-3);}
+.mt-4{margin-top:var(--space-4);}
+.mt-5{margin-top:var(--space-5);}
+.mt-6{margin-top:var(--space-6);}
+.mt-7{margin-top:var(--space-7);}
+.mt-8{margin-top:var(--space-8);}
+.mt-9{margin-top:var(--space-9);}
 
-.hidden {
-    visibility: hidden;
-    opacity: 0;
+.mb-1{margin-bottom:var(--space-1);}
+.mb-2{margin-bottom:var(--space-2);}
+.mb-3{margin-bottom:var(--space-3);}
+.mb-4{margin-bottom:var(--space-4);}
+.mb-5{margin-bottom:var(--space-5);}
+.mb-6{margin-bottom:var(--space-6);}
+.mb-7{margin-bottom:var(--space-7);}
+.mb-8{margin-bottom:var(--space-8);}
+.mb-9{margin-bottom:var(--space-9);}
+
+.pt-1{padding-top:var(--space-1);}
+.pt-2{padding-top:var(--space-2);}
+.pt-3{padding-top:var(--space-3);}
+.pt-4{padding-top:var(--space-4);}
+.pt-5{padding-top:var(--space-5);}
+.pt-6{padding-top:var(--space-6);}
+.pt-7{padding-top:var(--space-7);}
+.pt-8{padding-top:var(--space-8);}
+.pt-9{padding-top:var(--space-9);}
+
+.pb-1{padding-bottom:var(--space-1);}
+.pb-2{padding-bottom:var(--space-2);}
+.pb-3{padding-bottom:var(--space-3);}
+.pb-4{padding-bottom:var(--space-4);}
+.pb-5{padding-bottom:var(--space-5);}
+.pb-6{padding-bottom:var(--space-6);}
+.pb-7{padding-bottom:var(--space-7);}
+.pb-8{padding-bottom:var(--space-8);}
+.pb-9{padding-bottom:var(--space-9);}
+
+.rounded-sm{
+
+    border-radius:var(--radius-small);
+
 }
 
-.visible {
-    visibility: visible;
-    opacity: 1;
+.rounded{
+
+    border-radius:var(--radius-medium);
+
 }
 
-/* ===============================
-   POSITION HELPERS
-=============================== */
+.rounded-lg{
 
-.relative {
-    position: relative;
+    border-radius:var(--radius-large);
+
 }
 
-.absolute {
-    position: absolute;
+.shadow-sm{
+
+    box-shadow:var(--shadow-small);
+
 }
 
-.fixed {
-    position: fixed;
+.shadow{
+
+    box-shadow:var(--shadow-medium);
+
+}
+
+.shadow-lg{
+
+    box-shadow:var(--shadow-large);
+
+}
+
+.bg-primary{
+
+    background:var(--color-primary);
+
+    color:#ffffff;
+
+}
+
+.bg-light{
+
+    background:var(--color-background-alt);
+
+}
+
+.bg-white{
+
+    background:#ffffff;
+
+}
+
+.text-primary{
+
+    color:var(--color-primary);
+
+}
+
+.text-muted{
+
+    color:var(--color-text-light);
+
+}
+
+.text-white{
+
+    color:#ffffff;
+
+}
+
+.border{
+
+    border:1px solid var(--color-border);
+
+}
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.sr-only{
+
+    position:absolute;
+
+    width:1px;
+
+    height:1px;
+
+    padding:0;
+
+    margin:-1px;
+
+    overflow:hidden;
+
+    clip:rect(0,0,0,0);
+
+    white-space:nowrap;
+
+    border:0;
+
+}
+
+.fade-in{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+}
+
+.fade-in.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+
 }

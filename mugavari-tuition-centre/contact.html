@@ -3,84 +3,636 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 
-    <title>Contact | Mugavari Tuition Centre</title>
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Contact Mugavari Tuition Centre for course enquiries and admissions.">
+<title>
 
-    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-    <link rel="manifest" href="manifest.webmanifest">
+Contact Us | CBSE Tuition Center
 
-    <meta name="theme-color" content="#1a1a2e">
+</title>
 
-    <link rel="stylesheet" href="assets/css/main.css">
+<meta
+    name="description"
+    content="Contact our CBSE Tuition Center for admissions, course enquiries, counseling, class schedules, and student guidance.">
+
+<link
+    rel="canonical"
+    href="https://example.com/contact">
+
+<link
+    rel="icon"
+    href="favicon.ico">
+
+<link
+    rel="stylesheet"
+    href="assets/css/base.css">
+
+<link
+    rel="stylesheet"
+    href="assets/css/layout.css">
+
+<link
+    rel="stylesheet"
+    href="assets/css/components.css">
+
+<link
+    rel="stylesheet"
+    href="assets/css/utilities.css">
+
+<link
+    rel="stylesheet"
+    href="assets/css/responsive.css">
 
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <div data-component="header"></div>
+<header class="site-header">
 
-    <!-- NAVIGATION -->
-    <div data-component="navigation"></div>
+<nav
+    class="navbar"
+    aria-label="Primary Navigation">
 
-    <main>
+<div class="container">
 
-        <!-- PAGE HEADER -->
-        <section class="page-header">
+<a
+    href="index.html"
+    class="logo">
 
-            <div class="container">
+<img
+    src="assets/images/logo.webp"
+    alt="CBSE Tuition Center Logo"
+    width="180"
+    height="60">
 
-                <h1>Contact Us</h1>
+</a>
 
-                <p>
-                    Get in touch with us for course enquiries, admissions, and more.
-                </p>
+<button
+    id="mobile-menu-toggle"
+    class="mobile-menu-toggle"
+    aria-expanded="false"
+    aria-controls="primary-navigation"
+    aria-label="Toggle Navigation">
 
-            </div>
+<span></span>
+<span></span>
+<span></span>
 
-        </section>
+</button>
 
-        <!-- CONTACT FORM -->
-        <section data-component="contact-form"></section>
+<ul
+    id="primary-navigation"
+    class="nav-menu">
 
-        <!-- GOOGLE MAP -->
-        <section data-component="google-map"></section>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="courses.html">Courses</a></li>
+<li><a href="faculty.html">Faculty</a></li>
+<li><a href="study-materials.html">Study Materials</a></li>
+<li><a href="formula-library.html">Formula Library</a></li>
+<li><a href="gallery.html" aria-current="page">Gallery</a></li>
+<li><a href="results.html">Results</a></li>
+<li><a href="contact.html">Contact</a></li>
 
-    </main>
+</ul>
 
-    <!-- FOOTER -->
-    <div data-component="footer"></div>
+<a
+    href="contact.html"
+    class="btn btn-primary">
 
-    <!-- SCRIPTS - CORE -->
+Enroll Now
 
-    <script src="assets/js/utils.js"></script>
-    <script src="assets/js/loader.js"></script>
+</a>
 
-    <!-- MODULES -->
+</div>
 
-    <script src="assets/js/modules/modal.js"></script>
-    <script src="assets/js/modules/slider.js"></script>
-    <script src="assets/js/modules/validation.js"></script>
+</nav>
 
-    <!-- CORE -->
+</header>
 
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/forms.js"></script>
-    <script src="assets/js/lazyload.js"></script>
-    <script src="assets/js/accessibility.js"></script>
+<main>
 
-    <!-- RENDERERS -->
+<section class="hero-section">
 
-    <script src="assets/js/renderers/contact.js"></script>
-    <script src="assets/js/renderers/footer.js"></script>
+<div class="container hero-grid">
 
-    <!-- MAIN BOOTSTRAP -->
+<div class="hero-content">
 
-    <script src="assets/js/main.js"></script>
+<span class="hero-tag">
+
+Get In Touch
+
+</span>
+
+<h1>
+
+Start Your Academic Journey With Us
+
+</h1>
+
+<p>
+
+Contact our institute for admissions,
+course details,
+fee information,
+academic counselling,
+and personalized guidance for
+CBSE Grade 10 and Grade 12 students.
+
+</p>
+
+<div class="hero-buttons">
+
+<a
+    href="#contact-form"
+    class="btn btn-primary">
+
+Send Enquiry
+
+</a>
+
+<a
+    href="tel:+910000000000"
+    class="btn btn-secondary">
+
+Call Now
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img
+    src="assets/images/contact/contact-banner.webp"
+    alt="Contact CBSE Tuition Center"
+    width="700"
+    height="650">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact-form">
+
+<div class="container">
+
+<header class="section-header">
+
+<h2>
+
+Admission Enquiry Form
+
+</h2>
+
+<p>
+
+Fill out the form below and our academic team
+will contact you shortly.
+
+</p>
+
+</header>
+
+<form
+    class="contact-form"
+    novalidate>
+
+<div class="d-grid">
+
+<label for="name">
+
+Full Name
+
+</label>
+
+<input
+    id="name"
+    name="name"
+    type="text"
+    required>
+
+<label for="phone">
+
+Mobile Number
+
+</label>
+
+<input
+    id="phone"
+    name="phone"
+    type="tel"
+    required>
+
+<label for="email">
+
+Email Address
+
+</label>
+
+<input
+    id="email"
+    name="email"
+    type="email"
+    required>
+
+<label for="grade">
+
+Grade
+
+</label>
+
+<select
+    id="grade"
+    name="grade"
+    required>
+
+<option value="">Select Grade</option>
+<option>Grade 10</option>
+<option>Grade 12</option>
+
+</select>
+<div>
+
+<label for="subject">
+
+Subject
+
+</label>
+
+<select
+    id="subject"
+    name="subject"
+    required>
+
+<option value="">Select Subject</option>
+<option>Mathematics</option>
+<option>Physics</option>
+<option>Chemistry</option>
+
+</select>
+
+<label for="message">
+
+Message
+
+</label>
+
+<textarea
+    id="message"
+    name="message"
+    rows="6"
+    placeholder="Write your enquiry..."
+    required>
+
+</textarea>
+
+</div>
+
+<div class="section-action">
+
+<button
+    type="submit"
+    class="btn btn-primary">
+
+Submit Enquiry
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<header class="section-header">
+
+<h2>
+
+Contact Information
+
+</h2>
+
+<p>
+
+Reach us through phone,
+email,
+or visit our institute during
+working hours.
+
+</p>
+
+</header>
+
+<div class="feature-grid">
+
+<article class="feature-card">
+
+<div class="feature-icon">
+
+📍
+
+</div>
+
+<h3>
+
+Institute Address
+
+</h3>
+
+<p>
+
+Institute Address<br>
+
+City, State<br>
+
+India
+
+</p>
+
+</article>
+
+<article class="feature-card">
+
+<div class="feature-icon">
+
+📞
+
+</div>
+
+<h3>
+
+Phone
+
+</h3>
+
+<p>
+
+<a href="tel:+910000000000">
+
++91 00000 00000
+
+</a>
+
+</p>
+
+</article>
+
+<article class="feature-card">
+
+<div class="feature-icon">
+
+✉️
+
+</div>
+
+<h3>
+
+Email
+
+</h3>
+
+<p>
+
+<a href="mailto:info@example.com">
+
+info@example.com
+
+</a>
+
+</p>
+
+</article>
+
+<article class="feature-card">
+
+<div class="feature-icon">
+
+🕒
+
+</div>
+
+<h3>
+
+Working Hours
+
+</h3>
+
+<p>
+
+Monday – Friday<br>
+
+6:00 PM – 8:00 PM<br><br>
+
+Sunday<br>
+
+8:00 AM – 12:00 PM
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+<section class="final-cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<span class="cta-tag">
+
+Admissions Open
+
+</span>
+
+<h2>
+
+Take the First Step Towards Academic Excellence
+
+</h2>
+
+<p>
+
+Whether you are preparing for Grade 10 or Grade 12
+CBSE board examinations, our experienced faculty,
+structured learning methodology,
+continuous assessments,
+and premium study materials will help you achieve
+your academic goals with confidence.
+
+</p>
+
+<div class="cta-buttons">
+
+<a
+    href="tel:+910000000000"
+    class="btn btn-primary">
+
+Call Now
+
+</a>
+
+<a
+    href="mailto:info@example.com"
+    class="btn btn-secondary">
+
+Email Us
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<section class="footer-column">
+
+<h2 class="footer-title">
+
+CBSE Tuition Center
+
+</h2>
+
+<p>
+
+Empowering students through concept-based education,
+experienced faculty,
+regular assessments,
+premium learning resources,
+and personalized academic guidance.
+
+</p>
+
+</section>
+
+<section class="footer-column">
+
+<h3>
+
+Quick Links
+
+</h3>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="courses.html">Courses</a></li>
+<li><a href="faculty.html">Faculty</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</section>
+
+<section class="footer-column">
+
+<h3>
+
+Resources
+
+</h3>
+
+<ul>
+
+<li><a href="study-materials.html">Study Materials</a></li>
+<li><a href="formula-library.html">Formula Library</a></li>
+<li><a href="results.html">Results</a></li>
+<li><a href="faqs.html">FAQs</a></li>
+
+</ul>
+
+</section>
+
+<section class="footer-column">
+
+<h3>
+
+Contact Details
+
+</h3>
+
+<p>
+
+Institute Address<br>
+City, State<br>
+India
+
+</p>
+
+<p>
+
+<a href="tel:+910000000000">
+
++91 00000 00000
+
+</a>
+
+</p>
+
+<p>
+
+<a href="mailto:info@example.com">
+
+info@example.com
+
+</a>
+
+</p>
+
+</section>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+&copy; 2026 CBSE Tuition Center.
+All Rights Reserved.
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="assets/js/navigation.js" defer></script>
+<script src="assets/js/forms.js" defer></script>
+<script src="assets/js/animations.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 
 </body>
 

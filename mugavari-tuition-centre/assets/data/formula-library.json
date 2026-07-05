@@ -1,0 +1,103 @@
+{
+  "formulaLibrary": [
+    {
+      "id": "math-formulas",
+      "subject": "Mathematics",
+      "title": "Mathematics Formula Book",
+      "thumbnail": "assets/images/formula/mathematics.webp",
+      "pdf": "assets/documents/formula-books/mathematics-formulas.pdf",
+      "chapters": [
+        "Algebra",
+        "Geometry",
+        "Trigonometry",
+        "Coordinate Geometry",
+        "Mensuration",
+        "Statistics",
+        "Probability",
+        "Calculus",
+        "Vectors",
+        "Matrices"
+      ],
+      "features": [
+        "Handwritten Notes",
+        "Formula Summary",
+        "Solved Examples",
+        "Quick Revision",
+        "Exam Tips"
+      ]
+    },
+    {
+      "id": "physics-formulas",
+      "subject": "Physics",
+      "title": "Physics Formula Book",
+      "thumbnail": "assets/images/formula/physics.webp",
+      "pdf": "assets/documents/formula-books/physics-formulas.pdf",
+      "chapters": [
+        "Units & Dimensions",
+        "Motion",
+        "Laws of Motion",
+        "Work Energy Power",
+        "Thermodynamics",
+        "Electrostatics",
+        "Current Electricity",
+        "Magnetism",
+        "Optics",
+        "Modern Physics"
+      ],
+      "features": [
+        "Formula Sheets",
+        "Important Derivations",
+        "Key Concepts",
+        "Illustrations",
+        "Board Tips"
+      ]
+    },
+    {
+      "id": "chemistry-formulas",
+      "subject": "Chemistry",
+      "title": "Chemistry Formula Book",
+      "thumbnail": "assets/images/formula/chemistry.webp",
+      "pdf": "assets/documents/formula-books/chemistry-formulas.pdf",
+      "chapters": [
+        "Chemical Reactions",
+        "Organic Chemistry",
+        "Inorganic Chemistry",
+        "Physical Chemistry",
+        "Periodic Table",
+        "Electrochemistry",
+        "Chemical Bonding",
+        "Solutions",
+        "Equilibrium",
+        "Biomolecules"
+      ],
+      "features": [
+        "Reaction Charts",
+        "Formula Sheets",
+        "Important Equations",
+        "Memory Tricks",
+        "Quick Revision"
+      ]
+    },
+    {
+      "id": "revision-library",
+      "subject": "All Subjects",
+      "title": "Quick Revision Notes",
+      "thumbnail": "assets/images/formula/revision.webp",
+      "pdf": "assets/documents/formula-books/quick-revision.pdf",
+      "chapters": [
+        "Mind Maps",
+        "One Page Notes",
+        "Summary Tables",
+        "Important Concepts",
+        "Exam Strategies"
+      ],
+      "features": [
+        "Mobile Friendly",
+        "Printable",
+        "High Resolution",
+        "Fast Revision",
+        "Board Preparation"
+      ]
+    }
+  ]
+}

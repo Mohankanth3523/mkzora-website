@@ -1,0 +1,73 @@
+// File: assets/data/settings.json
+
+{
+  "site": {
+    "name": "CBSE Tuition Center",
+    "tagline": "Helping Students Score Above 95+",
+    "description": "Professional CBSE Coaching Institute for Grade 10 and Grade 12 students specializing in Mathematics, Physics, and Chemistry.",
+    "language": "en",
+    "timezone": "Asia/Kolkata",
+    "version": "1.0.0"
+  },
+
+  "branding": {
+    "primaryColor": "#2563EB",
+    "secondaryColor": "#F8FAFC",
+    "textColor": "#111827",
+    "logo": "assets/images/logo.png",
+    "favicon": "favicon.ico"
+  },
+
+  "contact": {
+    "instituteName": "CBSE Tuition Center",
+    "address": "Institute Address",
+    "city": "Your City",
+    "state": "Your State",
+    "country": "India",
+    "postalCode": "",
+    "phone": "+91XXXXXXXXXX",
+    "whatsapp": "91XXXXXXXXXX",
+    "email": "info@example.com",
+    "website": "https://example.com"
+  },
+
+  "businessHours": {
+    "monday": "6:00 PM - 8:00 PM",
+    "tuesday": "6:00 PM - 8:00 PM",
+    "wednesday": "6:00 PM - 8:00 PM",
+    "thursday": "6:00 PM - 8:00 PM",
+    "friday": "6:00 PM - 8:00 PM",
+    "saturday": "Holiday",
+    "sunday": "8:00 AM - 12:00 PM"
+  },
+
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "youtube": "",
+    "linkedin": ""
+  },
+
+  "seo": {
+    "title": "CBSE Tuition Center",
+    "description": "Professional CBSE Coaching Institute",
+    "keywords": [
+      "CBSE Tuition",
+      "Grade 10",
+      "Grade 12",
+      "Mathematics",
+      "Physics",
+      "Chemistry"
+    ]
+  },
+
+  "features": {
+    "gallery": true,
+    "formulaLibrary": true,
+    "studyMaterials": true,
+    "testimonials": true,
+    "results": true,
+    "animations": true,
+    "lazyLoading": true
+  }
+}

@@ -1,143 +1,109 @@
-/**
- * ==========================================================
- * LAZY LOAD MODULE
- * File: assets/js/lazyload.js
- * ==========================================================
- * Features:
- * - Image lazy loading using IntersectionObserver
- * - Fallback support for older browsers
- * - Data-src replacement system
- * ==========================================================
- */
+// File: assets/js/lazyload.js
 
-"use strict";
+'use strict';
 
-const LazyLoad = (() => {
+document.addEventListener('DOMContentLoaded', () => {
 
-    /* ======================================================
-       CONFIG
-    ====================================================== */
+    initializeLazyLoading();
 
-    const selector = "[data-lazy]";
+});
 
-    let observer = null;
+function initializeLazyLoading() {
 
-    /* ======================================================
-       INITIALIZE
-    ====================================================== */
+    const lazyImages = document.querySelectorAll(
+        'img[loading="lazy"]'
+    );
 
-    function initialize() {
+    if (!lazyImages.length) {
 
-        try {
-
-            const images =
-                document.querySelectorAll(
-                    selector
-                );
-
-            if (
-                "IntersectionObserver" in window
-            ) {
-
-                observer =
-                    new IntersectionObserver(
-                        handleIntersect,
-                        {
-                            root: null,
-                            threshold: 0.1
-                        }
-                    );
-
-                images.forEach(img => {
-
-                    observer.observe(img);
-
-                });
-
-            } else {
-
-                // Fallback: load all images immediately
-
-                images.forEach(loadImage);
-
-            }
-
-            Utils.log(
-                "LazyLoad initialized."
-            );
-
-        } catch (error) {
-
-            Utils.error(
-                "LazyLoad Error",
-                error
-            );
-
-        }
+        return;
 
     }
 
-    /* ======================================================
-       INTERSECTION HANDLER
-    ====================================================== */
+    if (!('IntersectionObserver' in window)) {
 
-    function handleIntersect(
-        entries,
-        observerInstance
-    ) {
+        lazyImages.forEach(image => {
 
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                const img =
-                    entry.target;
-
-                loadImage(img);
-
-                observerInstance.unobserve(
-                    img
-                );
-
-            }
+            loadImage(image);
 
         });
 
-    }
-
-    /* ======================================================
-       LOAD IMAGE
-    ====================================================== */
-
-    function loadImage(img) {
-
-        const src =
-            img.getAttribute(
-                "data-src"
-            );
-
-        if (!src) return;
-
-        img.src = src;
-
-        img.removeAttribute(
-            "data-src"
-        );
-
-        img.classList.add(
-            "loaded"
-        );
+        return;
 
     }
 
-    /* ======================================================
-       PUBLIC API
-    ====================================================== */
+    const observer = new IntersectionObserver(
 
-    return {
+        entries => {
 
-        initialize
+            entries.forEach(entry => {
 
-    };
+                if (!entry.isIntersecting) {
 
-})();
+                    return;
+
+                }
+
+                const image = entry.target;
+
+                loadImage(image);
+
+                observer.unobserve(image);
+
+            });
+
+        },
+
+        {
+
+            root: null,
+
+            rootMargin: '200px',
+
+            threshold: 0
+
+        }
+
+    );
+
+    lazyImages.forEach(image => {
+
+        observer.observe(image);
+
+    });
+
+}
+
+function loadImage(image) {
+
+    if (!image) {
+
+        return;
+
+    }
+
+    const source = image.dataset.src;
+
+    const sourceSet = image.dataset.srcset;
+
+    if (source) {
+
+        image.src = source;
+
+    }
+
+    if (sourceSet) {
+
+        image.srcset = sourceSet;
+
+    }
+
+    image.classList.add('loaded');
+
+}
+
+window.addEventListener('load', () => {
+
+    document.documentElement.classList.add('page-loaded');
+
+});

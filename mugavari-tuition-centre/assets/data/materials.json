@@ -1,0 +1,118 @@
+
+{
+  "studyMaterials": [
+    {
+      "id": "worksheets",
+      "title": "Topic-wise Worksheets",
+      "category": "Practice",
+      "description": "Chapter-wise worksheets designed to reinforce classroom learning through concept-based practice.",
+      "includes": [
+        "Concept Questions",
+        "Objective Questions",
+        "Application Problems",
+        "Board Pattern Questions",
+        "Revision Exercises"
+      ],
+      "benefits": [
+        "Improves conceptual understanding",
+        "Strengthens problem-solving ability",
+        "Builds examination confidence"
+      ],
+      "icon": "worksheet.svg"
+    },
+    {
+      "id": "revision-notes",
+      "title": "Revision Notes",
+      "category": "Revision",
+      "description": "Concise notes covering key concepts, formulas, and important exam points.",
+      "includes": [
+        "Definitions",
+        "Key Concepts",
+        "Formula Summary",
+        "Important Points",
+        "Exam Tips"
+      ],
+      "benefits": [
+        "Quick revision",
+        "Easy understanding",
+        "Time-saving preparation"
+      ],
+      "icon": "revision.svg"
+    },
+    {
+      "id": "formula-sheets",
+      "title": "Handwritten Formula Sheets",
+      "category": "Formula Library",
+      "description": "Faculty-prepared handwritten formula sheets for quick revision before examinations.",
+      "includes": [
+        "Mathematics Formulas",
+        "Physics Formulas",
+        "Chemistry Equations",
+        "Derivations",
+        "Reaction Charts"
+      ],
+      "benefits": [
+        "Faster revision",
+        "Better memory retention",
+        "Exam-ready preparation"
+      ],
+      "icon": "formula.svg"
+    },
+    {
+      "id": "practice-papers",
+      "title": "Practice Papers",
+      "category": "Assessment",
+      "description": "Board-oriented practice papers prepared according to the latest CBSE pattern.",
+      "includes": [
+        "Sample Papers",
+        "Model Papers",
+        "Question Bank",
+        "Time-based Tests",
+        "Answer Keys"
+      ],
+      "benefits": [
+        "Improves speed",
+        "Exam confidence",
+        "Performance analysis"
+      ],
+      "icon": "practice.svg"
+    },
+    {
+      "id": "previous-year",
+      "title": "Previous Year Question Papers",
+      "category": "Board Preparation",
+      "description": "Authentic previous CBSE board examination papers with answer discussions.",
+      "includes": [
+        "Solved Papers",
+        "Answer Keys",
+        "Marking Scheme",
+        "Important Questions"
+      ],
+      "benefits": [
+        "Understand board pattern",
+        "Identify repeated questions",
+        "Improve scoring strategy"
+      ],
+      "icon": "previous-year.svg"
+    },
+    {
+      "id": "quick-revision",
+      "title": "Quick Revision Resources",
+      "category": "Revision",
+      "description": "One-page revision materials for last-minute exam preparation.",
+      "includes": [
+        "Mind Maps",
+        "Formula Charts",
+        "Summary Notes",
+        "Memory Techniques",
+        "Exam Strategies"
+      ],
+      "benefits": [
+        "Rapid revision",
+        "Concept recall",
+        "Stress-free preparation"
+      ],
+      "icon": "quick-revision.svg"
+    }
+  ]
+}
