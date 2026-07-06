@@ -95,3 +95,17 @@ function initializeNavigation() {
     });
 
 }
+
+document.querySelectorAll(".dropdown-toggle").forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        if(window.innerWidth<=768){
+
+            button.parentElement.classList.toggle("open");
+
+        }
+
+    });
+
+});

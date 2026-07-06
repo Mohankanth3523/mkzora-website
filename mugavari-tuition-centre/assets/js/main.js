@@ -117,7 +117,9 @@ function initializeCounters() {
 
 function animateCounter(element) {
 
-    const target = Number(element.dataset.count);
+    const target = Number(
+    element.dataset.target || element.dataset.count || 0
+);
 
     const duration = 1800;
 

@@ -1,0 +1,464 @@
+/* =====================================================
+   MK Footer
+   Independent Footer Styles
+===================================================== */
+
+.mk-footer{
+
+    background:#0F172A;
+
+    color:#E2E8F0;
+
+    padding:56px 0 24px;
+
+    margin-top:0;
+
+}
+
+.mk-footer *{
+
+    box-sizing:border-box;
+
+}
+
+/* =====================================================
+   Grid
+===================================================== */
+
+.mk-footer-grid{
+
+    display:grid;
+
+    grid-template-columns:1.4fr 1fr 1fr;
+
+    gap:48px;
+
+    align-items:start;
+
+}
+
+/* =====================================================
+   Columns
+===================================================== */
+
+.mk-footer-col{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* =====================================================
+   Logo
+===================================================== */
+
+.mk-footer-logo{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+}
+
+.mk-footer-logo img{
+
+    display:block;
+
+    width:180px;
+
+    height:auto;
+
+}
+
+/* =====================================================
+   Description
+===================================================== */
+
+.mk-footer-description{
+
+    margin:0;
+
+    max-width:360px;
+
+    line-height:1.8;
+
+    color:#CBD5E1;
+
+}
+
+/* =====================================================
+   Heading
+===================================================== */
+
+.mk-footer-col h3{
+
+    margin:0 0 18px;
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+/* =====================================================
+   Lists
+===================================================== */
+
+.mk-footer-links,
+
+.mk-footer-contact{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.mk-footer-links li{
+
+    margin-bottom:12px;
+
+}
+
+.mk-footer-contact li{
+
+    margin-bottom:18px;
+
+}
+
+.mk-footer-links a,
+
+.mk-footer-contact a{
+
+    color:#CBD5E1;
+
+    text-decoration:none;
+
+    transition:.3s ease;
+
+}
+
+.mk-footer-links a:hover,
+
+.mk-footer-contact a:hover{
+
+    color:#ffffff;
+
+}
+
+.mk-footer-contact strong{
+
+    display:block;
+
+    margin-bottom:4px;
+
+    color:#ffffff;
+
+}
+
+.mk-footer-contact span{
+
+    color:#CBD5E1;
+
+}
+
+/* =====================================================
+   Divider
+===================================================== */
+
+.mk-footer-divider{
+
+    margin:36px 0 24px;
+
+    height:1px;
+
+    background:rgba(255,255,255,.10);
+
+}
+
+/* =====================================================
+   Bottom
+===================================================== */
+
+.mk-footer-bottom{
+
+    display:grid;
+
+    grid-template-columns:1fr auto;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:8px 0;
+
+}
+
+.mk-footer-bottom p{
+
+    margin:0;
+
+    color:#CBD5E1;
+
+}
+
+.mk-footer-bottom nav{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    gap:32px;
+
+}
+
+.mk-footer-bottom nav a{
+
+    color:#CBD5E1;
+
+    text-decoration:none;
+
+    transition:.3s ease;
+
+}
+
+.mk-footer-bottom nav a:hover{
+
+    color:#ffffff;
+
+}
+
+/* =====================================================
+   Powered By
+===================================================== */
+
+.mk-powered{
+
+    margin-top:22px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+}
+
+.mk-powered a{
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.mk-powered a:hover{
+
+    color:#60A5FA;
+
+}
+
+/* =====================================================
+   Tablet
+===================================================== */
+
+@media (max-width:991px){
+
+    .mk-footer{
+
+        padding:48px 0 22px;
+
+    }
+
+    .mk-footer-grid{
+
+        grid-template-columns:1fr;
+
+        gap:36px;
+
+        text-align:center;
+
+    }
+
+    .mk-footer-logo{
+
+        display:flex;
+
+        justify-content:center;
+
+    }
+
+    .mk-footer-description{
+
+        max-width:100%;
+
+        margin:0 auto;
+
+    }
+
+    .mk-footer-bottom{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
+        text-align:center;
+
+        gap:16px;
+
+    }
+
+    .mk-footer-bottom nav{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:18px;
+
+    }
+
+}
+
+/* =====================================================
+   Mobile
+===================================================== */
+
+@media (max-width:576px){
+
+    .mk-footer{
+
+        padding:40px 0 20px;
+
+    }
+
+    .mk-footer-grid{
+
+        gap:28px;
+
+    }
+
+    .mk-footer-logo{
+
+        display:flex;
+
+        justify-content:center;
+
+    }
+
+    .mk-footer-logo img{
+
+        width:160px;
+
+    }
+
+    .mk-footer-col{
+
+        text-align:center;
+
+    }
+
+    .mk-footer-description{
+
+        max-width:100%;
+
+        margin:0 auto;
+
+    }
+
+    .mk-footer-col h3{
+
+        font-size:1.25rem;
+
+        margin-bottom:16px;
+
+    }
+
+    .mk-footer-links li{
+
+        margin-bottom:10px;
+
+    }
+
+    .mk-footer-contact li{
+
+        margin-bottom:14px;
+
+    }
+
+    .mk-footer-divider{
+
+        margin:28px 0 20px;
+
+    }
+
+    .mk-footer-bottom{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
+        text-align:center;
+
+        gap:16px;
+
+    }
+
+    .mk-footer-bottom p{
+
+        margin:0;
+
+        line-height:1.6;
+
+    }
+
+    .mk-footer-bottom nav{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,auto);
+
+        justify-content:center;
+
+        gap:12px 24px;
+
+    }
+
+    .mk-footer-bottom nav a:last-child{
+
+        grid-column:1 / -1;
+
+        justify-self:center;
+
+    }
+
+    .mk-powered{
+
+        margin-top:16px;
+
+        padding-top:16px;
+
+        font-size:.86rem;
+
+        text-align:center;
+
+    }
+
+}
