@@ -1,0 +1,98 @@
+{
+    "section": {
+        "title": "Follow Us",
+        "description": "Stay connected with us through our official social media channels."
+    },
+
+    "socialLinks": [
+        {
+            "id": "facebook",
+
+            "name": "Facebook",
+
+            "icon": "assets/images/icons/facebook.svg",
+
+            "url": "",
+
+            "target": "_blank",
+
+            "rel": "noopener noreferrer",
+
+            "displayOrder": 1,
+
+            "isVisible": true
+        },
+
+        {
+            "id": "instagram",
+
+            "name": "Instagram",
+
+            "icon": "assets/images/icons/instagram.svg",
+
+            "url": "",
+
+            "target": "_blank",
+
+            "rel": "noopener noreferrer",
+
+            "displayOrder": 2,
+
+            "isVisible": true
+        },
+
+        {
+            "id": "youtube",
+
+            "name": "YouTube",
+
+            "icon": "assets/images/icons/youtube.svg",
+
+            "url": "",
+
+            "target": "_blank",
+
+            "rel": "noopener noreferrer",
+
+            "displayOrder": 3,
+
+            "isVisible": true
+        },
+
+        {
+            "id": "whatsapp",
+
+            "name": "WhatsApp",
+
+            "icon": "assets/images/icons/whatsapp.svg",
+
+            "url": "",
+
+            "target": "_blank",
+
+            "rel": "noopener noreferrer",
+
+            "displayOrder": 4,
+
+            "isVisible": true
+        },
+
+        {
+            "id": "linkedin",
+
+            "name": "LinkedIn",
+
+            "icon": "assets/images/icons/linkedin.svg",
+
+            "url": "",
+
+            "target": "_blank",
+
+            "rel": "noopener noreferrer",
+
+            "displayOrder": 5,
+
+            "isVisible": false
+        }
+    ]
+}

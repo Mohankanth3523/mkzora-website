@@ -1,0 +1,82 @@
+<!-- ==================================================
+     FAQ ITEM TEMPLATE
+=================================================== -->
+
+<template id="faq-item-template">
+
+    <article
+        class="faq-item"
+        data-faq-item>
+
+        <!-- =============================================
+             QUESTION
+        ============================================== -->
+
+        <h3 class="faq-heading">
+
+            <button
+                class="faq-question"
+                type="button"
+                data-faq-toggle
+                aria-expanded="false"
+                aria-controls=""
+                id="">
+
+                <span
+                    class="faq-question-text"
+                    data-faq-question>
+                </span>
+
+                <span
+                    class="faq-icon"
+                    aria-hidden="true">
+
+                    <svg
+                        class="faq-icon-svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none">
+
+                        <path
+                            d="M12 5V19"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round" />
+
+                        <path
+                            d="M5 12H19"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round" />
+
+                    </svg>
+
+                </span>
+
+            </button>
+
+        </h3>
+
+        <!-- =============================================
+             ANSWER
+        ============================================== -->
+
+        <div
+            class="faq-answer"
+            id=""
+            role="region"
+            aria-labelledby=""
+            hidden>
+
+            <div
+                class="faq-answer-content"
+                data-faq-answer>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</template>

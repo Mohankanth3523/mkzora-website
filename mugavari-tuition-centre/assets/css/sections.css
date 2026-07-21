@@ -1,0 +1,227 @@
+/* ==================================================
+   SECTIONS CSS (LAYOUT SYSTEM)
+   File: sections.css
+================================================== */
+
+/* ===============================
+   GLOBAL SECTION WRAPPER
+=============================== */
+
+section {
+    padding: var(--space-16) 0;
+    position: relative;
+}
+
+.section {
+    width: 100%;
+}
+
+/* ===============================
+   CONTAINER SYSTEM
+=============================== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+/* ===============================
+   PAGE HEADER (ALL PAGES)
+=============================== */
+
+.page-header {
+    text-align: center;
+    padding: var(--space-20) 0 var(--space-12);
+    background: var(--bg-section);
+}
+
+.page-header h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.page-header p {
+    font-size: var(--font-size-lg);
+    color: var(--color-muted);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ===============================
+   HERO SECTION
+=============================== */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-12);
+
+    min-height: 90vh;
+
+    background: var(--bg-body);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-4);
+}
+
+.hero-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-muted);
+    margin-bottom: var(--space-6);
+}
+
+.hero-image {
+    flex: 1;
+}
+
+/* ===============================
+   COURSES GRID
+=============================== */
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+/* ===============================
+   FACULTY GRID
+=============================== */
+
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+/* ===============================
+   TESTIMONIALS GRID
+=============================== */
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+
+/* ===============================
+   FAQ SECTION
+=============================== */
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-section {
+    background: var(--bg-section);
+}
+
+/* ===============================
+   CTA SECTION
+=============================== */
+
+.cta-section {
+    background: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: var(--space-20) 0;
+}
+
+.cta-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-4);
+}
+
+.cta-description {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+    margin-bottom: var(--space-6);
+}
+
+/* ===============================
+   CONTACT SECTION
+=============================== */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    align-items: start;
+}
+
+/* ===============================
+   WHY CHOOSE US GRID
+=============================== */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+}
+
+/* ===============================
+   FEATURE CARD
+=============================== */
+
+.feature-card {
+    text-align: center;
+    padding: var(--space-6);
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ===============================
+   RESPONSIVE FIX (basic fallback here)
+=============================== */
+
+@media (max-width: 1024px) {
+
+    .courses-grid,
+    .faculty-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .courses-grid,
+    .faculty-grid,
+    .testimonials-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+}

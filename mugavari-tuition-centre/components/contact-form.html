@@ -1,0 +1,278 @@
+<!-- ==================================================
+     CONTACT FORM COMPONENT
+     Pure Reusable Template
+=================================================== -->
+
+<section
+    class="contact-form-section"
+    id="contact-form-section"
+    aria-labelledby="contact-form-title">
+
+    <div class="container">
+
+        <div class="contact-form-wrapper">
+
+            <!-- =============================================
+                 FORM CONTENT
+            ============================================== -->
+
+            <div class="contact-form-content">
+
+                <span
+                    class="section-badge"
+                    data-form-badge>
+                </span>
+
+                <h2
+                    id="contact-form-title"
+                    class="section-title"
+                    data-form-title>
+                </h2>
+
+                <p
+                    class="section-description"
+                    data-form-description>
+                </p>
+
+            </div>
+
+            <!-- =============================================
+                 CONTACT FORM
+            ============================================== -->
+
+            <form
+                id="contact-form"
+                class="contact-form"
+                novalidate>
+
+                <!-- Full Name -->
+
+                <div class="form-group">
+
+                    <label
+                        for="full-name"
+                        data-label-full-name>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="fullName"
+                        class="form-control"
+                        data-placeholder-full-name
+                        autocomplete="name"
+                        required>
+
+                    <small
+                        class="form-error"
+                        data-error-full-name>
+                    </small>
+
+                </div>
+
+                <!-- Student Name -->
+
+                <div class="form-group">
+
+                    <label
+                        for="student-name"
+                        data-label-student-name>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="student-name"
+                        name="studentName"
+                        class="form-control"
+                        data-placeholder-student-name
+                        required>
+
+                    <small
+                        class="form-error"
+                        data-error-student-name>
+                    </small>
+
+                </div>
+
+                <!-- Phone -->
+
+                <div class="form-group">
+
+                    <label
+                        for="phone"
+                        data-label-phone>
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        class="form-control"
+                        data-placeholder-phone
+                        autocomplete="tel"
+                        required>
+
+                    <small
+                        class="form-error"
+                        data-error-phone>
+                    </small>
+
+                </div>
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label
+                        for="email"
+                        data-label-email>
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        data-placeholder-email
+                        autocomplete="email">
+
+                    <small
+                        class="form-error"
+                        data-error-email>
+                    </small>
+
+                </div>
+
+                <!-- Class -->
+
+                <div class="form-group">
+
+                    <label
+                        for="student-class"
+                        data-label-class>
+                    </label>
+
+                    <select
+                        id="student-class"
+                        name="studentClass"
+                        class="form-control"
+                        data-select-class
+                        required>
+
+                        <!--
+                            Generated dynamically
+                            from site-config.json
+                        -->
+
+                    </select>
+
+                    <small
+                        class="form-error"
+                        data-error-class>
+                    </small>
+
+                </div>
+
+                <!-- Subject -->
+
+                <div class="form-group">
+
+                    <label
+                        for="subject"
+                        data-label-subject>
+                    </label>
+
+                    <select
+                        id="subject"
+                        name="subject"
+                        class="form-control"
+                        data-select-subject
+                        required>
+
+                        <!--
+                            Generated dynamically
+                        -->
+
+                    </select>
+
+                    <small
+                        class="form-error"
+                        data-error-subject>
+                    </small>
+
+                </div>
+
+                <!-- Message -->
+
+                <div class="form-group">
+
+                    <label
+                        for="message"
+                        data-label-message>
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        class="form-control"
+                        rows="5"
+                        data-placeholder-message>
+                    </textarea>
+
+                    <small
+                        class="form-error"
+                        data-error-message>
+                    </small>
+
+                </div>
+
+                <!-- Consent -->
+
+                <div class="form-checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="privacy-consent"
+                        name="privacyConsent"
+                        required>
+
+                    <label
+                        for="privacy-consent"
+                        data-consent-text>
+                    </label>
+
+                </div>
+
+                <!-- Actions -->
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        <span
+                            data-submit-text>
+                        </span>
+
+                    </button>
+
+                    <button
+                        type="reset"
+                        class="btn btn-outline">
+
+                        <span
+                            data-reset-text>
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>

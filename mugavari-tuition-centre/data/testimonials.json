@@ -1,0 +1,36 @@
+{
+    "section": {
+        "badge": "Testimonials",
+        "title": "What Our Students Say",
+        "description": "Hear from students and parents about their learning experience and academic success."
+    },
+
+    "testimonials": [
+        {
+            "id": "testimonial-001",
+
+            "badge": "",
+
+            "name": "",
+
+            "role": "",
+
+            "course": "",
+
+            "batch": "",
+
+            "year": "",
+
+            "location": "",
+
+            "rating": 5,
+
+            "message": "",
+
+            "image": {
+                "photo": "",
+                "alt": ""
+            }
+        }
+    ]
+}

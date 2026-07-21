@@ -1,0 +1,905 @@
+/* ==========================================
+   GOOGLE FONT & RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    color:#ffffff;
+
+    background:linear-gradient(
+        135deg,
+        #ff9a9e 0%,
+        #fad0c4 25%,
+        #ff758c 60%,
+        #ff5f6d 100%
+    );
+
+    background-size:400% 400%;
+    animation:bgAnimation 18s ease infinite;
+}
+
+/* ==========================================
+   BACKGROUND ANIMATION
+========================================== */
+
+@keyframes bgAnimation{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* ==========================================
+   FLOATING HEARTS
+========================================== */
+
+.hearts-container{
+
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:0;
+
+}
+
+.heart{
+
+    position:absolute;
+    color:#ff1744;
+    animation:floatHeart linear infinite;
+    opacity:.7;
+    user-select:none;
+
+}
+
+@keyframes floatHeart{
+
+    from{
+        transform:translateY(110vh) scale(.5);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    80%{
+        opacity:.9;
+    }
+
+    to{
+        transform:translateY(-120vh) scale(1.4) rotate(360deg);
+        opacity:0;
+    }
+
+}
+
+/* ==========================================
+   SPARKLES
+========================================== */
+
+.sparkles{
+
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
+
+}
+
+.sparkle{
+
+    position:absolute;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:
+        0 0 8px #fff,
+        0 0 15px #fff;
+    animation:twinkle 3s infinite;
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.2;
+        transform:scale(.5);
+
+    }
+
+    50%{
+
+        opacity:1;
+        transform:scale(1.8);
+
+    }
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    position:relative;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:40px;
+
+    overflow:hidden;
+
+}
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(6px);
+
+}
+
+.hero-content{
+
+    position:relative;
+    z-index:5;
+    max-width:900px;
+
+}
+
+.small-title{
+
+    font-size:1.2rem;
+    letter-spacing:2px;
+    margin-bottom:15px;
+
+    animation:fadeDown 1.3s ease;
+
+}
+
+.main-title{
+
+    font-family:'Great Vibes',cursive;
+    font-size:5rem;
+    line-height:1.2;
+
+    text-shadow:
+        0 0 15px rgba(255,255,255,.8),
+        0 0 35px #ff4d6d;
+
+    animation:glow 2.5s infinite alternate;
+
+}
+
+.main-title span{
+
+    color:#fff0f5;
+
+}
+
+.subtitle{
+
+    margin-top:25px;
+    font-size:1.25rem;
+    line-height:1.8;
+    opacity:.95;
+
+    animation:fadeUp 2s ease;
+
+}
+
+.hero-heart{
+
+    font-size:5rem;
+    margin:35px 0;
+
+    animation:pulseHeart 1.4s infinite;
+
+}
+
+.btn-love{
+
+    display:inline-block;
+
+    text-decoration:none;
+    color:#fff;
+
+    padding:15px 40px;
+
+    border-radius:40px;
+
+    background:linear-gradient(
+        90deg,
+        #ff1744,
+        #ff4d6d
+    );
+
+    box-shadow:
+        0 0 25px rgba(255,0,76,.5);
+
+    transition:.4s;
+
+}
+
+.btn-love:hover{
+
+    transform:translateY(-6px) scale(1.05);
+
+    box-shadow:
+        0 0 40px rgba(255,0,76,.8);
+
+}
+
+/* ==========================================
+   LETTER SECTION
+========================================== */
+
+.letter-section{
+
+    padding:100px 20px;
+
+    position:relative;
+    z-index:2;
+
+}
+
+.glass-card{
+
+    max-width:1000px;
+    margin:auto;
+
+    padding:60px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+}
+
+.glass-card h2{
+
+    text-align:center;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3.2rem;
+
+    margin-bottom:40px;
+
+    text-shadow:0 0 15px white;
+
+}
+
+.message{
+
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+
+}
+
+.message p{
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+    opacity:0;
+
+    animation:fadeInText 1s forwards;
+
+}
+
+.message p:nth-child(1){animation-delay:.2s;}
+.message p:nth-child(2){animation-delay:.4s;}
+.message p:nth-child(3){animation-delay:.6s;}
+.message p:nth-child(4){animation-delay:.8s;}
+.message p:nth-child(5){animation-delay:1s;}
+.message p:nth-child(6){animation-delay:1.2s;}
+.message p:nth-child(7){animation-delay:1.4s;}
+.message p:nth-child(8){animation-delay:1.6s;}
+.message p:nth-child(9){animation-delay:1.8s;}
+.message p:nth-child(10){animation-delay:2s;}
+.message p:nth-child(11){animation-delay:2.2s;}
+.message p:nth-child(12){animation-delay:2.4s;}
+.message p:nth-child(13){animation-delay:2.6s;}
+.message p:nth-child(14){animation-delay:2.8s;}
+.message p:nth-child(15){animation-delay:3s;}
+.message p:nth-child(16){animation-delay:3.2s;}
+.message p:nth-child(17){animation-delay:3.4s;}
+.message p:nth-child(18){animation-delay:3.6s;}
+.message p:nth-child(19){animation-delay:3.8s;}
+.message p:nth-child(20){animation-delay:4s;}
+
+.love-ending{
+
+    text-align:center;
+    font-size:1.6rem !important;
+    font-weight:700;
+    color:#fff;
+    text-shadow:0 0 20px #ff1744;
+
+}
+
+/* ==========================================
+   QUOTE SECTION
+========================================== */
+
+.quote-section{
+
+    padding:80px 20px;
+
+}
+
+.quote-card{
+
+    max-width:850px;
+    margin:auto;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    text-align:center;
+
+}
+
+.quote-card h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.quote-card p{
+
+    font-size:1.15rem;
+    line-height:2;
+
+}
+
+/* ==========================================
+   GALLERY
+========================================== */
+
+.gallery-section{
+
+    padding:100px 20px;
+
+}
+
+.gallery-title{
+
+    text-align:center;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3.8rem;
+
+    margin-bottom:60px;
+
+    text-shadow:0 0 20px white;
+
+}
+
+.gallery{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.photo-card{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:white;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.25);
+
+    transition:.5s;
+
+    opacity:0;
+
+    transform:scale(.8);
+
+}
+.photo-card.show{
+    opacity:1;
+    transform:scale(1);
+}
+
+.photo-card:hover{
+    transform:translateY(-12px) scale(1.05);
+    box-shadow:
+        0 20px 50px rgba(255,20,80,.45);
+}
+
+.photo-card img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    transition:transform .8s ease;
+}
+
+.photo-card:hover img{
+    transform:scale(1.15);
+}
+
+.couple{
+    grid-column:span 2;
+}
+
+.couple img{
+    height:520px;
+}
+
+/* ==========================================
+   PROMISE SECTION
+========================================== */
+
+.promise{
+    padding:100px 20px;
+}
+
+.promise-card{
+
+    max-width:900px;
+    margin:auto;
+
+    padding:60px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+.promise-card h2{
+
+    font-family:'Great Vibes',cursive;
+    font-size:3.2rem;
+
+    margin-bottom:30px;
+
+}
+
+.promise-card p{
+
+    font-size:1.15rem;
+    line-height:2;
+    margin-bottom:20px;
+
+}
+
+.promise-card h3{
+
+    font-size:2rem;
+    color:#fff;
+
+    text-shadow:
+        0 0 10px #fff,
+        0 0 25px #ff1744;
+
+}
+
+/* ==========================================
+   ENDING
+========================================== */
+
+.ending{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+}
+
+.ending-content{
+
+    max-width:900px;
+    margin:auto;
+
+}
+
+.ending-content h2{
+
+    font-family:'Great Vibes',cursive;
+    font-size:4rem;
+
+    margin-bottom:25px;
+
+}
+
+.big-heart{
+
+    font-size:6rem;
+
+    animation:pulseHeart 1.4s infinite;
+
+    margin:20px 0 35px;
+
+}
+
+.ending-content p{
+
+    font-size:1.2rem;
+    line-height:2;
+
+    margin-bottom:20px;
+
+}
+
+.ending-content h1{
+
+    margin-top:35px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:5rem;
+
+    text-shadow:
+        0 0 15px white,
+        0 0 40px #ff1744;
+
+    animation:glow 2s infinite alternate;
+
+}
+
+/* ==========================================
+   MUSIC BUTTON
+========================================== */
+
+#musicBtn{
+
+    position:fixed;
+
+    bottom:25px;
+    left:25px;
+
+    width:60px;
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:#ff1744;
+
+    box-shadow:
+        0 0 20px rgba(255,20,80,.55);
+
+    z-index:999;
+
+    transition:.3s;
+
+}
+
+#musicBtn:hover{
+
+    transform:scale(1.15);
+
+}
+
+/* ==========================================
+   TOP BUTTON
+========================================== */
+
+#topBtn{
+
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:60px;
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:#ff4d6d;
+
+    box-shadow:
+        0 0 20px rgba(255,20,80,.55);
+
+    z-index:999;
+
+    display:none;
+
+    transition:.3s;
+
+}
+
+#topBtn:hover{
+
+    transform:scale(1.15);
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes pulseHeart{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.25);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+@keyframes glow{
+
+    from{
+
+        text-shadow:
+            0 0 10px white,
+            0 0 20px #ff1744;
+
+    }
+
+    to{
+
+        text-shadow:
+            0 0 25px white,
+            0 0 60px #ff1744;
+
+    }
+
+}
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeInText{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    .main-title{
+        font-size:4rem;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .couple{
+        grid-column:span 2;
+    }
+
+    .couple img{
+        height:420px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .main-title{
+        font-size:3rem;
+    }
+
+    .hero-heart{
+        font-size:4rem;
+    }
+
+    .glass-card,
+    .quote-card,
+    .promise-card{
+        padding:35px 25px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .couple{
+        grid-column:span 1;
+    }
+
+    .couple img{
+        height:360px;
+    }
+
+    .gallery-title,
+    .promise-card h2,
+    .quote-card h2,
+    .ending-content h2{
+        font-size:2.6rem;
+    }
+
+    .ending-content h1{
+        font-size:3.5rem;
+    }
+
+    .message p,
+    .promise-card p,
+    .quote-card p,
+    .ending-content p{
+        font-size:1rem;
+        line-height:1.9;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .main-title{
+        font-size:2.3rem;
+    }
+
+    .small-title{
+        font-size:1rem;
+    }
+
+    .hero-heart{
+        font-size:3.2rem;
+    }
+
+    .btn-love{
+        padding:14px 30px;
+        font-size:.95rem;
+    }
+
+    .gallery-title{
+        font-size:2.2rem;
+    }
+
+    .glass-card h2{
+        font-size:2.5rem;
+    }
+
+    .ending-content h1{
+        font-size:2.7rem;
+    }
+
+    #musicBtn,
+    #topBtn{
+
+        width:52px;
+        height:52px;
+        font-size:20px;
+
+    }
+
+}

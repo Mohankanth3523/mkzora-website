@@ -1,0 +1,53 @@
+{
+    "section": {
+        "badge": "Our Courses",
+        "title": "Courses We Offer",
+        "description": "Choose the right course designed to strengthen concepts and improve academic performance."
+    },
+
+    "courses": [
+        {
+            "id": "course-001",
+
+            "badge": "",
+
+            "category": "",
+
+            "title": "",
+
+            "class": "",
+
+            "subject": "",
+
+            "duration": "",
+
+            "mode": "",
+
+            "description": "",
+
+            "image": {
+                "thumbnail": "",
+                "alt": ""
+            },
+
+            "features": [
+                "",
+                "",
+                "",
+                ""
+            ],
+
+            "buttons": {
+                "details": {
+                    "text": "Learn More",
+                    "url": ""
+                },
+
+                "enquiry": {
+                    "text": "Enquire Now",
+                    "url": "contact.html"
+                }
+            }
+        }
+    ]
+}

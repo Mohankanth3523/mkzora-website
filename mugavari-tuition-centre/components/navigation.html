@@ -1,0 +1,116 @@
+<!-- ==================================================
+     NAVIGATION COMPONENT
+=================================================== -->
+
+<nav
+    class="site-navigation"
+    id="site-navigation"
+    aria-label="Primary Navigation">
+
+    <!-- =============================================
+         DESKTOP NAVIGATION
+    ============================================== -->
+
+    <ul
+        class="nav-menu"
+        id="desktop-navigation"
+        role="menubar">
+
+        <!--
+            Navigation Items
+
+            Loaded from:
+
+            data/navigation.json
+
+            Rendered by:
+
+            assets/js/navigation.js
+        -->
+
+    </ul>
+
+    <!-- =============================================
+         MOBILE NAVIGATION
+    ============================================== -->
+
+    <aside
+        id="mobile-navigation"
+        class="mobile-navigation"
+        aria-hidden="true">
+
+        <!-- Mobile Header -->
+
+        <div class="mobile-navigation-header">
+
+            <a
+                href="index.html"
+                class="mobile-logo"
+                aria-label="Home">
+
+                <img
+                    data-mobile-logo
+                    src=""
+                    alt=""
+                    width="150"
+                    height="50"
+                    loading="eager">
+
+            </a>
+
+            <button
+                id="mobile-menu-close"
+                class="mobile-menu-close"
+                type="button"
+                aria-label="Close Navigation">
+
+                <span aria-hidden="true">&times;</span>
+
+            </button>
+
+        </div>
+
+        <!-- Mobile Menu -->
+
+        <ul
+            class="mobile-nav-menu"
+            id="mobile-navigation-list"
+            role="menu">
+
+            <!--
+                Loaded dynamically from
+                data/navigation.json
+            -->
+
+        </ul>
+
+        <!-- Mobile CTA -->
+
+        <div class="mobile-navigation-footer">
+
+            <a
+                data-mobile-cta-link
+                class="btn btn-primary btn-block">
+
+                <span
+                    data-mobile-cta-text>
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- =============================================
+         MOBILE BACKDROP
+    ============================================== -->
+
+    <div
+        id="mobile-menu-backdrop"
+        class="mobile-menu-backdrop"
+        hidden>
+
+    </div>
+
+</nav>

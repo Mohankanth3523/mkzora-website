@@ -1,0 +1,66 @@
+{
+    "section": {
+        "badge": "Our Faculty",
+        "title": "Meet Our Expert Faculty",
+        "description": "Experienced educators dedicated to helping every student achieve academic excellence through concept-based learning."
+    },
+
+    "faculty": [
+        {
+            "id": "faculty-001",
+
+            "badge": "",
+
+            "name": "",
+
+            "designation": "",
+
+            "department": "",
+
+            "subject": "",
+
+            "qualification": "",
+
+            "experience": "",
+
+            "description": "",
+
+            "image": {
+                "photo": "",
+                "alt": ""
+            },
+
+            "expertise": [
+                "",
+                "",
+                "",
+                ""
+            ],
+
+            "achievements": [
+                "",
+                ""
+            ],
+
+            "socialLinks": {
+                "website": "",
+                "linkedin": "",
+                "facebook": "",
+                "instagram": "",
+                "youtube": ""
+            },
+
+            "buttons": {
+                "profile": {
+                    "text": "View Profile",
+                    "url": ""
+                },
+
+                "contact": {
+                    "text": "Contact",
+                    "url": "contact.html"
+                }
+            }
+        }
+    ]
+}

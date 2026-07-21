@@ -1,0 +1,92 @@
+{
+    "business": {
+        "name": "",
+        "tagline": "",
+        "registrationNumber": ""
+    },
+
+    "location": {
+        "address": {
+            "line1": "",
+            "line2": "",
+            "city": "",
+            "district": "",
+            "state": "",
+            "country": "",
+            "postalCode": ""
+        },
+
+        "coordinates": {
+            "latitude": "",
+            "longitude": ""
+        }
+    },
+
+    "contact": {
+        "primaryPhone": "",
+        "secondaryPhone": "",
+
+        "primaryEmail": "",
+        "secondaryEmail": "",
+
+        "whatsapp": ""
+    },
+
+    "workingHours": {
+
+        "monday": "",
+        "tuesday": "",
+        "wednesday": "",
+        "thursday": "",
+        "friday": "",
+        "saturday": "",
+        "sunday": ""
+
+    },
+
+    "google": {
+
+        "mapEmbedUrl": "",
+
+        "directionUrl": "",
+
+        "placeId": ""
+
+    },
+
+    "footer": {
+
+        "heading": "",
+
+        "description": ""
+
+    },
+
+    "buttons": {
+
+        "call": {
+
+            "text": "Call Now",
+
+            "link": ""
+
+        },
+
+        "whatsapp": {
+
+            "text": "WhatsApp",
+
+            "link": ""
+
+        },
+
+        "direction": {
+
+            "text": "Get Directions",
+
+            "link": ""
+
+        }
+
+    }
+}

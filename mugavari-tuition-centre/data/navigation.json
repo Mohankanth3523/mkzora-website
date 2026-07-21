@@ -1,0 +1,125 @@
+{
+    "navigation": {
+        "desktop": [
+            {
+                "id": 1,
+                "title": "Home",
+                "url": "index.html",
+                "target": "_self",
+                "active": true
+            },
+            {
+                "id": 2,
+                "title": "About",
+                "url": "about.html",
+                "target": "_self",
+                "active": false
+            },
+            {
+                "id": 3,
+                "title": "Courses",
+                "url": "courses.html",
+                "target": "_self",
+                "active": false
+            },
+            {
+                "id": 4,
+                "title": "Faculty",
+                "url": "faculty.html",
+                "target": "_self",
+                "active": false
+            },
+            {
+                "id": 5,
+                "title": "Why Choose Us",
+                "url": "why-choose-us.html",
+                "target": "_self",
+                "active": false
+            },
+            {
+                "id": 6,
+                "title": "Testimonials",
+                "url": "testimonials.html",
+                "target": "_self",
+                "active": false
+            },
+            {
+                "id": 7,
+                "title": "FAQ",
+                "url": "faq.html",
+                "target": "_self",
+                "active": false
+            },
+            {
+                "id": 8,
+                "title": "Contact",
+                "url": "contact.html",
+                "target": "_self",
+                "active": false
+            }
+        ],
+
+        "mobile": [
+            {
+                "id": 1,
+                "title": "Home",
+                "url": "index.html",
+                "target": "_self"
+            },
+            {
+                "id": 2,
+                "title": "About",
+                "url": "about.html",
+                "target": "_self"
+            },
+            {
+                "id": 3,
+                "title": "Courses",
+                "url": "courses.html",
+                "target": "_self"
+            },
+            {
+                "id": 4,
+                "title": "Faculty",
+                "url": "faculty.html",
+                "target": "_self"
+            },
+            {
+                "id": 5,
+                "title": "Why Choose Us",
+                "url": "why-choose-us.html",
+                "target": "_self"
+            },
+            {
+                "id": 6,
+                "title": "Testimonials",
+                "url": "testimonials.html",
+                "target": "_self"
+            },
+            {
+                "id": 7,
+                "title": "FAQ",
+                "url": "faq.html",
+                "target": "_self"
+            },
+            {
+                "id": 8,
+                "title": "Contact",
+                "url": "contact.html",
+                "target": "_self"
+            }
+        ],
+
+        "headerButton": {
+            "text": "Enquire Now",
+            "url": "contact.html",
+            "target": "_self"
+        },
+
+        "mobileButton": {
+            "text": "Enquire Now",
+            "url": "contact.html",
+            "target": "_self"
+        }
+    }
+}
