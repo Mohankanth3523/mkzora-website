@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Wedding Invitation — Irfan & Farhana
+   Extracted from Google Stitch export (code.html)
+   ========================================================================== */
+
+/* ---------- Page Background ---------- */
+.page-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKtAEVPdDCQTzMidcLDa8IWRfOS2PEnHFNWP4rVRHbYKV5XJZnVMN-99-_Ma-Sy0UuGFtD90aEVjhe0OHit4fYkJ5X_ZAwpOZhfRtRaMCqw_CQIxGEiXDZXodwamDxXh6owfsaYIUv7oZKbRZZajV59w47upN20nx_jp5FczocRWw5zbRVBUGOMSpoOrzKKYjgHmSJrIkTTojFWITJrmlxOl0iWQ-N79-hFbG-bRYUwL05gMJOIWir');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* ---------- Glass Card ---------- */
+.glass-card {
+    background: rgba(250, 250, 235, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(133, 115, 116, 0.2);
+    box-shadow: 0 10px 40px rgba(138, 72, 83, 0.05);
+}
+
+/* ---------- Scroll Reveal ---------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- Bismillah Fade Animation ---------- */
+.bismillah-fade {
+    animation: fadeInOut 4s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(0.98);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ---------- Body ---------- */
+body {
+    min-height: 100vh;
+}
+
+/* ---------- MKZORA Brand Credit ---------- */
+.brand-mkzora {
+    background: linear-gradient(135deg, #b76e79, #c9a96e, #b76e79);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.footer-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(183, 110, 121, 0.5), transparent);
+}
+

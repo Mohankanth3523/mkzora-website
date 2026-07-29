@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Wedding Invitation | Irfan &amp; Farhana</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Source+Serif+4:ital,wght@0,400;0,600;1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#6c614e",
+                        "surface-variant": "#e3e3d5",
+                        "background": "#fafaeb",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#fffbff",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#a0636e",
+                        "inverse-surface": "#2f3128",
+                        "surface": "#fafaeb",
+                        "on-primary-fixed": "#3a0915",
+                        "surface-dim": "#dbdbcd",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fafaeb",
+                        "tertiary-fixed-dim": "#fcb3be",
+                        "tertiary": "#844b55",
+                        "on-secondary-fixed": "#221b0b",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-tint": "#8c4b55",
+                        "tertiary-fixed": "#ffd9de",
+                        "primary-container": "#a6606b",
+                        "primary": "#8a4853",
+                        "secondary-container": "#eddec5",
+                        "primary-fixed-dim": "#ffb2bc",
+                        "secondary": "#685d4a",
+                        "surface-container-high": "#e9e9db",
+                        "outline": "#857374",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#4f4533",
+                        "secondary-fixed": "#f0e0c8",
+                        "surface-container-highest": "#e3e3d5",
+                        "surface-container-low": "#f4f5e6",
+                        "outline-variant": "#d7c1c3",
+                        "on-surface": "#1b1c14",
+                        "on-tertiary-fixed": "#360c17",
+                        "on-surface-variant": "#524345",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#6b3741",
+                        "secondary-fixed-dim": "#d3c5ad",
+                        "primary-fixed": "#ffd9dd",
+                        "on-background": "#1b1c14",
+                        "inverse-on-surface": "#f1f2e3",
+                        "on-primary-fixed-variant": "#70343e",
+                        "inverse-primary": "#ffb2bc",
+                        "surface-container": "#efefe0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "64px",
+                        "section-padding": "100px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "stack-sm": "8px",
+                        "stack-md": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-section": ["Libre Caslon Text"],
+                        "display-names-mobile": ["Playfair Display"],
+                        "label-caps": ["Libre Caslon Text"],
+                        "display-names": ["Playfair Display"],
+                        "body-main": ["\"Source Serif 4\""],
+                        "body-italic": ["\"Source Serif 4\""]
+                    },
+                    "fontSize": {
+                        "headline-section": ["24px", { "lineHeight": "32px", "letterSpacing": "0.1em", "fontWeight": "400" }],
+                        "display-names-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "display-names": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-main": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "body-italic": ["16px", { "lineHeight": "26px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body
+    class="text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden font-body-main">
+    <!-- Fixed Page Background -->
+    <div class="page-background"></div>
+    <!-- Splash Screen -->
+    <div class="fixed inset-0 z-[100] bg-surface flex flex-col items-center justify-center transition-all duration-1000"
+        id="splash">
+        <div class="text-center px-gutter max-w-md">
+            <div class="mb-8 bismillah-fade">
+                <span class="text-primary text-5xl md:text-6xl" style="font-family: 'Playfair Display', serif;">﷽</span>
+            </div>
+            <p class="font-headline-section text-label-caps text-secondary uppercase tracking-[0.3em] mb-4">Under the
+                Grace of Allah</p>
+            <h2 class="font-display-names-mobile text-display-names-mobile text-primary mb-12">Irfan &amp; Farhana</h2>
+            <button
+                class="group relative px-10 py-4 bg-primary-container text-on-primary-container rounded-full overflow-hidden transition-all active:scale-95 shadow-lg"
+                onclick="openInvitation()">
+                <span class="relative z-10 font-label-caps tracking-widest uppercase">Open Invitation</span>
+                <div
+                    class="absolute inset-0 bg-secondary-container transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500">
+                </div>
+            </button>
+        </div>
+    </div>
+    <!-- Background Music Audio Element -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="assets/music/wedding.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Music Player (Floating Toggle Button) -->
+    <button
+        class="fixed bottom-6 right-6 md:right-8 z-[80] w-12 h-12 rounded-full bg-surface-container-high/80 backdrop-blur-md flex items-center justify-center border border-outline-variant shadow-lg text-primary transition-all active:scale-90"
+        id="music-toggle">
+        <span class="material-symbols-outlined" id="music-icon">music_note</span>
+    </button>
+
+    <!-- Main Canvas -->
+    <main class="relative w-full max-w-container-max mx-auto md:px-0">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center px-gutter overflow-hidden" id="hero">
+            <div
+                class="relative z-10 text-center glass-card p-12 rounded-full border-2 border-primary/20 max-w-2xl mx-auto reveal">
+                <div class="mb-6 opacity-60">
+                    <span class="material-symbols-outlined text-primary scale-150">diamond</span>
+                </div>
+                <h1
+                    class="font-display-names text-display-names-mobile md:text-display-names text-primary mb-4 leading-tight">
+                    S. Irfan <br class="md:hidden" /> &amp; <br class="md:hidden" /> H. Farhana
+                </h1>
+                <p
+                    class="font-headline-section text-headline-section text-secondary tracking-widest uppercase mt-6 mb-8">
+                    Nikkah &amp; Valima Invitation</p>
+                <div class="flex items-center justify-center gap-4">
+                    <div class="h-px w-12 bg-outline-variant"></div>
+                    <span class="font-label-caps text-tertiary">30.08.2026</span>
+                    <div class="h-px w-12 bg-outline-variant"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Islamic Blessing -->
+        <section class="py-stack-lg px-gutter text-center reveal">
+            <div class="max-w-3xl mx-auto space-y-8 glass-card p-10 rounded-3xl">
+                <div class="text-3xl md:text-4xl text-primary font-display-names" style="direction: rtl;">
+                    بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+                </div>
+                <p class="font-body-italic text-body-italic italic text-secondary">
+                    "In the name of Allah, the Most Gracious, the Most Merciful"
+                </p>
+                <div class="pt-8 space-y-4">
+                    <p class="font-headline-section text-tertiary text-lg md:text-xl px-4">
+                        "And among His signs is this, that He created for you mates from among yourselves, that you may
+                        dwell in tranquility with them, and He has put love and mercy between your hearts..."
+                    </p>
+                    <p class="font-label-caps text-secondary opacity-60">— Surah Ar-Rum: 21</p>
+                </div>
+            </div>
+        </section>
+        <!-- Couple Story Section -->
+        <section class="py-stack-lg px-gutter reveal">
+            <div class="grid md:grid-cols-2 gap-stack-md max-w-4xl mx-auto relative">
+                <!-- Groom Card -->
+                <div class="glass-card p-10 rounded-xl text-center flex flex-col items-center">
+                    <div class="w-32 h-32 rounded-full mb-6 border-2 border-primary overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdlIjSsJ2uZOKWTBg5PzjkTHzcRNyOVeUosziYyd5yHLJdon9bYcie5CnizXzHcSryIwaHiA99YlvqFkWjUk3V-0Jrze1Jk_j8hwlSfTX4svh6cdOzyqT_RV-tU1zXhy4W6wIXCegRT8-25WO_PopvaUVcyG1E0arKWr2gorpaoRPESoL3cZKkc37HoxRyD_bPhuFeB80UPWz670e7VDBN0ow88NPujvOUWnuh65V8sxcCKrcGi0PZ" />
+                    </div>
+                    <h3 class="font-display-names-mobile text-headline-section text-primary mb-2">S. Irfan</h3>
+                    <p class="font-label-caps text-secondary mb-4">Groom</p>
+                    <p class="font-body-main text-on-surface-variant">S/O Mr. Sikkandhar <br /> Lalu ITI</p>
+                </div>
+                <!-- Bride Card -->
+                <div class="glass-card p-10 rounded-xl text-center flex flex-col items-center">
+                    <div class="w-32 h-32 rounded-full mb-6 border-2 border-primary overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMn3-JmiMbyd22tokoEKqBuYPt12gFNZnvBQhYhjZUb9JKUpRj62emwCeaGhUI7CzSMjb6wPggSTDjeJB1kcOFEoThGJTnjTLGGQ_brmH2s5mq2sow9U_JZk1xRaibtZ2tcMf9i7X4CIpsyDTEqqJwNvKd3lcNhTmax7LCbmocPEguZPrvgJ3NpHHrqUONl8wG7hKcUL8VIFVZLO3KdCxnZpqf7rziE3UK-xuVuuSu4tNfgS8W5I38" />
+                    </div>
+                    <h3 class="font-display-names-mobile text-headline-section text-primary mb-2">H. Farhana</h3>
+                    <p class="font-label-caps text-secondary mb-4">Bride</p>
+                    <p class="font-body-main text-on-surface-variant">D/O Hafiz &amp; Alim <br /> (Aalimah)</p>
+                </div>
+            </div>
+        </section>
+        <!-- Countdown Timer -->
+        <section class="py-stack-lg px-gutter reveal">
+            <div class="glass-card p-10 rounded-full border border-primary/10 max-w-3xl mx-auto text-center">
+                <h4 class="font-label-caps text-secondary tracking-[0.2em] uppercase mb-8">Counting down to Forever</h4>
+                <div class="grid grid-cols-4 gap-4 md:gap-8" id="countdown">
+                    <div class="flex flex-col">
+                        <span class="text-3xl md:text-5xl font-display-names text-primary" id="days">00</span>
+                        <span class="font-label-caps text-[10px] text-tertiary">DAYS</span>
+                    </div>
+                    <div class="flex flex-col border-l border-outline-variant">
+                        <span class="text-3xl md:text-5xl font-display-names text-primary" id="hours">00</span>
+                        <span class="font-label-caps text-[10px] text-tertiary">HOURS</span>
+                    </div>
+                    <div class="flex flex-col border-l border-outline-variant">
+                        <span class="text-3xl md:text-5xl font-display-names text-primary" id="minutes">00</span>
+                        <span class="font-label-caps text-[10px] text-tertiary">MINUTES</span>
+                    </div>
+                    <div class="flex flex-col border-l border-outline-variant">
+                        <span class="text-3xl md:text-5xl font-display-names text-primary" id="seconds">00</span>
+                        <span class="font-label-caps text-[10px] text-tertiary">SECONDS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Event Timeline -->
+        <section class="py-stack-lg px-gutter reveal">
+            <div class="text-center mb-12">
+                <h2 class="font-headline-section text-headline-section text-primary uppercase tracking-widest">Wedding
+                    Schedule</h2>
+                <div class="w-16 h-0.5 bg-primary-container mx-auto mt-4"></div>
+            </div>
+            <div class="max-w-2xl mx-auto relative space-y-12">
+                <!-- Center Line -->
+                <div class="absolute left-1/2 top-0 bottom-0 w-px bg-secondary-fixed -translate-x-1/2 hidden md:block">
+                </div>
+                <!-- Nikkah -->
+                <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+                    <div class="hidden md:block w-5/12 text-right pr-12">
+                        <h5 class="font-label-caps text-secondary">30 August 2026</h5>
+                        <p class="font-body-main text-on-surface-variant">12:15 PM Onwards</p>
+                    </div>
+                    <div
+                        class="z-10 w-8 h-8 rounded-full bg-primary border-4 border-surface shadow-md flex items-center justify-center">
+                        <span class="w-2 h-2 rounded-full bg-white"></span>
+                    </div>
+                    <div class="w-full md:w-5/12 pl-0 md:pl-12 mt-6 md:mt-0 text-center md:text-left">
+                        <div class="glass-card p-6 rounded-xl transition-all hover:scale-[1.02]">
+                            <h4 class="font-headline-section text-primary text-xl mb-2">Nikkah Ceremony</h4>
+                            <p class="font-body-main text-secondary">Thouhith Masjid, Mittur</p>
+                            <p class="md:hidden font-label-caps text-tertiary mt-2">30 August, 12:15 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lunch -->
+                <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+                    <div class="hidden md:block w-5/12 text-right pr-12">
+                        <h5 class="font-label-caps text-secondary">30 August 2026</h5>
+                    </div>
+                    <div
+                        class="z-10 w-8 h-8 rounded-full bg-tertiary border-4 border-surface shadow-md flex items-center justify-center">
+                        <span class="w-2 h-2 rounded-full bg-white"></span>
+                    </div>
+                    <div class="w-full md:w-5/12 pl-0 md:pl-12 mt-6 md:mt-0 text-center md:text-left">
+                        <div class="glass-card p-6 rounded-xl transition-all hover:scale-[1.02]">
+                            <h4 class="font-headline-section text-primary text-xl mb-2">Wedding Lunch</h4>
+                            <p class="font-body-main text-secondary">MPN Marriage Hall</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Valima -->
+                <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+                    <div class="hidden md:block w-5/12 text-right pr-12">
+                        <h5 class="font-label-caps text-secondary">01 September 2026</h5>
+                    </div>
+                    <div
+                        class="z-10 w-8 h-8 rounded-full bg-secondary border-4 border-surface shadow-md flex items-center justify-center">
+                        <span class="w-2 h-2 rounded-full bg-white"></span>
+                    </div>
+                    <div class="w-full md:w-5/12 pl-0 md:pl-12 mt-6 md:mt-0 text-center md:text-left">
+                        <div class="glass-card p-6 rounded-xl transition-all hover:scale-[1.02]">
+                            <h4 class="font-headline-section text-primary text-xl mb-2">Valima Celebration</h4>
+                            <p class="font-body-main text-secondary">KGS Mahal, S. Kodiyur, Jolarpettai</p>
+                            <p class="md:hidden font-label-caps text-tertiary mt-2">01 September 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Venue & Map -->
+        <section class="py-stack-lg px-gutter reveal">
+            <div class="grid md:grid-cols-2 gap-stack-md max-w-5xl mx-auto">
+                <div class="glass-card p-8 rounded-xl flex flex-col">
+                    <div class="h-48 w-full rounded-lg mb-6 overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHVqra19Sd8iiC4s_m433p1_ZNUtuntP4dyZrhPEE3UbbvQINHdJURGdo_0OXNGzPt2411Oqy8StgfN2IEBYxKZlADV3eqJ5h_LaYduQyRsYzkCWKpvw7ZQ1KMMsZ-i6W4Qchma64kmlfq6BzYbYMy2VlCQqUM32ALEFgpgd59ui_YtwUplpppxSfuvdx5S4Xo438ZG7fMnb28UJP_bJZCJx2rDG4o79P7aJekakW_8MbXu2MjL5wM" />
+                    </div>
+                    <h3 class="font-headline-section text-primary mb-2">Nikkah Venue</h3>
+                    <p class="font-body-main text-secondary mb-6 flex-grow">Thouhith Masjid, Mittur. A place of serenity
+                        and prayer where our journey begins.</p>
+                    <a class="inline-flex items-center justify-center gap-2 py-3 bg-secondary-container text-on-secondary-container rounded-lg font-label-caps hover:bg-secondary/20 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">directions</span> Get Directions
+                    </a>
+                </div>
+                <div class="glass-card p-8 rounded-xl flex flex-col">
+                    <div class="h-48 w-full rounded-lg mb-6 overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCumP10LA-_jXx9Lk8-WEQrW_LxTWrCuZfU9rAEyY0VYTZ24XTzY5oCzfUsoRlKjG2ezzLtKz4djX6MLK9VbrDApXINtCWeV-4086kZMJq_IJab2cUxEUsjUfBxBuUxR1Zp3pgtDhdD0whUbONxwxuf_W2-Z9_4gw_tn7iT9V1U7rDU5rszCq6puWOiNMm_21DRXL165AJU7drJ-tQgKKMMyPmt9y-KZ4Dib57bqzEe_OfN0_no0LGf" />
+                    </div>
+                    <h3 class="font-headline-section text-primary mb-2">Valima Venue</h3>
+                    <p class="font-body-main text-secondary mb-6 flex-grow">KGS Mahal, S. Kodiyur, Jolarpettai. We
+                        invite you to join us for a grand celebration.</p>
+                    <a class="inline-flex items-center justify-center gap-2 py-3 bg-secondary-container text-on-secondary-container rounded-lg font-label-caps hover:bg-secondary/20 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">directions</span> Get Directions
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Photo Gallery -->
+        <section class="py-stack-lg px-gutter reveal">
+            <div class="text-center mb-12">
+                <h2 class="font-headline-section text-headline-section text-primary tracking-[0.2em] uppercase">Moments
+                </h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden glass-card p-1">
+                    <img class="w-full h-full object-cover rounded-lg"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdhdHEkuWf4xLpitxj3ykxEtuamkg3ChB0lnl5U8muTHbjV7iH3HlWvRrjJG100xWNofuDVpiAOJl2Ks2aRp0Ohe7b7Jl93tvR5Ih6R7mgsCvFiHbybeM9ji_OrxCJ-A1neLN7dsXf9pMrDoM-h4pygxfqFHJK1rsZ1IeWrRymW4QpmLG1TfuVoNdMVPZKP4c5-7IOkaLoQDVCbbpt_myUnSOAx02RZsFiu_gk4py8R9Meow6Qrn45" />
+                </div>
+                <div class="aspect-[3/4] rounded-xl overflow-hidden glass-card p-1 mt-8 md:mt-0">
+                    <img class="w-full h-full object-cover rounded-lg"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8kfjxDvTnWgkbz8AM6h2VUqjwJyJwfOA9PxB46tydDmqbi-6Ac3m6q6uiWOvM_tBSG4vZCN0QxviprtPyEkjyLA9EaDY1Ll2CoShic5302JnQmrOnzgbEpNIAo67oh547Znx64JPTaLeBSWz_mrmcwBLu-r2z_lyZQl_y-tZ7rUhmMsglWWm8ZXFQwq_mJDctH2xKttnX46R-S-Ql7aTx4gndbHkSsNUxh6OWwhLFxOZtPE4OdknK" />
+                </div>
+                <div class="aspect-[3/4] rounded-xl overflow-hidden glass-card p-1">
+                    <img class="w-full h-full object-cover rounded-lg"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa19Il3t4-lPLe_sMAl4ysGRkhfZ8ZEwtob6Qdy0JaxcTxFyaeHBkvOUOSjczKUud3daQkBTz9e0aRArwdpa7WduublSKxXyNh5hJ42eg3iiLnYLoocCZzSbyJDHFFFq7tIeKS63Hf4BkHjZsXo1XyyK-mgylOh1Py-LZhPVQCjuiBB6OCqZOON08hid90zs5YmIoqielukiF1yuNsgAhiCU-mbJhTMPeTHyyZeYCSU0oHeA91U-sn" />
+                </div>
+                <div class="aspect-[3/4] rounded-xl overflow-hidden glass-card p-1 mt-8 md:mt-0">
+                    <img class="w-full h-full object-cover rounded-lg"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl1LQks5mELr0y2yTvti6rT_fC3ksxQ4NSTgzFT9WJyuPmXa_Mf8VcqZfsBZx8tEhNc1k547WF20qAWuD5W_uixBkq805gs3l0TPBUGqz6KpvoD0LAgHYfRorde3W9g8lnLRZX9h7uaVZgluIJcKNUi2MJtMV7gypnqQdgBxEpSoqquCDtwPvtEJ25D4NUVo7rlA1r3dkuwUOp0h9wl4k9Ng__jPwi0HAt08OViONSyWPCGG1Xfdac" />
+                </div>
+            </div>
+        </section>
+        <!-- RSVP Section -->
+        <section class="py-stack-lg px-gutter reveal">
+            <div class="max-w-2xl mx-auto glass-card p-10 md:p-16 rounded-3xl">
+                <div class="text-center mb-10">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">mail</span>
+                    <h2 class="font-display-names-mobile text-display-names-mobile text-primary">Kindly RSVP</h2>
+                    <p class="font-body-main text-secondary mt-2">Will you be joining us in our celebration?</p>
+                </div>
+                <form class="space-y-8">
+                    <div class="relative">
+                        <input
+                            class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-colors text-body-main"
+                            placeholder="Full Name" type="text" />
+                    </div>
+                    <div class="relative">
+                        <input
+                            class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-colors text-body-main"
+                            placeholder="Mobile Number" type="tel" />
+                    </div>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="relative">
+                            <input
+                                class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-colors text-body-main"
+                                placeholder="Guest Count" type="number" />
+                        </div>
+                        <div class="relative flex items-end">
+                            <select
+                                class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-colors text-body-main appearance-none">
+                                <option>Attending</option>
+                                <option>Regretfully Declined</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <textarea
+                            class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-colors text-body-main resize-none"
+                            placeholder="Your Message" rows="2"></textarea>
+                    </div>
+                    <button
+                        class="w-full py-5 bg-primary text-on-primary rounded-full font-label-caps tracking-widest uppercase shadow-xl hover:opacity-90 active:scale-[0.98] transition-all"
+                        type="submit">Send Response</button>
+                </form>
+            </div>
+        </section>
+        <!-- Family & Compliments -->
+        <section class="py-stack-lg px-gutter reveal text-center">
+            <div class="max-w-4xl mx-auto glass-card p-12 rounded-3xl grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-4">
+                    <h4 class="font-label-caps text-secondary uppercase tracking-widest">Invited by</h4>
+                    <p class="font-display-names-mobile text-headline-section text-primary">Mr. Sikkandhar</p>
+                    <p class="font-body-main text-on-surface-variant">&amp; Family</p>
+                </div>
+                <div class="h-12 w-px bg-outline-variant mx-auto hidden md:block"></div>
+                <div class="space-y-4">
+                    <h4 class="font-label-caps text-secondary uppercase tracking-widest">Best Compliments</h4>
+                    <p class="font-display-names-mobile text-headline-section text-primary">Mohammed Aarif</p>
+                    <p class="font-body-main text-on-surface-variant">(ICICI Bank) &amp; Friends</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="w-full py-stack-md flex flex-col items-center justify-center gap-4 bg-surface-container-low/80 backdrop-blur-md border-t border-outline-variant/30 text-secondary reveal">
+        <div class="font-headline-section text-primary text-xl">Irfan &amp; Farhana</div>
+        <p class="font-body-main text-sm text-center px-gutter">Together in Faith</p>
+
+        <!-- MKZORA Brand Credit -->
+        <div class="footer-divider mx-auto mt-6"></div>
+        <div class="flex flex-col items-center gap-2 mt-4 pb-2">
+            <p class="font-body-main text-sm text-secondary">
+                Digital Invitation by <span class="brand-mkzora font-label-caps text-sm">MKZORA</span>
+            </p>
+            <a class="inline-flex items-center gap-2 text-secondary hover:text-tertiary transition-colors"
+                href="https://wa.me/918838935124" target="_blank" rel="noopener noreferrer">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <span class="font-label-caps text-[11px]">+91 88389 35124</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
